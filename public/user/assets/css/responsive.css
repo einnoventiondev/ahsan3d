@@ -11,6 +11,12 @@
     justify-content: center;
     align-items: center;
 }
+.dropzone {
+    width: 100%;
+}
+.form-select.procedure {
+    width: 100%;
+}
 /* .move-hand{
     animation: fade-down 3.5s linear;
     animation-delay: 3s;

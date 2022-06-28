@@ -8,7 +8,7 @@
                             <div class="zhd-center-close">
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div> 
+                            <div>
                                 <span class="outline dot">أكثر من 13 عضو اصطناعي</span>
                                 <h1 class="modal-title right"><span class="btm-line"><span class="inner-line"></span>
                                         الخدمات الطبية
@@ -16,39 +16,42 @@
                             </div>
                             <div class="profile zhd-box">
                                 @if(@auth()->user()->profile == null)
-                                    @if(@auth()->user()->name == null)
-                                        <button class="btn btn-sky profile-btn invert">
-                                            المصمم
-                                        </button>
-                                    @else
-                                        <button class="btn btn-sky profile-btn invert">
-                                            {{-- المصمم --}}
-                                            {{ auth()->user()->name }}
-                                        </button>
-                                    @endif
-                                    {{-- <button class="btn btn-sky profile-btn invert">
+                                @if(@auth()->user()->name == null)
+                                <button class="btn btn-sky profile-btn invert">
+                                    المصمم
+                                </button>
+                                @else
+                                <button class="btn btn-sky profile-btn invert">
+                                    {{-- المصمم --}}
+                                    {{ auth()->user()->name }}
+                                </button>
+                                @endif
+                                {{-- <button class="btn btn-sky profile-btn invert">
                                     المصمم
                                     </button> --}}
-                                    <a href="#profile">
-                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
-                                    </a>
+                                <a href="#profile">
+                                    <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
+                                </a>
                                 @else
-                                    <button class="btn btn-sky profile-btn invert">
-                                        {{-- المصمم --}}
-                                        {{ auth()->user()->name }}    
-                                    </button>
-                                    <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
-                                    </a>
+                                <button class="btn btn-sky profile-btn invert">
+                                    {{-- المصمم --}}
+                                    {{ auth()->user()->name }}
+                                </button>
+                                <a href="#profile">
+                                    <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                </a>
                                 @endif
                             </div>
                         </div>
                         <div class="modal-body">
                             <div id="carouselHealthIndicators" class="carousel slide" data-bs-ride="carousel">
+
                                 <div class="carousel-inner">
                                     <form class="gy-4 gx-5 p-2 form-1" action="{{route('medical.store')}}" method="POST" enctype="multipart/form-data">
                                         @csrf
+
                                         <div class="carousel-item one active" data-bs-interval="100000">
+                                           
                                             <div class="row justify-content-center">
                                                 <div class="col-md-12">
                                                     <div class="row mb-2">
@@ -68,7 +71,7 @@
                                                             <label class="form-label dot">رقم هاتف الطبيب</label>
                                                             <input type="number" pattern="\d*" name="dr_phone" class="form-control phone" placeholder="رقم الهاتف هنا" value="" required>
                                                         </div>
-                                                    <!-- </div>
+                                                        <!-- </div>
                                                     <div class="row"> -->
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">المستشفى أو الشركة</label>
@@ -132,7 +135,7 @@
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-3 py-sm-4 text-end">
                                                             <label class="form-label dot d-xxl-block">تحديد القسم</label>
-                                                            <select class="form-select body-parts"  name="parts" multiple aria-label="Default select example">
+                                                            <select class="form-select body-parts" name="parts" multiple aria-label="Default select example">
                                                                 <!-- <option selected>اختيار من هنا ..</option> -->
                                                                 <option value="skull">الجمجمة</option>
                                                                 <option value="neck">neck</option>
@@ -171,7 +174,9 @@
                                             </div>
                                         </div>
                                         <div class="carousel-item three carousel-blur" data-bs-interval="100000">
+
                                             <div class="row justify-content-center">
+
                                                 <div class="col-md-12">
                                                     <div class="row mb-2 align-items-center">
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-5 col-xxl-5">
@@ -190,6 +195,7 @@
                                                                 <img src="{{asset('user/assets/images/male-front.png')}}" class="img-fluid robot" alt="male-front">
                                                             </div>
                                                             <!-- <img src="{{asset('user/assets/images/male-front.png')}}" class="img-fluid robot" alt="male-front"> -->
+
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-3 text-end">
                                                             <label class="form-label dot">اختيار نوع الإجراء الطبي</label>
@@ -201,9 +207,17 @@
                                                                 <option value="3">Three</option>
                                                             </select>
                                                             <label class="form-label dot mt-4">رفع الصور الطبية</label>
-                                                            <div class="upload-btn-wrapper">
+                                                            <!-- <div class="upload-btn-wrapper">
                                                                 <button class="btn btn-upload health"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
                                                                 <input type="file" id="health-file" required name="myfile" />
+                                                            </div> -->
+                                                            <div id="health-dropzone" action="/" class="dropzone scrollbar-hidden">
+                                                                <div class="dropzone-previews"></div>
+                                                                <img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img">
+                                                                <div class="fallback">
+                                                                    <!-- this is the fallback if JS isn't working -->
+                                                                    <input name="file" type="file" id="health-file" required multiple />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
