@@ -1826,19 +1826,19 @@
 
                                                     <div class="color-circle-main">
 
-                                                        <label for="gray" class="color-circle gray"> <span class="color-txt"> أبيض</span></label>
+                                                        <label for="gray" class="color-circle gray"> <span class="color-txt"> رمادي</span></label>
                                                         <input type="radio" id="gray" name="gray" class="color-picker d-none" value="#FFFF00">
 
-                                                        <label for="yellow" class="color-circle yellow"> <span class="color-txt"> أبيض</span> </label>
+                                                        <label for="yellow" class="color-circle yellow"> <span class="color-txt"> الأصفر</span> </label>
                                                         <input type="radio" id="yellow" name="yellow" class="color-picker d-none " value="#FED949">
 
-                                                        <label for="red" class="color-circle red"> <span class="color-txt"> أبيض</span> </label>
+                                                        <label for="red" class="color-circle red"> <span class="color-txt"> زهري</span> </label>
                                                         <input type="radio" id="red" name="red" class="color-picker d-none " value="#000">
 
-                                                        <label for="blue" class="color-circle blue"> <span class="color-txt"> أبيض</span> </label>
+                                                        <label for="blue" class="color-circle blue"> <span class="color-txt"> أزرق</span> </label>
                                                         <input type="radio" id="blue" name="blue" class="color-picker d-none " value="#fff">
 
-                                                        <label for="orange" class="color-circle orange"> <span class="color-txt"> أبيض</span> </label>
+                                                        <label for="orange" class="color-circle orange"> <span class="color-txt"> أحمر</span> </label>
                                                         <input type="radio" id="orange" name="orange" class="color-picker d-none " value="#FFFF00">
 
 
@@ -1859,7 +1859,7 @@
                                                         <option>1</option>
                                                     </select> -->
                                                     <input class="form-control" id="qty"
-                                                        rows="4" name="qty" placeholder="   الكمية<">
+                                                        rows="4" name="qty" placeholder="   الكمية">
                                                 </div>
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                     <label class="form-label dot">المقاسات</label>
