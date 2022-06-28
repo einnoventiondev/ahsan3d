@@ -28663,8 +28663,23 @@ span.twitter-typeahead .tt-suggestion {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
   border-top-right-radius: 5px !important;
-  border-bottom-right-radius: 5px !important; }
+  border-bottom-right-radius: 5px !important;
 
+  
+  
+   }
+   .form-control{
+    border-radius: 25px !important;
+    height: 40px;
+    border: 3px solid #215099 !important;
+    font-size: 16px !important;
+    color: #000000 !important;
+   }
+   .form-label{
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #000000 !important;
+   }
 .rtl .social-tab .input-group .input-group-text {
   border-top-left-radius: 5px !important;
   border-bottom-left-radius: 5px !important;
@@ -31407,7 +31422,8 @@ margin-left: 20px;
 
 /* chat style */
 .upload-btn-wrapper{
-  border: 1px solid #ced4da;
+  border: 3px solid #215099 !important;
+  border-radius: 25px;
 }
 #message{
   padding: 9px;

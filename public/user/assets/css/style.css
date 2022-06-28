@@ -1839,6 +1839,7 @@ textarea {
 
 .pointer.head:hover p,
 .pointer.arm:hover p,
+.pointer.chest:hover p,
 .pointer.foot:hover p {
     opacity: 1;
 }
@@ -1875,10 +1876,13 @@ textarea {
 }
 
 .pointer.arm p {
+    right: 16px;
+    top: 19px;
+}
+.pointer.chest p {
     right: 60px;
     top: -10px;
 }
-
 .pointer.foot p {
     right: 60px;
     bottom: -15px;

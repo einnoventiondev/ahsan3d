@@ -244,3 +244,6 @@ Route::delete('delete/logo5/{id}',[LogoController::class,'logoDelete5'])->name('
 Route::delete('delete/logo6/{id}',[LogoController::class,'logoDelete6'])->name('logo6.destroy');
 Route::delete('delete/logo7/{id}',[LogoController::class,'logoDelete7'])->name('logo7.destroy');
 
+Route::get('/ordermanagmentview',function(){
+ return view('pages.admin.dashboard.perposal.OrderManagementView');
+})->name('order.management.user');
