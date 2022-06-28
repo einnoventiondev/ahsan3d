@@ -1067,8 +1067,8 @@ textarea {
     cursor: pointer;
 }
 
-.btn-upload {
-    border: 4px dashed #E3E9EC;
+.btn-upload, .dropzone {
+    border: 4px dashed #E3E9EC !important;
     border-radius: 50px;
     /* padding: 10px 145px; */
     padding: 0.6rem 0.375rem;
@@ -1084,6 +1084,24 @@ textarea {
 
 .btn-upload img {
     width: 20px;
+}
+
+.dropzone {
+    min-height: 120px!important;
+    width: 400px;
+    overflow-y: hidden;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}
+
+.form-select.procedure {
+    width: 400px;
+}
+
+.dz-default.dz-message {
+    display: none;
 }
 
 .form-detail {
