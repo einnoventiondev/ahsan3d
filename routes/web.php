@@ -128,7 +128,7 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::post('identity',[UserController::class,'identity'])->name('identity');
     });
 
-    Route::group(['middleware' =>  'role:superadmin',], function () {
+    Route::group([['middleware' =>  'role:admin'],['middleware' =>  'role:superadmin']], function () {
         Route::resource('about', AboutUsController::class);
         Route::resource('contact', ContactControllers::class);
         Route::resource('client', ClientController::class);

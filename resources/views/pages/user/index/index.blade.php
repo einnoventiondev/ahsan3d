@@ -789,18 +789,26 @@
                                         <img src="{{ asset('user/assets/images/gas.png') }}">
                                     </div>
                                     @endif
+
+                                    @if (@$logos->logo8 != null)
                                     @php
 
-                                     $images= App\Models\Logo::first();
-                                      $image=[];
-                                      $image = json_decode($images->logo8, true);
-                                    @endphp
+                                    $images= App\Models\Logo::first();
+                                     $image=[];
+                                     $image = json_decode($images->logo8, true);
+                                   @endphp
 
+                                   <div class="slide-logos">
+                                       @foreach ($image as $item)
+                                         <img src="{{$item ? asset('upload/' . $item) : asset('user/assets/images/gas.png') }}" alt="image" class="card-img" >
+                                       @endforeach
+                                   </div>
+                                    @else
                                     <div class="slide-logos">
-                                        @foreach ($image as $item)
-                                          <img src="{{$item ? asset('upload/' . $item) : asset('user/assets/images/gas.png') }}" alt="image" class="card-img" >
-                                        @endforeach
+                                        <img src="{{ asset('user/assets/images/gas.png') }}">
                                     </div>
+                                    @endif
+
                                 </div>
                                 <div class="row pt-5 mt-5 align-items-end p-t-70" dir="rtl">
                                     <div class="col-md-9 col-lg-7 res-width-64" data-aos="fade-up">
@@ -1078,7 +1086,7 @@
                             <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}"
                                 class="mujtmah-box__image">
                             <div class="mujtmah-box__count">
-                                <h1 class="mujtmah-box__count-heading designer-counter2" data-count="{{$counter->designer}}">0</h1>
+                                <h1 class="mujtmah-box__count-heading designer-counter2" data-count="{{$counter->designer ?? ' '}}">0</h1>
                                 <p class="mujtmah-box__count-sub-heading">مصمم</p>
                             </div>
                         </div>
@@ -1086,7 +1094,7 @@
                     <div class="mujtmah-box2">
                         <div class="mujtmah-box__media" data-aos="zoom-in">
                             <div class="mujtmah-box__count2">
-                                <h1 class="mujtmah-box__count-heading designer-counter" data-count="{{ $counter->client }}" >0</h1>
+                                <h1 class="mujtmah-box__count-heading designer-counter" data-count="{{ $counter->client ?? ' '}}" >0</h1>
                                 <p class="mujtmah-box__count-sub-heading">عميل</p>
                             </div>
                             <img src="{{ asset('user/assets/images/mujtmah-box__image3.png') }}"
