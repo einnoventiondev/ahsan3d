@@ -5919,12 +5919,9 @@
                                                 </div>
                                                 <div class="input-holder">
 
-                                                    <select class="form-control" data-placeholder="Выберите теги" name="software">
+                                                    <select class="form-select select-softwares-designer" name="software" multiple aria-label="Default select example">
                                                         @foreach($softwares as $software)
-
                                                         <option value="{{ $software->name }}">{{ $software->name }}
-
-
                                                         </option>
                                                         @endforeach
                                                     </select>

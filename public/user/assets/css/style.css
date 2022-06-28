@@ -2055,6 +2055,11 @@ textarea {
 
 
 /* Select2 dropdown */
+#registerModal .select2-container--default .select2-selection--multiple {
+    width: 330px;
+    min-height: 47px;
+    height: auto;
+}
 
 .select2-container--default.select2-container--focus .select2-selection--multiple {
     border-width: 4px;
