@@ -15,14 +15,17 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-        $admin = User::find(1);
+        $superadmin = User::find(1);
         $user = User::find(2);
         $designer = User::find(3);
-        $adminRole = Role::create(['name' => 'superadmin']);
+        $admin = User::find(4);
+        $superadminRole = Role::create(['name' => 'superadmin']);
         $userRole = Role::create(['name' => 'user']);
         $designerRole = Role::create(['name' => 'designer']);
-        $admin->assignRole($adminRole);
+        $adminRole = Role::create(['name' => 'admin']);
+        $superadmin->assignRole($superadminRole);
         $user->assignRole($userRole);
         $designer->assignRole($designerRole);
+        $admin->assignRole($adminRole);
     }
 }

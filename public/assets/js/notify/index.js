@@ -1,7 +1,7 @@
 'use strict';
 var notify = $.notify('<span class="notify-loader"><i class="fa fa-bell-o"></i><strong>تحميل</strong> الصفحة لا تغلق هذه الصفحة ...</span>', {
     type: 'theme',
-    allow_dismiss: true,
+    allow_dismiss: false,
     delay: 2000,
     showProgressbar: true,
     timer: 300

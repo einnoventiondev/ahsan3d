@@ -19,11 +19,19 @@ class DatabaseSeeder extends Seeder
     {
 
 
-       $admin = User::create([
+       $superadmin = User::create([
             'name' => 'superadmin',
             'email' => 'superadmin@admin.com',
             'password' => Hash::make('password'),
             'role' => 'superadmin',
+            'email_verified_at' => '2021-10-04 00:00:00',
+            'remember_token' => Str::random(10),
+        ]);
+        $admin = User::create([
+            'name' => 'admin',
+            'email' => 'admin@admin.com',
+            'password' => Hash::make('password'),
+            'role' => 'admin',
             'email_verified_at' => '2021-10-04 00:00:00',
             'remember_token' => Str::random(10),
         ]);
@@ -43,12 +51,14 @@ class DatabaseSeeder extends Seeder
             'email_verified_at' => '2021-10-04 00:00:00',
             'remember_token' => Str::random(10),
         ]);
-        $adminRole = Role::create(['name' => 'superadmin']);
+        $superadminRole = Role::create(['name' => 'superadmin']);
         $userRole = Role::create(['name' => 'user']);
         $designerRole = Role::create(['name' => 'designer']);
-        $admin->assignRole($adminRole);
+        $adminRole = Role::create(['name' => 'admin']);
+        $superadmin->assignRole($superadminRole);
         $user->assignRole($userRole);
         $designer->assignRole($designerRole);
+        $admin->assignRole($adminRole);
 
         // \App\Models\User::factory(10)->create();
     }
