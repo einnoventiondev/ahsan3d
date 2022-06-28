@@ -61,6 +61,10 @@
         </div>
       </div>
     </div>
+ <input type="hidden" id="admin_get" value="{{ $admin_get }}">
+ <input type="hidden" id="product_get" value="{{ $product }}">
+ <input type="hidden" id="designer_get" value="{{ $designer_get }}">
+ <input type="hidden" id="order_get" value="{{ $order }}">
 
   </div>
 </div>

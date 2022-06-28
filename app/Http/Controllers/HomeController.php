@@ -67,7 +67,22 @@ class HomeController extends Controller
                 $user = User::orderBy('id', 'desc')->paginate(5);
 
                 return view('pages.admin.dashboard.dashboard', compact('title', 'medical', 'public','user','users_get','medical_request','public_request'));
-            } else {
+            }
+            elseif (auth()->user()->role == 'superadmin') {
+                $title = Title::first();
+                $medical = Medical::orderBy('id', 'desc')->paginate(5);
+                 $medical_request=Medical::count();
+                 $public_request=PublicService::count();
+                 $users_get = User::where('role','user')->count();
+                 $designer_get = User::where('role','designer')->count();
+                 $product=Product::count();
+                 $order=Order::count();
+                 $admin_get = User::where('role','admin')->count();
+                $public = PublicService::orderBy('id', 'desc')->paginate(5);
+                $user = User::orderBy('id', 'desc')->paginate(5);
+
+                return view('pages.admin.dashboard.dashboard', compact('title', 'medical', 'public','user','users_get','medical_request','public_request','order','product','admin_get','designer_get'));
+            }  else {
                 if(Auth::user()->approve==0){
                     return abort('403');
                 }elseif(Auth::user()->approve==1){

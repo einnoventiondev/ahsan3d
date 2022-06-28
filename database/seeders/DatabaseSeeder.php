@@ -17,13 +17,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
        $admin = User::create([
-            'name' => 'Admin',
-            'email' => 'admin@admin.com',
+            'name' => 'superadmin',
+            'email' => 'superadmin@admin.com',
             'password' => Hash::make('password'),
-            'role' => 'admin',
+            'role' => 'superadmin',
+            'email_verified_at' => '2021-10-04 00:00:00',
+            'remember_token' => Str::random(10),
+        ]);
+        $designer = User::create([
+            'name' => 'designer',
+            'email' => 'designer@designer.com',
+            'password' => Hash::make('password'),
+            'role' => 'designer',
             'email_verified_at' => '2021-10-04 00:00:00',
             'remember_token' => Str::random(10),
         ]);
@@ -35,11 +43,13 @@ class DatabaseSeeder extends Seeder
             'email_verified_at' => '2021-10-04 00:00:00',
             'remember_token' => Str::random(10),
         ]);
-        $adminRole = Role::create(['name' => 'admin']);
+        $adminRole = Role::create(['name' => 'superadmin']);
         $userRole = Role::create(['name' => 'user']);
+        $designerRole = Role::create(['name' => 'designer']);
         $admin->assignRole($adminRole);
         $user->assignRole($userRole);
-        
+        $designer->assignRole($designerRole);
+
         // \App\Models\User::factory(10)->create();
     }
 }
