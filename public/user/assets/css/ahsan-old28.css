@@ -1,0 +1,861 @@
+/*
+Theme name:;
+autor:ahsan Contact Whatsup + skype +923014749625;
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background-color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    white-space: 1px;
+    font-family: 'JannaRegular';
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.al-center {
+    align-items: center;
+}
+
+.jst-center {
+    justify-content: center;
+}
+
+.jst-btw {
+    justify-content: space-between;
+}
+
+.ml-2 {
+    margin-left: 20px !important;
+}
+
+.ml-3 {
+    margin-left: 30px !important;
+}
+
+.mgb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mgt-0 {
+    margin-top: 0 !important;
+}
+
+.mgr-0 {
+    margin-right: 0 !important;
+}
+
+.mgl-0 {
+    margin-left: 0 !important;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.container-f {
+    max-width: 1196px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-m {
+    max-width: 1062px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.m-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    width: 133px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* ******************************
+mujtmah-almusmamen section start
+******************************* */
+
+.mujtmah-almusmamen {
+    padding: 85px 0 105px 0;
+    background-color: #1F5098;
+}
+
+.mujtmah-almusmamen-heading-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.sub-heading-box {
+    margin-bottom: 0px;
+}
+
+.red-dot {
+    width: 11px;
+    height: 11px;
+    background-color: #D83554;
+    margin-bottom: 3px;
+    /* transform: translate(10px); */
+}
+
+.sub-heading-box__heading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1EA9D4;
+    line-height: 1;
+    font-family: 'JannaRegular';
+}
+
+.heading-box {
+    margin-bottom: 45px;
+}
+
+.mujtmah-heading-box {
+    margin: 0 auto;
+    width: 315px;
+}
+
+.mujtmah-almusmamen__heading {
+    font-size: 43px;
+    font-family: 'JannaRegular';
+    color: #fff;
+    text-shadow: 0 6px 6px rgb(0 0 0 / 16%);
+    font-weight: 700;
+}
+
+.heading-box__underline {
+    background-color: #fff;
+    width: 58px;
+    margin-right: 0px;
+    height: 2px;
+    border-radius: 25%;
+}
+
+.mujtmah-almusmamen__para {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.mujtmah-almusmamen-btn {
+    background-color: #1EA9D4;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.mujtmah-almusmamen-btn:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    color: #1F5098;
+}
+
+.mujtmah-box {
+    width: 51%;
+}
+
+.mujtmah-box2 {
+    width: 45%;
+}
+
+.mujtmah-box__content {
+    max-width: 410px;
+    margin-bottom: 35px;
+}
+
+.mujtmah-box__heading {
+    font-size: 43px;
+    color: #1EA9D4;
+    font-family: 'JannaRegular';
+    text-shadow: 0 6px 6px rgb(0 0 0 / 16%);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.mujtmah-box__para {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.mujtmah-box-btn {
+    background-color: #1EA9D4;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.mujtmah-box-btn:hover {
+    text-decoration: underline;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-white-1 {
+    background-color: #fff;
+    color: #1F5098;
+    margin-left: 30px;
+}
+
+.mujtmah-box-btn__img {
+    width: 12px;
+    height: auto;
+    margin-left: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.mujtmah-box-btn__img2 {
+    width: 15px;
+    margin-left: 10px;
+}
+.mujtmah-box-btn__img3{
+    width: 12px; 
+    margin-right: 10px;
+    transform: rotate(180deg);
+}
+.mujtmah-box__count-heading {
+    color: #fff;
+    font-size: 43px;
+    font-family: 'JannaRegular';
+    line-height: 1;
+    font-weight: 700;
+}
+.designer-counter::before{
+    content: '+';
+    color: #fff;
+    font-size: 43px;
+    font-family: 'JannaRegular';
+    line-height: 1;
+}
+.designer-counter2::before{
+    content: '+';
+    color: #fff;
+    font-size: 43px;
+    font-family: 'JannaRegular';
+    line-height: 1;
+}
+.mujtmah-box__media {
+    position: relative;
+}
+
+.mujtmah-box__count {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+}
+
+.mujtmah-box__count-sub-heading {
+    font-size: 18px;
+    font-family: 'JannaRegular';
+    line-height: 1;
+    color: #1EA9D4;
+}
+
+.mujtmah-box__count2 {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    left: 0;
+}
+
+.user-req-p {
+    font-size: 10px;
+    color: #58595B;
+    text-align: center;
+}
+
+.userReq-btn-box {
+    width: 50%;
+    margin: 60px auto 130px auto;
+}
+
+.userReq-btn-box--a {
+    margin-bottom: 50px;
+}
+
+.userReq-btn-box__btn {
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    width: 133px;
+    height: 40px;
+    color: #fff;
+    margin-left: 30px;
+    transition: all 0.3s;
+    box-shadow: 0 12px 6px rgb(0 0 0 / 16%);
+}
+
+.userReq-btn-box__btn:hover {
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.userReq-btn-box__btn--a {
+    background-color: #1ED46B;
+}
+
+.userReq-btn-box__btn--c {
+    background-color: #1EA9D4;
+}
+
+.userReq-btn-box__btn--b {
+    background-color: #D41E1E;
+}
+
+.userreqFormBtn-box {
+    text-align: center;
+}
+
+
+/* ******************************
+mujtmah-almusmamen section end
+******************************* */
+
+
+/* ******************************
+almuntjat section start
+******************************* */
+
+.almuntjat-form {
+    padding: 50px 100px 150px 100px;
+}
+
+.sub-heading-box__heading--b {
+    color: #000;
+    font-family: 'JannaRegular';
+    margin-bottom: 15px;
+}
+
+.b2 {
+    margin-bottom: 35px;
+}
+
+.almuntjat-form__img-label {
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.almuntjat-form__img-label-text {
+    position: absolute;
+    top: 48px;
+    left: 63px;
+    z-index: 1;
+    color: #fff;
+}
+
+.almuntjat-form__img-input {
+    display: none;
+}
+
+.almuntjat-form__input-wrapper {
+    margin-bottom: 48px;
+}
+
+.almuntjat-form {
+    width: 100%;
+}
+
+.almuntjat-form__wasaf-input {
+    width: 100%;
+    border: 4px solid #E3E9EC;
+    border-radius: 10px;
+    min-height: 128px;
+    outline: none;
+    padding: 20px 15px;
+    color: #E3E9EC;
+}
+
+.almuntjat-form__wasaf-input::placeholder {
+    color: #E3E9EC;
+}
+
+.almuntjat-form__wasaf-input:focus {
+    border: 4px solid #1F5098;
+    color: #1F5098;
+}
+
+.almuntjat-form__input {
+    width: 100%;
+    border: 4px solid #E3E9EC;
+    border-radius: 25px;
+    outline: none;
+    padding: 5px 15px;
+    color: #E3E9EC;
+    height: 40px;
+}
+
+.almuntjat-form__input::placeholder {
+    color: #E3E9EC;
+}
+
+.almuntjat-form__input:focus {
+    border: 4px solid #1F5098;
+    color: #1F5098;
+}
+
+.form-inner-wrapper {
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.almuntjat-form__box {
+    width: 31%;
+    margin-bottom: 30px;
+}
+
+.almuntjat-form__input.failed::placeholder {
+    color: #D83554;
+}
+
+.almuntjat-form__input.failed {
+    border: 4px solid #D83554;
+    color: #D83554;
+}
+
+.almuntjat-form__input.failed:focus {
+    border: 4px solid #D83554;
+    color: #D83554;
+}
+
+.input-holder {
+    position: relative;
+}
+
+.input-holder__img {
+    position: absolute;
+    width: 12px;
+    top: calc(50% - 6px);
+    left: 15px;
+}
+
+.almuntjat-form-error {
+    padding: 10px 20px;
+    height: 60px;
+    background-color: #1F5098;
+    border-radius: 13px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 52px;
+}
+
+.almuntjat-form-error__img {
+    width: 24px;
+    height: auto;
+    margin-left: 45px;
+    margin-bottom: 0 !important;
+}
+
+.almuntjat-form__btn {
+    background-color: #1F5098;
+    box-shadow: 0px 12px 6px rgb(0 0 0 / 16%);
+    margin: 0 auto 30px auto;
+    color: #fff;
+}
+
+.almuntjat-form__text {
+    font-size: 18px;
+    color: #58595B;
+    text-align: center;
+}
+
+.ahs-member-model-box {
+    width: 290px;
+}
+/* #memberModal .ahs-member-model-box {
+    width: 0px;
+} */
+
+.ahs-from-box {
+    position: relative;
+}
+
+.ahs-from-box .input-holder__img {
+    top: calc(50% + 18px);
+    left: 25px;
+    margin: 0 !important;
+}
+
+.ahs-img-uploder-cam__holder {
+    position: relative;
+    width: 150px;
+    margin: auto;
+}
+
+.ahs-img-uploder-cam__holder2 {
+    width: 100px;
+}
+
+.ahs-img-uploder-cam {
+    position: absolute;
+    width: 34px;
+    height: auto;
+    bottom: -40px;
+    right: 0;
+}
+
+.inner-line2 {
+    border: 1px solid #215099;
+    background-color: #215099;
+    position: absolute;
+    width: 60px;
+    box-shadow: 0 6px 6px rgb(0 0 0 / 16%);
+    bottom: -7px;
+}
+
+.container-x {
+    margin-top: 40px;
+    margin-bottom: -20px;
+}
+
+.terms-wrapper {
+    justify-content: center;
+    text-align: center;
+}
+
+.term-cond {
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.terms-link {
+    font-size: 18px;
+    color: #1F5098;
+    text-decoration: underline;
+}
+
+.container-x2 {
+    max-width: 910px !important;
+}
+
+.new-account-box {
+    margin-top: 170px;
+    text-align: center;
+}
+
+.new-account {
+    font-size: 18px;
+    color: #1F5098;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.modal.login .ahs-from-action {
+    padding-top: 0 !important;
+}
+
+.modal.page .modal-body {
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.forget-password {
+    font-size: 18px;
+    color: #1F5098;
+    margin-top: 10px !important;
+}
+
+.forget-password:hover {
+    color: #1F5098;
+    text-decoration: underline;
+}
+
+.forget-password-box {
+    margin-top: 10px;
+}
+
+.ahs-form-head1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1EA9D4;
+    padding-left: 5px;
+}
+
+.ahs-form-head2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.ahs-form-box1 {
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ahs-form-img1 {
+    width: 12px;
+    margin: 0 !important;
+    margin-right: 50px !important;
+}
+
+.ahs-form-box1-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.edit-profile--ahs {
+    margin-left: 20px;
+}
+#designinnerModal .ahs-profile-plus-btn{
+    font-size:15px;
+    margin-left: 30px
+}
+#designinnerModal .svg-plus-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.ahs-profile-plus-btn {
+    color: #1EA9D4;
+    font-size: 20px;
+    background: none;
+    border: none;
+    outline: none;
+    margin-right: 20px;
+}
+
+.ahs-profile-plus {
+    font-size: 20px;
+}
+
+.ahs-profile-plus-btn.disabled {
+    color: #E0E0DE;
+}
+
+.ahs-star {
+    color: #EEEEF0;
+}
+
+.heading__plus {
+    color: #FD354F;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.heading__minus {
+    color: #02BB84;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.userreqFormBtn-box__text {
+    font-size: 18px;
+    color: #58595B;
+    margin-top: 20px;
+}
+
+.userreqFormBtn-box__text--a {
+    text-align: center;
+}
+
+.userreqFormBtn-box {
+    padding-bottom: 40px;
+}
+
+.userreq-blur {
+    position: relative;
+    padding: 0px 25px;
+}
+
+.userreq-blur-bg {
+    background-color: rgb(255 255 255 / 0%);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.prog-box__heading {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.prog-box__para {
+    font-size: 18px;
+    color: #58595B;
+    text-align: center;
+}
+
+.prog-outer--b {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.userReq-btn-box__btn--d {
+    background-color: #1EA9D4;
+}
+
+.userReq-btn-box__btn--e {
+    background-color: #D83554;
+}
+
+#user3RequestModal .almuntjat-form-error,
+#user4RequestModal .almuntjat-form-error {
+    width: 828px;
+    margin: auto;
+}
+
+.rating2 {
+    width: 100%;
+}
+
+.mujtmah-box__link1 {
+    font-size: 18px;
+    color: #D83554;
+    text-decoration: none;
+    margin: 0 23px;
+    margin-left: 5px;
+    line-height: 1;
+}
+
+.mujtmah-box__link2 {
+    font-size: 18px;
+    color: #fff;
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: underline;
+    line-height: 1;
+}
+
+.mujtmah-box-btn__img2 {
+    margin-right: 10px;
+    transform: rotate(180deg);
+}
+.ahs-stars i{
+    font-size: 30px !important;
+
+}
+
+
+/* ******************************
+almuntjat section end
+******************************* */
+
+
+/* ********************
+MEDIA QUERIES
+********************* */
+
+@media(max-width:1200px) {
+    .container-m {
+        max-width: 1024px;
+    }
+}
+
+@media(max-width:1024px) {
+    .container-m {
+        max-width: 768px;
+    }
+    .mujtmah-box__heading,
+    .mujtmah-box__count-heading {
+        font-size: 36px;
+    }
+    .mujtmah-box__para {
+        font-size: 16px;
+    }
+    /* mujtmah-almusmamen section end */
+    /* almuntjat-form section start */
+    /* almuntjat-form section end */
+    .almuntjat-form {
+        padding: 50px 0px 150px 0px;
+    }
+}
+
+@media(max-width:767px) {
+    .container-m {
+        max-width: 360pxpx;
+    }
+    .mujtmah-almusmamen {
+        padding: 50px 0;
+    }
+    .mujtmah-almusmamen-wrapper {
+        flex-wrap: wrap;
+    }
+    .mujtmah-box2,
+    .mujtmah-box {
+        width: 100%;
+    }
+    .mujtmah-box {
+        margin-bottom: 70px;
+    }
+    .mujtmah-box {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    /* mujtmah-almusmamen section end */
+    /* almuntjat-form section start */
+    /* almuntjat-form section end */
+    .almuntjat-form__box {
+        width: 100%;
+    }
+}
+
+
+/* ********************
+MEDIA QUERIES end
+********************* */

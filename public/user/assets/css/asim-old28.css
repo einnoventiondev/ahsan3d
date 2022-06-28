@@ -1,0 +1,1845 @@
+    
+    /* ////////////////////////////////////  designer section start here  //////////////////////////////////// */
+    #productdesignModal .designer-sec::after{display:none;}
+    #designinnerModal .designer-sec {
+        padding-top: 50px;
+    }
+    
+    #designinnerModal .designer-sec::before {      
+        content: "";
+        position: absolute;
+        background: url(../images/design-bg.png) no-repeat;
+        background-position: top center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        z-index: -1;
+        left: 0;
+        top: -26px;
+        bottom: auto;
+        right: 0;
+        display: block;
+        margin: auto;
+        max-height: unset;
+        height: 1020px;
+        width: 1280px;
+    }
+    
+    /* .product-1 {
+        background: url(../images/design-9.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .product-2 {
+        background: url(../images/design-2.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .product-3 {
+        background: url(../images/design-3.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .product-4 {
+        background: url(../images/design-4.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .product-5 {
+        background: url(../images/design-5.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    } */
+    
+    #designinnerModal .modal-header {
+        padding: 0px;
+        padding-right: 4rem;
+    }
+    
+    #designinnerModal .modal-header .btn-close {
+        box-shadow: none;
+        z-index: 9999;
+    }
+    
+    #designinnerModal .design-card-inner a {
+        width: 100%;
+    }
+    
+    .add-btn span {
+        color: #1EA9D4;
+    }
+    .plus-bton{
+        font-weight: 300;
+    }
+    
+    .btn-add {
+        margin: 0;
+        border: 1px solid #1EA9D4;
+        background-color: #1EA9D4;
+        color: #ffffff;
+        border-radius: 50px;
+        opacity: 1;
+        font-size: 18px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 12px 12px rgb(0 0 0 / 16%);
+    }
+    
+    #productdesignModal .modal-header {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    #productdesignModal .btn-close {
+        padding: 0px;
+        width: 40px;
+        height: 40px;
+        transform: translate(45px);
+    }
+    
+    #productdesignModal .designer-sec::before {
+        background: none !important;
+    }
+    
+    .design-card-right-top {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .design-card-right-top p {
+        font-size: 10px;
+        font-weight: bold;
+        color: #1EA9D4;
+    }
+    
+    #productdesignModal .designer-sec-1 {
+        padding-bottom: 80px !important;
+    }
+    
+    .txt-green {
+        color: #1ED46B !important;
+    }
+    
+    .txt-blue {
+        color: #1EA9D4 !important;
+    }
+    
+    .txt-red {
+        color: #D83554 !important;
+    }
+    .pink-btn-bg{
+        background-color: #1EA9D4 !important;
+    }
+    .product-add-link {
+        width: 100%;
+    }
+    /* ////////////////////////////////////  designer-sec-1  css end here  //////////////////////////////////// */
+
+    .notification-box.notification-box-wdt{
+        width: 427px;
+    }
+
+    /* ////////////////////////////////////  product add view  css start here  //////////////////////////////////// */
+    
+    .product-add-upload {
+        background-color: #9FA5B2;
+        display: block;
+        position: relative;
+        border-radius: 10px;
+        /* border: 4px solid #fff; */
+        width: 128px;
+        height: 128px;
+    }
+    
+    .product-add-upload p {
+        color: #fff;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        /* opacity: 0; */
+    }
+    
+    .uplod-img-active p {
+        opacity: 1;
+    }
+    
+    .product-add-upload img {
+        margin-bottom: 0px !important;
+        margin-top: 0px !important;
+        height: 100%;
+        width: 100% !important;
+    }
+    
+    .product-add-upload .camera-icon {
+        position: absolute;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        bottom: -20px;
+        left: -20px;
+        background-color: #1F5098;
+        text-align: center;
+        cursor: pointer;
+        line-height: 2.3;
+        font-size: 15px;
+        z-index: 9999;
+    }
+
+    .product-add-upload .camera-icon i {
+        line-height: 2.3;
+        color: #fff;
+    }
+    .product-add-upload .camera-icon svg {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .sub-heading-box__heading{
+        margin-right: 10px !important;
+    }
+    .mujtmah-almusmamen  .sub-heading-box__heading{
+        margin-right: 0px !important;
+    }
+    .mujtmah-heading-box .red-dot{
+        transform: translate(10px) !important;
+    }
+    /* #productaddModal .red-dot , #productaddformModal .red-dot{
+        transform: translate(0px);
+    } */
+    .product-overlay{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.6;
+        visibility: visible;
+        background: #333;
+        transition: all .3s;
+    }
+    .almuntjat-form-error i {
+        font-size: 18px;
+        margin-left: 20px;
+        color: #fff;
+    }
+    
+    .upload-cross-red {
+        background-color: #D41E1E !important;
+    }
+    
+    .uplod-img-active {
+        border: 4px solid #1EA9D4;
+    }
+    
+    .ahs-profile-plus {
+        font-size: 38px !important;
+        padding-top: 20px;
+    }
+    
+    .switch {
+        width: 69%;
+        text-align: left;
+        margin-top: 20px;
+    }
+    
+    .switch .form-check {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        direction: ltr;
+        padding-left: 0px;
+    }
+    
+    .switch .form-check-input {
+        width: 40px;
+        height: 23px;
+        background-color: #d3dade;
+        border-color: #d3dade;
+    }
+    .switch .form-check-input:checked{
+        background-color: #02BB84;
+        border-color: #02BB84;
+    }
+    .switch .form-check-label {
+        margin: 0px;
+        padding-left: 10px;
+        border: none;
+        font-size: 14px;
+        justify-content: left;
+    }
+    
+    .switch .form-check-input:focus {
+        box-shadow: none;
+    }
+    
+    .switch p {
+        color: #9FA5B2;
+        margin-bottom: 14px;
+        font-weight: 300;
+    }
+    
+    .error-red-bg {
+        background-color: #D83554 !important;
+    }
+    
+    .productadd-top-btn {
+        background-color: #E0E0DE;
+        color: #fff;
+        height: 40px;
+        width: 133px;
+        text-align: center;
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+        border-radius: 20px;
+    }
+    
+    form .search-input i {
+        pointer-events: none !important;
+    }
+    /* ////////////////////////////////////  product add view  css end here  //////////////////////////////////// */
+    /* stat blur bg */
+    
+    .blur-star {
+        display: none;
+    }
+    
+    .blur-bg {
+        margin: auto;
+        /* background-color: rgb(255 255 255 / 0%);
+        backdrop-filter: blur(8px); */
+        width: 100%;
+        height: 662px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        /* top: 325px; */
+        top: 0;
+        z-index: 1;
+    }
+    .blur.blur-star-rating{
+        padding: 0px 25px;
+    }
+    .blur-star-inner {
+        display: flex;
+        width: 500px;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .blur-bg .review-text {
+        width: 500px;
+    }
+    
+    .blur-star .form-control {
+        background-color: #fff !important;
+        pointer-events: auto !important;
+    }
+    
+    .blur-star-bottom-btn {
+        text-align: center;
+    }
+    
+    .review-text-hide {
+        display: none;
+    }
+    
+    .show-footer-btns {
+        display: none;
+    }
+    
+    .credit-log {
+        position: relative;
+        display: none;
+    }
+    
+    .credit-logo-inner {
+        border-radius: 20px!important;
+        background-color: #fff;
+        color: #000;
+        border: 4px solid #D3DADE;
+        padding: 8px 15px;
+        height: 73px;
+        width: 359px;
+    }
+    
+    .flot-lft {
+        float: left;
+    }
+    
+    .credit-card-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 5px solid #D3DADE;
+        padding: 10px;
+    }
+    
+    .credit-logo-inner i {
+        font-size: 20px;
+        color: #00AE9B;
+    }
+    
+    .credit-logo-inner .row {
+        align-items: center;
+    }
+    
+    .credit-logo-inner h5 {
+        font-size: 14px;
+        color: #003B4A;
+        margin-bottom: 0px;
+    }
+    
+    .green-border {
+        border-color: #00AE9B;
+    }
+    
+    .gray-background {
+        color: #D3DADE;
+    }
+    
+    .blur-bg-1 {
+        background-color: rgb(255 255 255 / 0%);
+        backdrop-filter: blur(8px);
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 380px;
+    }
+    
+    .blur-bg--a {
+        top: 0;
+        height: 380px;
+        display: block;
+    }
+    #user4RequestModal .blur-bg--a{
+        height: 360px; 
+    }
+    #user4RequestModal .userreqFormBtn-box{
+        padding-top: 50px;
+    }
+    .orange-bg {
+        background-color: #F8AC00;
+    }
+    
+    .bill-click-show {
+        display: none;
+    }
+    .mb-50{
+        margin-bottom: 50px !important;
+    }
+
+    .blur-bg-1.d-block{
+        height: 250px;
+    }
+.productdesign-main::before{
+    display: none;
+}
+
+#designinnerModal .designer-sec-1::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(360deg, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 0)) !important;
+    /* background: linear-gradient(360deg, rgba(255, 255, 255, 100%), transparent) !important; */
+    /* background: -webkit-linear-gradient(360deg, rgba(255, 255, 255, 100%), transparent) !important; */
+    background-repeat: no-repeat;
+    top: 320px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 130px;
+    z-index: -1;
+
+}
+
+#userRequestModal .modal-header {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.ahs-profile-plus-btn span{
+    text-decoration: underline;
+}
+/* payment blur */
+#userRequestModal .payment{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    padding-top: 50px;
+    top: auto;
+    bottom: 460px;
+}
+
+#user7RequestModal .payment{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    padding-top: 50px;
+    top: auto;
+    bottom: 200px;
+}
+#userRequestModal .credit-payment .form-check-label , #user7RequestModal .credit-payment .form-check-label{
+    width: 25%;
+}
+#userRequestModal  .payment .form-check:last-child label , #user7RequestModal  .payment .form-check:last-child label {
+    width: 50% !important;
+}
+
+.message-error-icon{
+    margin-bottom: 0px !important;
+    margin-left: 20px;
+}
+/* .circle-plus-icon{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 0px;
+    margin-top: auto;
+} */
+.circle-plus-icon i{
+    font-size: 43px;
+    margin-left: 5px;
+}
+#productaddModal .btn-close{
+    width: 17px;
+    height: 17px;
+}
+
+
+.modal-header .profile.zhd-box .btn-sky.invert{
+    padding: 0px !important;
+    width: 96px;
+    height: 30px;
+    font-size: 14px;
+}
+
+.blur .userReq-btn-box__btn {
+    z-index: -1;
+}
+.blur input {
+    cursor: pointer !important;
+}
+.svg-plus-icon{
+    color: #1EA9D4;
+    width: 40px;
+    height: 40px;
+    margin-left: 7px;
+    border-radius: 50%;
+    box-shadow: 0 12px 12px rgb(0 0 0 / 16%);
+    opacity: 1;
+    font-size: 12px;
+}
+.disabled svg{
+    color: #E3E9EC;
+    background: #fff;
+}
+
+.modal-bottom-txt{
+    text-align: center;
+    color: #58595B;
+    font-family: 'JannaRegular';
+}
+
+.star-s-30 i{
+    font-size: 30px !important;
+}
+
+
+#requestsModal .requests-position{
+    padding-bottom: 100px;
+}
+
+#requestsModal .modal-footer {
+    position: relative !important;
+}
+.disabled.tadile-btn{
+    box-shadow: none !important;
+    background-color: #E0E0DE;
+}
+.register-pdf{
+    position: absolute;
+    right: 140px;
+}
+
+#user3RequestModal .almuntjat-form-error-2{
+ margin-top: 50px;   
+}
+ /* /////////////////////////////////////// user7RequestModal hide d-none class default /////////////////////////////////////// */
+       #user7RequestModal .modal-body .payment.credit-payment.d-block{
+        display: block !important;
+        }
+
+    /* styling end here */
+
+
+#designModal nav .left-side .border-bottom, #designinnerModal nav .left-side .border-bottom, #cleanshotModal nav .left-side .border-bottom{
+    border-bottom-color: #58595B !important;
+    padding-bottom: 2px;
+}
+
+
+.view-order-heading{
+    margin-right: 150px;
+} 
+.m-r-30{
+    margin-right: 30px;
+}
+
+#designer-order .modal-header , #designer-order-upload .modal-header , #designer-review-upload .modal-header,
+#designer-bid-submission .modal-header,#designer-submit-quote  .modal-header, #designer-bid-rejected  .modal-header , #designer-information  .modal-header , #designer-order-submitted .modal-header , #healthServiesModal .modal-header{
+    padding: 2rem 0rem !important;
+}
+
+#healthServiesModal .profile.zhd-box{
+    text-align: left;
+}
+
+    /* //////////////////////////////////// responsive start here ////////////////////////////////////////////////*/
+    
+    @media (min-width: 360px) and (max-width: 767px) {
+        .notification-box.notification-box-wdt{
+            display: block !important;
+            width: 100% !important;
+        }
+        .m-r-30{
+            margin-right: 0px;
+        }
+        .view-order-heading{
+            margin-right: 0px !important;
+        }
+        
+        #view-order .view-order-heading, #public-order .view-order-heading{
+            margin-right: 0px;
+        }
+        form.p-l-0{
+            padding-left: 0px !important;
+        }
+        form .padd-l-0{
+            padding-left: 0px !important;
+            padding-right: 20px;
+
+        }
+        .register-pdf {
+            position: absolute;
+            right: 35px;
+            top: 90px;
+        }
+        .register-pdf .btn{
+            padding: 3px 6px;
+        }
+        #requestsModal .modal-body{
+            margin-top: 50px;
+        }
+        /* home page */
+        .error-red-bg img{
+            width: 40px !important;
+
+        }
+        #productaddformModal .change-zhd{
+            margin: 0px;
+            padding: 0px;
+            width: 110px;
+        }
+        #productaddformModal .modal-header{
+            padding-left: 0 !important;
+            padding-right: 0!important;
+
+        }
+        .dot-txt-main .dot.center::before {
+            right: -113px !important;
+        }
+        .about-content{
+            padding-top: 50px !important;
+        }
+        .dot-txt-main .right.left-right-h::before {
+            left: -20px !important;
+        }
+
+        .footer-white-heading .dot.center::before {
+            right: -90px !important;
+        }
+        .footer-white-heading .dot.center {
+            right: -10px;
+        }
+
+        /* end home page */
+
+        .mob-p-0{
+            padding: 0px;
+        }
+        .btn-list .blur-part{
+            display: none;
+        }
+        .designer-sec {
+            padding-top: 50px;
+            margin-top: 0px;
+        }
+        .designer-sec::before {
+            background-size: cover;
+            top: 140px;
+            max-height: 150px;
+            background: none !important;
+        }
+        .design-txt {
+            padding-bottom: 30px;
+        }
+        .designer-title {
+            font-size: 36px;
+            padding-bottom: 20px;
+        }
+        .search-form {
+            padding: 0px;
+            padding-bottom: 50px;
+        }
+        .search-form .ps-0 {
+            padding-left: 12px !important;
+        }
+        .designer-sec .sort-btn .btn {
+            text-align: right;
+        }
+        .btn-list {
+            padding: 0px;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        .mob-center{
+            text-align: center;
+        }
+        .sort-btn {
+           margin-bottom: 10px;
+        }
+        .btn-white, .btn-blue {
+            margin-left: 15px;
+            margin-bottom: 30px;
+        }
+        .btn-trans {
+            margin-left: 15px;
+            margin-bottom: 30px;
+        }
+        .btn-list .btn-trans:nth-child(even) {
+            margin-left: 0px !important;
+        }
+        .design-card-inner .row:first-child .col-md-6 {
+            width: 50%;
+        }
+
+        #designinnerModal .btn-white, #designinnerModal .btn-blue {
+            margin-left: 0px;
+        }
+        #designinnerModal .btn-trans {
+            margin-left: 0px;
+        }
+
+
+        #designinnerModal .designer-sec::before {
+            top: 100px !important;
+            bottom: auto;
+            left: 0;
+            right: 0;
+            display: block;
+            margin: auto;
+            max-height: unset;
+            height: 180px !important;
+            width: 327px !important;
+            overflow: hidden;
+            background: none !important;
+            /* background: url(../images/design-mob.png) no-repeat !important; */
+            background-position: top center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+
+        #productdesignModal .btn-close{
+            transform: translate(10px);
+        }
+        /* .almuntjat-form {
+            padding: 50px 100px 150px 100px !important;
+        } */
+
+        #designinnerModal .designer-sec {
+            padding-top: 0px;
+        }
+
+        #designinnerModal .modal-header{
+            padding-top: 140px;
+            padding-right: 20px;
+        }
+        #designinnerModal #menu-toggle{
+            left: 25px !important;
+            /* top: 35px !important; */
+        }
+        #designinnerModal #page-content-wrapper{
+            padding-right: 0px !important;
+        }
+        
+        .circle-plus-icon{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 0px;
+            margin-top: 30px;
+        }
+        #productaddModal .almuntjat-form{
+            padding: 0px !important;
+        }
+
+        .ahs-profile-plus {
+            font-size: 32px;
+        }
+        /* #designinnerModal css start here */
+        .product-add-upload{
+            margin-top: 30px;
+        }
+
+        .switch{
+            text-align: right;
+        }
+        .switch .form-check {
+            justify-content: right;
+        }
+        .almuntjat-form-error{
+            font-size: 13px;
+            line-height: 1.2;
+        }
+        /* #designinnerModal css end here */
+
+        #userRequestModal .modal-header{
+            padding-bottom: 4rem;
+        }
+        #userRequestModal .profile  .btn-sky.profile-btn{
+            display: none;
+        }
+        #userRequestModal .profile{
+            text-align: left;
+        }
+        .zhd-product-visit .btn{
+            margin-top: 30px;
+        }
+        .designer-text {
+            width: 20rem;
+        }
+        .jst-btw{
+            flex-direction: column;
+            text-align: center;
+        }
+        .design-card-inner {
+            width: 100%;
+        }
+
+        #userRequestModal .modal-header {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .modal-body .final .col-auto{
+            width: 100%;
+        }
+        .zhd-quote {
+            margin-bottom: 40px !important;
+        }
+        .zhd-product-visit {
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .btn-sky.invert {
+            margin-top: 30px;
+        }
+
+        .userReq-btn-box{
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        .userReq-btn-box__btn{
+            margin-top: 20px;
+            margin-left: 0px;
+        }
+        .conditional-blur label{
+            margin-top: 1.5rem!important;
+        }
+        #userRequestModal .credit-payment .form-check-label , #user7RequestModal .credit-payment .form-check-label  {
+            width: 100%;
+        }
+        #userRequestModal .payment .form-check:last-child label,   #user7RequestModal .payment .form-check:last-child label {
+         width: 100% !important;
+        }
+
+           /* user2RequestModal modal */
+
+        #user2RequestModal .submitted-data p {
+            font-size: 17px;
+        }
+        .modal-header .profile .btn-sky.invert{
+            display: none;
+        }
+
+        .modal-header .zhd-center-close{
+            width: auto;
+        }
+        .modal-header .profile.zhd-box{
+            width: auto;
+        }
+        #user3RequestModal .almuntjat-form-error, #user4RequestModal .almuntjat-form-error {
+            width: 100%;
+            line-height: 1.4;
+        }
+        #user3RequestModal .upload-btn-wrapper{
+            
+        margin-bottom: 30px;
+
+        }
+        #user3RequestModal .userReq-btn-box{
+            width: 33.33%;
+        }
+        #user3RequestModal .userReq-btn-box__btn{
+            margin-top: 30px;
+        }
+        .text-area-input{
+            margin-bottom: 20px;
+        }
+
+        .blur-bg .review-text {
+            width: 330px;
+        }
+        .hide-mobile{
+            display: none;
+        }
+
+
+        /* #registerModal modal css */
+        
+        .tab-justify-right{
+            justify-content: right !important;
+        }
+         #registerModal .almuntjat-form-error__img {
+            margin-top: 0px;
+            margin-bottom: 0px!important;
+            margin-left: 20px;
+            width: 30px;
+        }
+
+        /* #registerModal modal css end */
+
+        .profile.ahs-member-model-box2{
+            text-align: left;
+        }
+        .ahs-member-model-box2 .btn{
+            margin-left: 10px !important;
+        }
+        .modal-body .ahs-form-box1 .ahs-form-img1{
+            margin-bottom: 0px!important;
+            width: 20px !important;
+            margin-right: 15px !important;
+        }
+        .modal.register .modal-header .membership-edit{
+            margin-top: 10px;
+            padding: 4px 34px !important;
+        }        
+
+        .modal.page .btn-close{
+            margin-right: 10px;
+            margin-bottom: 0px;
+        }
+        
+        #financialOperations .ahs-member-model-box{
+            width: 100%;
+        }
+        #financialOperations2 .ahs-member-model-box2{
+            width: 100%;
+        }
+
+        .ps-lr-0{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+/* cleanshort modal */
+
+  /* clean short modal */
+        #cleanshotModal #page-content-wrapper{
+            position: relative;
+        }
+        #cleanshotModal-readonly #page-content-wrapper{
+            position: relative;
+        }
+        
+        .cleanshot-row{
+            align-content: flex-end !important;
+            padding-bottom: 25px;
+        } 
+
+            .adobe-icon{
+                margin-top: 30px;   
+                float: right !important;
+            }
+            .card-img-main{
+                margin-bottom: 30px;
+            }
+            .personal-pro {
+                float: right !important;
+            }
+            .clean-headings h3 {
+                font-size: 33px;
+            }
+            .color-circle-main {
+                margin-bottom: 20px;
+            }
+            .color-circle-main .blue-border{
+                margin-right: 0px;
+            }
+            .zhd-textarea-clean{
+                width: 100%;
+            }
+            #cleanshotModal .zhd-form-clean, .textarea-clean-short, #cleanshotModal .footer-clean{
+                padding: 0px !important;
+            }
+            #cleanshotModal-readonly .zhd-form-clean, #cleanshotModal-readonly .footer-clean{
+                padding: 0px !important;
+            }
+
+
+            /* request modal */
+
+            #requestsModal .nav-tabs .nav-item, .onTab .nav-tabs .nav-item{
+                width: 100% !important;
+            }
+           
+            .designer-bdy .btn-upload-designer, .designer-bdy .red-btn, .btn-form{
+                margin-top: 30px;
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+
+            #designer-bid-submission .btn-form {
+                margin-top: 0px !important;
+            }
+            .zhd-finished .btn{
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+            #designer-review-upload .blur {
+                padding: 0px !important;
+            }
+
+            #designer-bid-submission .red-btn{
+                margin-top: 0px !important;
+            }
+            #designer-submit-quote .blur-bg{
+                bottom: 300px !important;
+            }
+
+
+            
+            /* membermodal */
+            #memberModal .profile.ahs-member-model-box{
+                text-align: left;
+            }
+            #memberModal .member-cross-btn{
+                width: 200px;
+            }
+            #memberModal .ahs-member-model-box .btn{
+                margin-left: 0px;
+            }
+            #memberModal #blah1{
+                width: 100%;
+            }
+            #memberModal .ahs-img-uploder-cam{
+                width: 34px;
+                bottom: 0;
+            }
+
+            #memberModal .almuntjat-form-error__img{
+                margin: 0px !important;
+                width: 30px;
+                margin-left: 20px !important;
+            }
+            #memberModal .edit-profile.membership-edit{
+                padding: 4px 33px !important;
+            }
+
+/* designModal */
+
+           #designModal #page-content-wrapper{
+                position: relative;
+            }
+            #designModal #sidebar-wrapper{
+                right: 0;
+            }
+            #designModal #wrapper.menuDisplayed #sidebar-wrapper {
+                right: 0;
+            }
+            #designinnerModal #wrapper.menuDisplayed #sidebar-wrapper {
+                right: 0;
+                top: 0;
+            }
+            #designinnerModal #wrapper.mobile-nav #sidebar-wrapper{
+                right: 0;
+                top: 0;
+            }
+            #cleanshotModal #wrapper.menuDisplayed #sidebar-wrapper, #cleanshotModal-readonly #wrapper.menuDisplayed #sidebar-wrapper{
+                right: 0;
+            }
+            #cleanshotModal #sidebar-wrapper, #cleanshotModal-readonly #sidebar-wrapper{
+                right: 0;
+            }
+            #cleanshotModal-readonly .modal-body{
+                padding: 0px;
+            }
+            #cleanshotModal-readonly .small-card__images-box{
+                margin-left: 20px;
+            }
+            #cleanshotModal-readonly .small-card img{
+                margin-left: 20px;
+            }
+
+
+            #productaddModal .modal-header{
+                padding-top: 30px !important;
+            }
+
+            .video iframe{
+                width: 275px;
+            }
+            .mujtmah-almusmamen-wrapper .mujtmah-box-btn-wrapper, .mujtmah-box__content .mujtmah-box-btn-wrapper{
+                justify-content: center;
+                align-items: center;
+            }
+            .mujtmah-box__content .mujtmah-box-btn-wrapper button:last-child{
+                margin-left: 0px;
+            }
+            .actions .btn:last-child{
+                margin-left: 0px !important;
+            }
+            
+            .design-card-main {
+                padding-top: 0px;
+            }
+            #page-content-wrapper{
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .almuntjat-form-error__img{
+                width: 20px;
+                margin-left: 20px;
+            }
+            .small-card img {
+                width: 90px;
+            }
+            .small-card__images-box {
+                width: 90px;
+                height: 90px;
+            }
+            #cleanshotModal .mujtmah-box__link1{
+                margin-right: 0;
+            }
+            .map-cap {
+                bottom: 0;
+                padding-right: 21px;
+                margin-bottom: 15px;
+            }
+            #page-content-wrapper{
+                padding-bottom: 0;
+            }
+            .user-req-p{
+                text-align: right;
+                margin-top: 15px;
+                padding-right: 10px;
+            }
+    }
+    
+    /* ////////////////////////////////////////// tab landscape responsive //////////////////////////////////////////////////////// */
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        #healthServiesModal .modal-body {
+            padding: 3rem 1rem!important;
+        }
+        /* healthServiesModal */
+
+        .male-back .back {
+            right: 118px;
+            top: 67px;
+        }
+        .male-back .leftHand {
+            right: 148px;
+            top: 136px;
+        }
+
+        .male-back .rightHand {
+            right: 91px;
+            top: 136px;
+        }
+        .male-back .leftLeg {
+            right: 137px;
+            top: 190px;
+        }
+        .male-back .rightLeg {
+            right: 100px;
+            top: 190px;
+        }
+        .male-back .leftFoot {
+            bottom: 10px;
+            right: 135px;
+        }
+        .male-back .rightFoot {
+            bottom: 10px;
+            right: 105px;
+        }
+        /* healthServiesModal end */
+
+        .m-r-30{
+            margin-right: 0px;
+        } 
+
+        .designer-sec::before, .designer-sec::after, #designinnerModal .designer-sec-1::after, #designinnerModal .designer-sec::before{
+            display: none;
+        }
+        .notification-box.notification-box-wdt{
+            width: 325px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+        }
+        .designer-sec {
+            padding-top: 50px;
+            margin-top: 0px;
+        }
+        .designer-sec::before {
+            top: 140px;
+        }
+        .btn-white {
+            margin-left: 13px;
+            margin-bottom: 30px;
+        }
+        .btn-trans {
+            margin-left: 13px;
+            margin-bottom: 30px;
+        }
+        .btn-list .btn-blue{
+            margin-left: 13px;
+            margin-bottom: 30px;
+        }
+
+        .btn-list .blur-part{
+            display: none;
+        }
+
+        #designinnerModal .designer-sec::before{
+            width: 1220px;
+            bottom: 500px;
+        }
+        #designinnerModal  #wrapper.menuDisplayed #sidebar-wrapper {
+            right: 0;
+        }
+        #designinnerModal .modal-header {
+            padding-top: 140px;
+            padding-right: 20px;
+        }
+        #productdesignModal .btn-close{
+            transform: translate(10px);
+        }
+        .almuntjat-form {
+            padding: 0px !important;
+            /* padding: 50px 100px 150px 100px !important; */
+        }
+
+        .product-add-upload{
+            margin-top: 30px;
+        }
+
+        /* userRequestModal */
+        #userRequestModal .modal-header{
+            padding-bottom: 4rem;
+        }
+        .hide-tab{
+            display: none;
+        }
+        .design-card-inner {
+            width: 100%;
+        }
+
+        #userRequestModal .credit-payment .form-check-label , #user7RequestModal .credit-payment .form-check-label {
+            width: 100%;
+        }
+        #userRequestModal .payment .form-check:last-child label,  #user7RequestModal .payment .form-check:last-child label {
+         width: 100% !important;
+        }
+
+        /* user2RequestModal modal */
+
+        #user2RequestModal .submitted-data p {
+            font-size: 17px;
+        }
+        #user3RequestModal .modal-header{
+            padding: 4rem 0rem;
+        }
+        #user3RequestModal .almuntjat-form-error, #user4RequestModal .almuntjat-form-error {
+            width: 100%;
+        }
+        #user3RequestModal .userReq-btn-box{
+            width: 80%;
+            text-align: center;
+        }
+        .userReq-btn-box {
+            width: 100%;
+        }
+
+        /* #registerModal modal css */
+        
+        .tab-justify-right{
+            justify-content: right !important;
+        }
+         #registerModal .almuntjat-form-error__img {
+            margin-top: 0px;
+            margin-bottom: 0px!important;
+            width: 30px;
+        }
+
+        /* #registerModal modal css end */
+     
+        .profile.ahs-member-model-box2{
+            text-align: left;
+        }
+        .ahs-member-model-box2 .btn{
+            margin-left: 0px !important;
+        }
+        .membership-edit{
+            margin-top: 10px;
+            width: 60%;
+        }
+        .modal-body .ahs-form-box1 .ahs-form-img1{
+            margin-bottom: 0px!important;
+            width: 20px !important;
+            margin-right: 15px !important;
+        }
+
+       /* #financialOperations2 .membership-edit{
+        width: 57%;
+        } */
+       
+/* blur review modal */
+
+      /* clean short modal */
+      #cleanshotModal #page-content-wrapper{
+        position: relative;
+    }
+    #cleanshotModal-readonly #page-content-wrapper{
+        position: relative;
+    }
+    #cleanshotModal-readonly .modal-body{
+        padding: 0px !important;
+    }
+      .cleanshot-row{
+        align-content: flex-end !important;
+        min-height: 430px;
+      } 
+
+    .adobe-icon{
+        margin-top: 30px;   
+        float: right;
+    }
+ 
+    #designerPublicServiesModal .submitted-data p {
+        font-size: 17px;
+    }
+    #designer-order-upload .designer-text{
+        margin-top: 30px;
+    }
+    #designer-review-upload .review-text{
+        margin-top: 50px;
+    }
+
+    /* membermodal */
+    #memberModal .profile.ahs-member-model-box{
+        text-align: left;
+    }
+    #memberModal .ahs-member-model-box .btn{
+        margin-left: 0px;
+    }
+    #memberModal #blah1{
+        width: 100%;
+    }
+    #memberModal .ahs-img-uploder-cam{
+        width: 34px;
+    }
+    
+    #memberModal .almuntjat-form-error__img{
+        margin: 0px !important;
+        width: 30px;
+        margin-left: 20px !important;
+    }
+    
+    #designModal #page-content-wrapper{
+        position: relative;
+    }
+
+    .search-form {
+        padding: 0px 30px;
+    }
+    .search-form .ps-0{
+        padding-left: 12px !important;
+    }
+    .designer-sec .search-form .sort-btn:first-child .btn{
+        text-align: right;
+    }
+    .btn-list {
+        padding-top: 40px;
+        margin-bottom: 20px;
+        padding-right: 30px;
+    }
+
+    .design-card-main {
+        padding-top: 0px !important;
+    }
+    .designer-title {
+        padding-bottom: 30px;
+    }
+    .designer-profile .btn {
+        margin-bottom: 15px;
+    }
+    #designinnerModal .designer-sec {
+        padding-top: 0px;
+    }
+    footer .social a {
+        margin-right: 0px;
+    }
+    footer .social a:last-child {
+        margin: 0px;
+    }
+    .switch .form-check {
+        padding-left: 10px;
+    }
+    .message-error-icon{
+        width: 30px !important;
+        margin: 0px !important;
+        margin-bottom: 0px !important;
+        margin-left: 20px !important;
+    }
+    
+    #productaddformModal .message-error-icon{
+        margin-bottom: 0px !important;
+    }
+    .zhd-footer{
+        padding-left: 0px!important;
+    }
+
+    .small-card img {
+        width: 115px;
+    }
+    .small-card__images-box{
+        width: 115px;
+        height: 115px;
+    }
+    .small-card__images-img{
+        width: auto !important;
+    }
+    .footer-white-heading .dot.center {
+        right: -10px !important;
+    }
+  
+    .final .col-auto:first-child .dateTime:first-child{
+        padding-top: 50px !important;
+    }
+    #userRequestModal .dateTime.small.padd-t-40{
+        padding-top: 40px !important;
+    }
+    .zhd-form-clean{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .zhd-textarea-clean{
+        width: 100% !important;
+    }
+    
+    .modal.page.show .modal-header {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .zhd-box {
+        width: 150px;
+    }
+
+    #designinnerModal .design-card-main {
+        padding-top: 0px;
+    }
+    #designinnerModal .design-card-main .padd-30{
+        padding-top: 0px;
+    }
+    .mujtmah-box__content .mujtmah-box__wrapper{
+        justify-content: right;
+    }
+    .p-t-70{
+        padding-top: 70px !important;
+    }
+
+    #user3RequestModal .bill-click-show{
+        margin-bottom: 40px;
+    }
+    /* ahsan */
+    .cleanshot-row {
+        min-height: 392px;
+    }
+    .small-card img {
+        width: 90px;
+    }
+    .small-card__images-box {
+        width: 90px;
+        height: 90px;
+    }
+    .small-card__images-text p {
+        font-size: 8px;
+    }
+    #user9RequestModal .modal-header,
+    #designerPublicServiesModal .modal-header{
+        padding: 1rem 25px !important;
+    }
+    .mujtmah-box__link1,.mujtmah-box__link2{
+        font-size: 16px;
+    }
+    .mujtmah-almusmamen{
+        padding-bottom: 80px;
+    }
+    .ad{
+        margin-top: 0 !important;
+    }
+    .acf{
+        margin-bottom: 30px;
+    }
+    /* ahsan */
+
+    .form-top{
+        padding-top: 30px;
+    }
+
+    .zhd-product-visit{
+        margin-top: 50px;
+    }
+
+}
+    
+    /* ////////////////////////////////////////// Large landscape responsive //////////////////////////////////////////////////////// */
+
+
+    @media (min-width:992px) and (max-width: 1199px) {
+
+        /* navbar */
+        .navbar {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .social-icons{
+            display: none;
+        }
+        nav .left-side a {
+            margin: 0px 17px;
+        }
+        /* navbar end */
+       #requestsModal .modal-body .tab-content .nav-link{
+           padding: 0px;
+       }
+        .notification-box.notification-box-wdt{
+            width: 360px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+        }
+        .search-form {
+            padding: 0px 7px;
+            padding-bottom: 50px;
+        }
+        .btn-list {
+            margin-bottom: 52px;
+            padding-right: 28px;
+        }
+        .btn-white {
+            margin-left: 24px;
+            margin-top: 20px;
+        }
+        .btn-trans {
+            margin-left: 24px;
+            margin-top: 20px;
+        }
+        .btn-blue{
+            margin-left: 24px;
+            margin-top: 20px;
+        }
+        .design-card-main {
+            padding-top: 0px;
+        }
+        .btn-list .blur-part {
+            width: 250px;
+            right: 700px;
+            display: none;
+        }
+        #designinnerModal  .btn-white {
+            margin-left: 20px;
+        }
+        #designinnerModal .btn-trans {
+            margin-left: 20px;
+        }
+        #designinnerModal .btn-blue{
+            margin-left: 20px;
+        }
+        #designinnerModal .modal-header .btn-close {
+            margin-right: 90px;
+        }
+
+        #designinnerModal .designer-sec::before {
+            top: 0;
+            bottom: 370px;
+            left: 0;
+            right: -30px;
+            display: block;
+            margin: auto;
+            max-height: unset;
+            height: 1010px;
+            width: 1180px;
+        }
+        #designinnerModal .design-card-main {
+            padding-top: 0px;
+        }
+
+        #productdesignModal .btn-close{
+            transform: translate(10px);
+        }
+
+        .modal.page .modal-header {
+            padding: 1rem 0rem !important;
+        }
+        .almuntjat-form {
+            padding: 50px 100px 150px 100px !important;
+        }
+        .design-card-inner {
+            width: 100%;
+        }
+        #user2RequestModal .modal-header , #user4RequestModal .modal-header{
+            padding: 1rem 0rem !important;
+        }
+        /* ahsan */
+        .left-side{
+            padding-left: 25px;
+        }
+        #main-effect{
+            margin-bottom: 6px;
+        }
+        .actions .btn:first-child {
+            margin-right: 12px;
+        }
+        footer .right p{
+            padding-right: 10px;
+        }
+        .details p{
+            width: 100%;
+        }
+        .designer-sec::before{
+            width: 100%;
+            height: auto;
+            top: 50px;
+        }
+        .navbar{
+            padding-bottom: 0;
+        }
+        .designer-sec{
+            padding-top: 150px;
+        }
+        #designinnerModal .designer-sec::before {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        #designinnerModal .btn-blue {
+            margin-left: 0px;
+        }
+        .star-reating{
+            margin: 20px 0;
+        }
+        .search-form{
+            padding-bottom: 35px;
+        }
+        .btn-list{
+            margin-bottom: 20px;
+        }
+        #designinnerModal .navbar{
+            padding-bottom: 0;
+        }
+        .btn-list .btn-blue{
+            margin-left: 20px !important;
+        }
+        .color-circle-main .color-circle {
+            margin-right: 15px;
+        }
+        .mujtmah-almusmamen{
+            padding-bottom: 80px;
+        }
+        .zhd-box{
+            display: flex;
+            align-items: center;
+        }
+        .zhd-box .profile-btn{
+            margin-right: auto;
+            margin-left: 20px;
+        }
+        .navbar li.nav-item {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+        /* ahsan */
+        #user2RequestModal .modal-header{
+            padding: 0 25px !important;
+        }
+        #user2RequestModal{
+            padding-top: 40px;
+        }
+        .bill-click-show{
+            margin-bottom: 30px;
+        }
+        .zhd-quote{
+            margin-bottom: 60px !important;
+        }
+
+        #requestsModal .modal-body {
+            padding: 0 3rem !important;
+        }
+        #requestsModal .modal-header {
+            padding: 3rem 0rem !important;
+        }
+
+        .form-top{
+            padding-top: 30px;
+        }
+    }
+    
+
+    @media (min-width:1200px) and (max-width: 1300px) {
+        #designinnerModal .designer-sec::before {
+            right: -306px;
+        }
+        #healthServiesModal .modal.page .modal-header {
+            padding: 4rem 0 !important;
+        }
+    }
+
+    /* ////////////////////////////////////////// Extra Large landscape responsive //////////////////////////////////////////////////////// */
+
+    @media (min-width: 1400px) {
+        .design-card-inner {
+            width: 370px;
+        }
+        
+
+    }
+    /* //////////////////////////////////// responsive end here ////////////////////////////////////////////////*/
+  
+
+   #productaddformModal .product-add-upload .camera-icon i{
+        position: absolute;
+        top: 0;
+        left: 9px;
+    }
+
+    #productaddformModal .switch .form-check{
+        padding-left: 20px !important;
+    }
+    .productadd-top-span{
+        pointer-events: none !important;
+        width: 133px;
+    }
+    .productadd-btm-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #productaddformModal .product-sub-btn{
+        margin: 30px 10px !important;
+    }
+
+    .product-sub-btn{
+        margin: 30px 0px !important;
+    }
+
+    .alert-msg{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        right: 0;
+        width: 330px;
+        height: 150px;
+        margin: auto auto;
+        z-index: 999;
+        text-align: center;
+        color: #275099;
+        background-color: #fff;
+        border-color: #fff;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .alert-msg ul{
+        padding: 0px;
+        margin: 0px !important;
+    }
+    .alert-msg .alert-icon{
+        position: absolute;
+        top: 9px;
+        right: 12px;
+        border: 1px solid #1EA9D4;
+        background-color: #1EA9D4;
+        border-radius: 50%;
+        padding: 3px 6px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .alert-msg ul li{
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+   .color-picker {
+        border-radius: 50%;
+        width: 26px;
+        border: none;
+        margin-left: 20px;
+    }
+
+
+    .alert-overlay{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin: auto auto;
+        background-color: #00000066;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10000;
+    }

@@ -1,0 +1,10 @@
+@media screen and (max-width: 974px) {
+    
+.page-wrapper.compact-wrapper .page-body-wrapper .page-body {
+margin-right: 0px !important;
+}
+}
+
+.customizer-links{
+    display:none;
+}

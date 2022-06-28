@@ -1,0 +1,1566 @@
+/* Mobile Devices */
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+/* asim */
+#healthServiesModal .carousel-control-next{
+    top: auto !important;
+    right: 89px !important;
+    bottom: 169px !important;
+}
+#publicServiesModal #carouselIndicators .carousel-control-next{
+    top: auto !important;
+    right: 109px !important;
+    bottom: 169px !important;
+}
+/* asim code end here */
+    /* Navbar */
+    .navbar {
+        padding: 1rem 0;
+        position: absolute;
+        z-index: 1000;
+        background: white;
+        width: 100%;
+    }
+
+    .navbar-nav {
+        padding-right: 0;
+    }
+
+    nav .left-side a {
+        margin: 0px 12px;
+    }
+
+    nav .nav-link.active {
+        width: max-content;
+        padding-right: 0!important;
+    }
+
+    /* Modal */
+    .modal-title {
+        font-size: 18px;
+    }
+    .modal.page .modal-body {
+        padding: 1rem 1rem 0 1rem;
+    }
+    .modal.page .modal-header {
+        padding: 1rem;
+    }
+    .modal {
+        background-color: #FFFFFF;
+    }
+
+    #allRequestsResultModal .modal-body {
+        padding: 1rem 1rem;
+    }
+
+    #publicServiesModal .modal-body {
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    #allRequestsModal .left-content {
+        padding-right: 0;
+        padding-top: 20px;
+    }
+
+    #memberModal .modal-title::after {
+        border-width: 2px;
+    }
+
+    /* title */
+    .outline {
+        font-size: 15px;
+    }
+
+    .modal form {
+        padding: 5px;
+    }
+
+    /* Form */
+    .form-action {
+        padding: 1rem;
+        margin: 0;
+        position: relative;
+        bottom: 0;
+    }
+
+    .form .carousel-indicators {
+        position: absolute;
+        bottom: 90px;
+    }
+
+    .submitted-data div p {
+        padding-right: 0;
+        font-size: 14px;
+    }
+
+    .flying-man {
+        display: none;
+    }
+
+    .form .form-action p {
+        /* margin-bottom: 60px; */
+        padding-top: 0px;
+    }
+
+    #healthServiesModal .robot {
+        margin: auto;
+        display: block;
+    }  
+
+    /* Contact */
+    .section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .details {
+        padding: 0px 10px;
+    }
+
+    .details p {
+        width: 100%!important;
+    }
+
+    /* Banner */
+    .map-place iframe {
+        width: 100%;
+        height: 330px;
+    }
+
+    .map-place .blue-box {
+        left: 0;
+        bottom: -10px;
+    }
+
+    .banner {
+        padding-top: 270px;
+    }
+
+    .banner .carousel-item p {
+        padding-left: 5px;
+    }
+
+    .banner .carousel-indicators {
+        margin-right: 15%;
+        margin-top: 10%;
+        top: 325px;
+        justify-content: center;
+    }
+    
+    .banner .carousel-control-next {
+        right: 60%;
+        z-index: 9999;
+        padding-bottom: 30px;
+        margin-top: -7rem;
+    }
+    
+    .banner .carousel-control-prev {
+        right: 40%;
+        z-index: 9999;
+        padding-bottom: 30px;
+        margin-top: -7rem;
+    }
+
+    .banner-bg {
+        top: -30px;
+        width: 340px;
+        right: 10px;
+    }
+
+    .banner.sample .carousel-inner {
+        /* overflow: auto; */
+        padding-top: 45px;
+        padding-left: 0;
+    }
+
+    .black-bg {
+        top: -140px;
+        width: 290px;
+        left: 0;
+    }
+
+    .black-bg.sample {
+        top: 100px;
+        width: 360px;
+        left: 0;
+    }
+
+    .carousel-item .btn {
+        margin-bottom: 100px;
+    }
+
+    .carousel-item .btn-upload {
+        margin-bottom: 0;
+    }
+
+    #publicServiesModal .form-action {
+        margin-top: 40px;
+    }
+
+    [dir='rtl'] .slick-next {
+        left: 35%!important;
+        top: 440px;
+    }
+    
+    [dir='rtl'] .slick-prev {
+        right: 30%!important;
+        top: 440px;
+    }
+
+    .hands {
+        width: 200px;
+        top: -90px;
+        right: 145px;
+    }
+
+    .hands.sample {
+        left: 0;
+        width: 250px;
+        bottom: 0;
+        top: 90px;
+        right: 80px;
+    }
+
+    .about-content .actions {
+        padding-top: 0px;
+        padding-bottom: 60px;
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    .about-content .actions .btn {
+        margin-left: 0;
+    }
+    
+    .map-cap {
+        bottom: 0;
+    }
+
+    .modal-title::after {
+        left: 30px!important;
+        width: 30px;
+    }
+
+    .title::after {
+        right: 0;
+        width: 45px;
+    }
+
+    .request .description {
+        padding-right: 0rem;
+        padding-left: 0rem;
+    }
+
+    .actions {
+        padding: 10px 0px;
+        margin-right: 0;
+    }
+
+    .top.boxContainer .blue-box {
+        top: -22px;
+        left: 0;
+    }
+
+    .bottom.boxContainer {
+        padding-top: 20px;
+    }
+
+    .bottom.boxContainer img {
+        margin: auto;
+        display: block;
+        width: 100%;
+    }
+
+    .map-cap.side {
+        padding-right: 40px;
+        padding-top: 100px;
+    }
+
+    .bottom.boxContainer .blue-box {
+        right: 0;
+        top: 5px;
+    }
+
+    .nav-tabs {
+        padding-right: 0;
+    }
+    
+    .nav-tabs .nav-link {
+        border: 4px solid #E3E9EC;
+        border-radius: 60px;
+        color: #9FA5B2;
+        padding: 3px 50px;
+        margin: 0 -25px;
+        font-size: 12px;
+    }
+    
+    .nav-tabs .nav-link.active .notification {
+        width: 20px;
+        height: 20px;
+    }
+
+    .request-box::after {
+        bottom: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .tab-content .data {
+        display: block;
+    }
+
+    .tab-content .data p {
+        margin: 8px 0px;
+        font-size: 14px;
+    }
+
+    .modal-footer {
+        position: relative;
+    }
+
+    .dateTime {
+        font-size: 14px;
+    }
+
+    #medical-services .data p, #public-services .data p {
+        margin-right: 0;
+    }
+
+    .tab-content .data span {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .form .carousel-item {
+        height: auto!important;
+    }
+    
+    .submitted-data {
+        float: none;
+    }
+
+    #carouselHealthIndicators .submitted-data {
+        margin: auto;
+        display: block;
+        width: 50%;
+    }
+
+    .notification-box {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .modal.page .btn-close {
+        font-size: 10px;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+    .profile a img {
+        width: 35px;
+        margin-bottom: 5px;
+    }
+
+    .banner .title {
+        padding-right: 6px;
+    }
+
+    .banner .outline {
+        padding-right: 10px;
+    }
+
+    .banner-bg.sample {
+        position: absolute;
+        z-index: 1;
+        top: 136px;
+        width: 1040px;
+        right: 0px;
+        max-width: 360px;
+    }
+
+    .modal.register .modal-header {
+        padding: 0.5rem;
+        justify-content: space-between;
+    }
+    
+    .modal.register .btn-sky {
+        padding: 4px 25px!important;
+    }
+    
+    .modal.register img {
+        margin-bottom: 0!important;
+        width: 80px;
+    }
+
+    .modal.login form {
+        padding-top: 5rem;
+    }
+    
+    .modal.login .form-action {
+        padding-top: 5rem;
+    }
+
+    .modal.login .modal-body, .modal.register .modal-body {
+        overflow: hidden;
+    }
+
+    .modal.pay .form-action.payment-public .btn {
+        margin: 8px 0!important;
+        font-size: 11px;
+        padding: 6px 30px !important;
+    }
+
+    #allRequestsResultModal .form-action.price .btn {
+        margin: 8px 0!important;
+        font-size: 11px;
+        padding: 6px 30px !important;
+    }
+
+    .modal.pay .form-action {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .pointer.head {
+        right: 45%;
+        top: 2%;
+    }
+    .pointer.arm {
+        left: 30%;
+        top: 34%;
+    }
+    .pointer.foot {
+        bottom: 21%;
+        left: 33%;
+    }
+    .pointer p {
+        font-size: 11px;
+    }
+    .pointer.top p {
+        left: 30px;
+    }
+
+    .final img, #healthServicesFinalModal .modal-body img {
+        margin: auto;
+        display: block;
+    }
+
+    .final.two img {
+        margin: unset;
+        display: initial;
+    }
+
+    .final .single {
+        margin-bottom: -0.5rem!important;
+        align-self: auto;
+    }
+
+    .slick-slide img {
+        display: block;
+        margin: auto;
+    }
+
+    .map .btn {
+        top: 53%;
+    }
+
+    .notification-box {
+        display: none;
+    }
+
+    .notification-box.mobile {
+        display: block;
+    }
+
+    .desktop-menu {
+        display: none!important;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+
+    .pointer {
+        padding: 7px;
+    }
+
+    .male-front .pointer.head {
+        right: 133px;
+        top: 18px;
+    }
+    .male-front .pointer.ear {
+        right: 150px;
+        top: 30px;
+    }
+    .male-front .pointer.chin {
+        right: 130px;
+        top: 39px;
+    }
+    .male-front .pointer.neck {
+        right: 145px;
+        top: 47px;
+    }
+    .male-front .pointer.chest {
+        right: 128px;
+        top: 74px;
+    }
+    .male-front .pointer.leftArm {
+        right: 180px;
+        top: 125px;
+    }
+    .male-front .pointer.rightArm {
+        right: 100px;
+        top: 125px;
+    }
+    .male-front .pointer.leftHand {
+        right: 178px;
+        top: 168px;
+    }
+    .male-front .pointer.rightHand {
+        right: 100px;
+        top: 168px;
+    }
+    .male-front .pointer.leftFoot {
+        bottom: 10px;
+        right: 115px;
+    }
+    .male-front .pointer.rightFoot {
+        bottom: 10px;
+        right: 170px;
+    }
+
+    .static-text {
+        width: auto !important;
+        position: relative;
+    }
+
+    .male-front {
+        width: 300px;
+        max-width: 300px;
+        margin: auto;
+        display: block;
+    }
+
+    .male-back {
+        width: 300px;
+        max-width: 300px;
+        margin: auto;
+        display: block;
+    }
+
+    .sm-center {
+        position: relative;
+    }
+
+    .d-xs-block {
+        display: block!important;
+    }
+
+    .select2-container--default .select2-selection--multiple {
+        width: 100%!important;
+    }
+
+    .select2-container {
+        width: 100%!important;
+    }
+
+    .p-xs-0 {
+        padding: 0!important;
+    }
+
+    .d-xs-none {
+        display: none!important;
+    }
+
+    #allRequestsModal {
+        overflow: auto;
+    }
+
+    #allRequestsResultModal form {
+        padding: 10px;
+        padding-bottom: 50px;
+    }
+    
+    #allRequestsResultModal .reject-reason {
+        bottom: 0;
+        top: unset;
+        padding-top: 0;
+    }
+    
+    #allRequestsResultModal .submit {
+        margin-top: 30px!important;
+    }
+
+    .pay.payment {
+        padding-top: 0;
+        top: unset;
+        bottom: 0;
+    }
+    
+    .pay.payment .form-check {
+        display: block;
+        direction: rtl;
+        padding: 0px 10px;
+    }
+    
+    .pay.payment .form-check-label {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .pay.payment .form-check:last-child {
+        width: 100%;
+        justify-content: start;
+        margin-right: 0;
+    }
+    
+    .pay.payment .form-check:last-child label {
+        width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        padding-bottom: 0;
+    }
+
+    footer .right {
+        padding: 0;
+        justify-content: center;
+    }
+
+    footer .social {
+        text-align: center;
+    }
+
+    .footer-nav {
+        padding-top: 40px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    
+    .footer-nav .nav-link {
+        font-size: 15px;
+    }
+
+    .footer-nav li {
+        margin: 0;
+    }
+
+    .title.white::after {
+        left: 30px;
+    }
+}
+
+/* Extra Small Devices */
+@media only screen and (max-width: 500px) {
+    
+    #carouselHealthIndicators .submitted-data {
+        margin: auto;
+        display: block;
+        width: 80%;
+    }
+
+    .banner .carousel-control-next, .banner .carousel-control-prev {
+        margin-top: -130px;
+    }
+
+    .banner .carousel-indicators {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 537px) and (max-width: 767px) {
+    
+    #carouselHealthIndicators .submitted-data {
+        margin: auto;
+        display: block;
+        width: 50%;
+    }
+
+    /* asim */
+    #healthServiesModal .carousel-control-next{
+        top: auto !important;
+        bottom: 169px;
+        right: 193px !important;
+    }
+    #publicServiesModal #carouselIndicators .carousel-control-next{
+        top: auto !important;
+        bottom: 169px;
+        right: 213px !important;
+    }
+
+}
+
+@media only screen and (max-height: 450px) {
+    .modal-footer {
+        position: relative;
+    }
+
+    #allRequestsModal {
+        overflow: auto;
+    }
+
+    #allRequestsModal .modal-body {
+        height: auto;
+    }
+}
+
+/* Tabs */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* asim */
+    #healthServiesModal .carousel-control-next{
+        top: 700px !important;
+        right: 293px !important;
+    }
+    #publicServiesModal #carouselIndicators .carousel-control-next{
+        top: 468px !important;
+        right: 313px !important;
+    }
+    /* asim code end */
+    .d-xs-none {
+        display: none!important;
+    }
+    .navbar {
+        padding: 1rem 0;
+        position: absolute;
+        z-index: 1000;
+        background: white;
+        width: 100%;
+    }
+    nav .nav-link.active {
+        width: max-content;
+        padding-right: 0!important;
+    }
+    .navbar-nav {
+        padding-right: 0;
+    }
+
+    .banner {
+        padding-top: 240px;
+    }
+
+    .final.two img {
+        margin-bottom: 1rem;
+        padding-top: 0;
+    }
+    
+    .final .single {
+        margin: unset;
+        margin-bottom: 0.5rem!important;
+        display: unset;
+        align-self: auto;
+    }
+
+    /* Modal */
+    .modal.page .modal-body {
+        padding: 0rem 1rem!important;
+    }
+    .modal.login form {
+        padding-top: 4rem;
+    }
+
+    #aboutModal .modal-body, #tdModal .modal-body {
+        padding: 0rem 6rem;
+    }
+
+    .modal.page .modal-header {
+        padding: 1rem 4rem;
+    }
+
+    /* Form */
+    .form-action {
+        padding: 5rem 0;
+    }
+
+    /* Contact */
+    .section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .details p {
+        width: auto;
+    }
+
+    /* Banner */
+    .map-place iframe {
+        width: 100%;
+        height: 330px;
+    }
+
+    .map-place .blue-box {
+        left: -14px;
+        bottom: -10px;
+    }
+
+    .banner .carousel-item p {
+        padding-left: 5px;
+    }
+
+    .banner .carousel-indicators {
+        top: 500px;
+    }
+
+    .black-bg {
+        top: -140px;
+        width: 160px;
+    }
+
+    .banner.sample .carousel-inner {
+        padding-bottom: 300px;
+    }
+
+    .carousel-item .btn {
+        margin-bottom: 100px;
+    }
+
+    [dir='rtl'] .slick-next {
+        left: 70%!important;
+        top: 200px;
+    }
+    
+    [dir='rtl'] .slick-prev {
+        right: 8%!important;
+        top: 200px;
+    }
+
+    /* .hands {
+        left: 170px;
+        width: 250px;
+        top: -40px;
+    } */
+    .hands.sample {
+        right: 370px;
+        left: 0;
+        width: 250px;
+        bottom: 0px;
+        top: 210px;
+    }
+
+    .about-content .actions {
+        padding-top: 0px;
+        padding-bottom: 60px;
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    .about-content .actions .btn {
+        margin-left: 0;
+    }
+    
+    .map-cap {
+        bottom: 0;
+        padding-right: 0;
+    }
+
+    .modal-title::after {
+        left: 30px;
+        width: 30px;
+    }
+
+    .title::after {
+        right: 0;
+        width: 45px;
+    }
+
+    .request .description {
+        padding-right: 0rem;
+        padding-left: 0rem;
+    }
+
+    .actions {
+        padding: 10px 0px;
+        margin-right: 0;
+    }
+
+    .top.boxContainer .blue-box {
+        left: -10px;
+        top: -15px;
+    }
+
+    .bottom.boxContainer {
+        padding-top: 20px;
+    }
+
+    .bottom.boxContainer img {
+        margin: auto;
+        display: block;
+        width: 100%;
+    }
+
+    /* .map-cap.side {
+        padding-right: 0;
+        padding-top: 200px;
+    } */
+    .map-cap.side.sample {
+        padding-right: 0;
+        bottom: 160px;
+        padding-top: 0;
+    }
+
+    .bottom.boxContainer .blue-box {
+        right: -20px;
+        top: 5px;
+    }
+
+    .main-slide {
+        padding-top: 0;
+    }
+
+    /* .banner-bg {
+        top: -90px;
+        width: 600px;
+        right: -20px;
+    } */
+    .banner-bg.sample {
+        top: 215px;
+        width: 550px;
+        right: 0;
+        min-width: 630px;
+        /* max-width: 630px; */
+    }
+
+    /* .black-bg {
+        top: -180px;
+        width: 450px;
+    } */
+    .black-bg.sample {
+        top: 96px;
+        width: 440px;
+        left: 0;
+    }
+
+    .tab-content .data {
+        overflow: auto;
+    }
+
+    .request-box::after {
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+    }
+
+    .dateTime {
+        font-size: 14px;
+        white-space: pre;
+    }
+
+    .tab-content .data p {
+        font-size: 14px;
+    }
+    
+    .tab-content .data span {
+        font-size: 14px;
+    }
+
+    .modal.register .modal-header {
+        padding: 1rem 1.2rem;
+    }
+    
+    .modal.register img {
+        margin-top: 30px;
+        margin-bottom: 40px!important;
+        width: 90px;
+    }
+
+    #requestsModal .modal-body {
+        padding: 2rem 1rem!important;
+    }
+
+    .submitted-data div p {
+        text-align: right;
+    }
+
+    .flying-man {
+        width: 440px;
+    }
+
+    #healthServiesModal .carousel-item {
+        /* height: 950px; */
+        height: auto;
+        min-height: 580px!important;
+    }
+
+    #healthServiesModal .form-action {
+        padding: 0;
+        position: absolute;
+        bottom: 0px;
+    } 
+    
+    #healthServiesModal .form-action p {
+        padding-top: 0px;
+    }
+
+    #healthServiesModal .form-action.first {
+        position: relative;
+        padding-top: 30px;
+        height: 220px;
+    }
+
+    /* #healthServiesModal .form-action.first .btn {
+        margin-bottom: 110px;
+    } */
+
+    #healthServiesModal .form-action.first p {
+        padding-top: 0;
+        margin-bottom: 0
+    }
+
+    #healthServiesModal .carousel-item .btn {
+        margin-bottom: 80px;
+    }
+
+    #publicServiesModal .carousel-item {
+        height: 650px;
+    }
+    
+    #publicServiesModal .form-action {
+        padding: 0;
+    }
+    
+    #publicServiesModal .carousel-item .btn {
+        margin-bottom: 20px;
+    }
+
+    #allRequestsModal .left-content {
+        padding-right: 100px;
+    }
+
+    .details {
+        padding: 0px 100px;
+    }
+
+    .final img {
+        margin: auto;
+        display: block;
+    }
+
+    .modal.result .form-action {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        
+    }
+
+    #publicPaymentModal .form-action {
+        position: relative;
+        z-index: 9999;
+    }
+
+    .pointer.head {
+        right: 45%;
+        top: 1%;
+    }
+    
+    .pointer.arm {
+        left: 30%;
+    }
+    
+    .pointer.chest {
+        right: 47%;
+        top: 30%;
+    }
+    
+    .pointer.foot {
+        left: 33%;
+    }
+
+    .static-text {
+        position: absolute;
+        width: 40%;
+    }
+
+    .notification-box {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .pointer {
+        padding: 5px;
+    }
+
+    .male-front, .male-back {
+        width: 250px;
+        max-width: 250px;
+    }
+
+    .male-front .pointer.head {
+        right: 110px;
+        top: 13px;
+    }
+    .male-front .pointer.ear {
+        right: 122px;
+        top: 25px;
+    }
+    .male-front .pointer.chin {
+        right: 105px;
+        top: 30px;
+    }
+    .male-front .pointer.neck {
+        right: 120px;
+        top: 38px;
+    }
+    .male-front .pointer.chest {
+        right: 105px;
+        top: 64px;
+    }
+    .male-front .pointer.leftArm {
+        right: 148px;
+        top: 105px;
+    }
+    .male-front .pointer.rightArm {
+        right: 84px;
+        top: 105px;
+    }
+    .male-front .pointer.leftFoot {
+        bottom: 8px;
+        right: 140px;
+    }
+    .male-front .pointer.rightFoot {
+        bottom: 8px;
+        right: 95px;
+    }
+    .male-front .pointer.leftHand {
+        right: 146px;
+        top: 140px;
+    }
+    .male-front .pointer.rightHand {
+        right: 85px;
+        top: 140px;
+    }
+
+    .pay.payment {
+        padding-top: 0;
+        top: unset;
+        bottom: 0;
+    }
+    
+    .pay.payment .form-check {
+        display: block;
+        direction: rtl;
+        padding: 0px 10px;
+    }
+    
+    .pay.payment .form-check-label {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .pay.payment .form-check:last-child {
+        width: 100%;
+        justify-content: start;
+        margin-right: 0;
+    }
+    
+    .pay.payment .form-check:last-child label {
+        width: 100%;
+    }
+    
+    /* Footer */
+    footer {
+        padding-bottom: 0;
+    }
+    
+    footer .social {
+        padding: 0 0px;
+    }
+    
+    footer .right {
+        padding: 0 0px;
+    }
+    
+}
+
+/* Large Devices */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* asim */
+    #healthServiesModal .carousel-control-next{
+    right: 422px !important;
+    }
+    #publicServiesModal #carouselIndicators .carousel-control-next{
+        right: 330px !important;
+    }
+
+    /* asim code end*/
+    .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+
+    nav .left-side {
+        align-items: center;
+    }
+
+    .final img {
+        align-self: auto;
+    }
+
+    /* Banner */
+    /* .banner-bg {
+        width: 800px;
+        top: -70px;
+    } */
+
+    .banner-bg.sample {
+        top: 136px;
+        width: 820px;
+        right: 3px;
+    }
+
+    .banner .carousel-control-next, .banner .carousel-control-prev {
+        top: 480px;
+    }
+
+    .banner .carousel-indicators {
+        top: 560px;
+    }
+
+    .banner .carousel-item p {
+        padding-left: 5rem;
+    }
+
+    .banner .btn-sky {
+        margin-left: 0;
+    }
+
+    .banner.sample .carousel-inner {
+        padding-bottom: 390px;
+    }
+
+    .banner .title {
+        font-size: 28px;
+    }
+
+    .bottom.boxContainer .blue-box {
+        right: 15px;
+        top: -25px;
+    }
+
+    .map-place .blue-box {
+        left: -25px;
+        bottom: -15px;
+    }
+
+    [dir='rtl'] .slick-next {
+        left: 490px!important;
+    }
+
+    .black-bg {
+        top: -120px;
+        width: 420px;
+    }
+
+    /* .hands {
+        left: 280px;
+        width: 300px;
+        top: -10px;
+    } */
+
+    .hands.sample {
+        right: 400px;
+        left: 0;
+        width: 350px;
+        bottom: 0;
+        top: 180px;
+    }
+
+    .details p {
+        width: 54%;
+    }
+
+    .details {
+        text-align: right;
+        padding: 0px 20px;
+    }
+
+    .request .description {
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+
+    .map-cap {
+        padding-right: 0;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .actions {
+        margin-right: 0;
+    }
+
+    .modal.page .modal-body {
+        padding: 0;
+    }
+
+    #requestsModal .modal-body {
+        padding: 0 7rem;
+    }
+
+    #aboutModal .modal-body, #tdModal .modal-body {
+        padding: 0rem 6rem;
+    }
+
+    #healthServicesFinalModal p {
+        font-size: 12px;
+    }
+
+    #allRequestsResultModal p {
+        font-size: 12px;
+    }
+
+    #allRequestsModal .left-content {
+        padding-right: 190px;
+    }
+
+    .final img {
+        padding-top: 1rem;
+    }
+
+    .dateTime.small {
+        font-size: 6px;
+    }
+
+    .notification-box {
+        margin-right: 20px;
+    }
+
+    .pointer.head {
+        right: 46%;
+        top: 2%;
+    }
+
+    .pointer.arm {
+        left: 32%;
+    }
+
+    .pointer.foot {
+        left: 34%;
+    }
+
+    .image-place.dot-effect {
+        margin-bottom: -25px;
+    }
+
+    .pay.payment .form-check-label {
+        width: 30%;
+    }
+
+    .pay.payment .form-check:last-child label {
+        width: 61%;
+    }
+
+    /* Footer */
+    footer .right {
+        padding: 0 20px;
+    }
+    
+    footer .social {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .banner-bg.sample {
+        width: 830px!important;
+    }
+    .banner.sample .carousel-inner {
+        padding-bottom: 350px;
+    }
+    .hands.sample {
+        left: 0px;
+        width: 350px;
+        right: 420px;
+        bottom: 180px;
+    }
+    .image-place.dot-effect {
+        margin-bottom: 0;
+    }
+
+    iframe {
+        width: 450px;
+    }
+
+    .map-place .blue-box {
+        left: -110px!important;
+    }
+
+    .bottom.boxContainer .blue-box {
+        right: 80px;
+    }
+
+    #requestsModal .modal-body {
+        padding: 1rem 2rem;
+    }
+    
+    .pointer.arm {
+        left: 33%;
+    }
+    .pointer.foot {
+        left: 36%;
+    }
+
+    .details {
+        text-align: right;
+        padding: 0px 30px;
+    }
+    
+    .details p {
+        width: 68%;
+    }
+}
+
+/* Extra Large Devices */
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+    .request .description {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+
+    /* iframe {
+        width: 100%;
+    } */
+
+    .actions {
+        margin-right: 0;
+    }
+
+    [dir='rtl'] .slick-next {
+        left: 84%!important;
+    }
+
+    .banner-bg {
+        width: 960px;
+    }
+
+    .banner .carousel-item p {
+        padding-left: 20rem;
+        z-index: 1;
+        position: relative;
+    }
+
+    .hands {
+        right: 360px;
+        width: 350px;
+        bottom: 40px;
+    }
+
+    .final img {
+        padding-top: 1.5rem;
+    }
+
+    .modal.page .modal-body {
+        padding: 0;
+    }
+
+    #requestsModal .modal-body {
+        padding: 0 7rem;
+    }
+
+    #aboutModal .modal-body, #tdModal .modal-body {
+        padding: 0 6rem;
+    }
+
+    #healthServicesFinalModal p {
+        font-size: 15px;
+    }
+
+    #allRequestsResultModal p {
+        font-size: 15px;
+    }
+
+    .dateTime.small {
+        font-size: 8px;
+    }
+    .final img {
+        padding-top: 0.5rem;
+        align-self: auto;
+    }
+
+    .map-place .blue-box {
+        left: -155px;
+    }
+
+    .notification-box {
+        width: 510px;
+        margin-right: 90px;
+    }
+
+    .banner-bg.sample {
+        width: 960px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .banner-bg.sample {
+        width: 920px;
+    }
+
+    .hands.sample {
+        left: 0;
+        right: 425px;
+        width: 420px;
+        top: 180px;
+    }
+
+    .image-place.dot-effect {
+        margin-bottom: 70px;
+    }
+
+    .pay.payment .form-check-label {
+        width: 20%;
+    }
+
+    .pay.payment .form-check:last-child label {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .banner-bg.sample {
+        width: 1000px;
+    }
+    .hands.sample {
+        left: 0;
+        right: 570px;
+        width: 380px;
+        top: 180px;
+    }
+       /* asim */
+       #healthServiesModal .carousel-control-next{
+        top: 488px !important;
+        width: 150px !important;
+        height: 40px !important;
+        right: 601px !important;
+    }
+    #publicServiesModal #carouselIndicators .carousel-control-next{
+        right: 634px !important;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    .banner-bg.sample {
+        top: 80px;
+        width: 1170px;
+    }
+    
+    .hands.sample {
+        right: 640px;
+        width: 450px;
+        top: 150px;
+    }
+
+    .static-text {
+        width: 20%;
+    }
+
+    /* asim */
+    #publicServiesModal #carouselIndicators .carousel-control-next {
+        right: 793px !important;
+    }
+    #healthServiesModal .carousel-control-next{
+        right: 750px !important;
+    }
+ 
+
+}
