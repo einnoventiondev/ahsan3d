@@ -373,8 +373,14 @@ var options = {
 var charttimeline = new ApexCharts(document.querySelector("#chart-timeline-dashbord"), options);
 charttimeline.render();
 // second chart dashbord dafault
+var get_order = document.getElementById('order_get').value;
+var get_admin = document.getElementById('admin_get').value;
+var get_designer = document.getElementById('designer_get').value;
+var get_product = document.getElementById('product_get').value;
+
+
 var options17 = {
-    series: [76, 67, 61, 90],
+    series: [get_order, get_product, get_designer, get_admin],
     chart: {
         height: 380,
         type: 'radialBar',

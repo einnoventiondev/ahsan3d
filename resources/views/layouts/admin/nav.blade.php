@@ -1,5 +1,6 @@
   <header class="main-nav">
-      <div class="sidebar-user text-center"><a class="setting-primary" href="{{route('editpassword')}}"><i data-feather="settings"></i></a>
+      <div class="sidebar-user text-center">
+        {{-- <a class="setting-primary" href="{{route('editpassword')}}"><i data-feather="settings"></i></a> --}}
 
           <a href="{{ route('profileupdate.view') }}" class="admin-profile">
               @if(auth()->user()->profile != null)
@@ -92,6 +93,15 @@
                             <li class="nav-item">
                                 <a class="nav-link " href="{{ route('color.index') }}" tabindex="-1" aria-disabled="true">    البرامجc </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{ route('extention.index') }}" tabindex="-1" aria-disabled="true">    Extention </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{ route('procedure.index') }}" tabindex="-1" aria-disabled="true">    medicalProcedure </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{ route('specialization.index') }}" tabindex="-1" aria-disabled="true">    Specialization </a>
+                            </li>
                           </ul>
                       </li>
                       <li class="nav-item">
@@ -123,9 +133,11 @@
                      <!-- <li class="nav-item">
                           <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-users"></i> ائمة المشرفينـ </a>
                       </li> -->
+                      @if(Auth::user()->role=='superadmin')
                       <li class="nav-item">
-                          <a class="nav-link " href="{{ route('user.profile.list') }}" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> الإدارة </a>
+                          <a class="nav-link " href="{{ route('admin.index') }}" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> الإدارة </a>
                       </li>
+                      @endif
                      <!-- <li class="nav-item">
                         <a class="nav-link " href="{{ route('payment') }}" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> قسط </a>
                     </li> -->

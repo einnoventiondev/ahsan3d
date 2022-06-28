@@ -1272,7 +1272,7 @@
                                                         <p>اليدين</p>
                                                     </div>
                                                     <div class="pointer chest">
-                                                        <p></p>
+                                                        <p>الصدر</p>
                                                     </div>
                                                     <div class="pointer foot">
                                                         <p>الساقين</p>

@@ -53,7 +53,7 @@
                                     </td>
                                     <td class="flex">
                                         <!-- <a href="" class="edit-btn"><i class="fa fa-pencil-square-o"></i></a> -->
-                                        <a href="" class="view-btn"><i class="fa  fa-eye"></i></a>
+                                        <a href="{{route('order.management.user')}}" class="view-btn"><i class="fa  fa-eye"></i></a>
                                         <a href="" class="delete-btn btn-danger"><i class="fa fa-trash-o"></i></a>
                                     </td>
                                     </tr>

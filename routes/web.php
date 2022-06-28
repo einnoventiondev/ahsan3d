@@ -27,9 +27,13 @@ use App\Http\Controllers\SizeController;
 use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\TechController;
 use App\Http\Controllers\TitleController;
+use App\Http\Controllers\AdminCreateController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\YoutubeurlController;
 use App\Http\Controllers\DesignerController;
+use App\Http\Controllers\FileExtentionController;
+use App\Http\Controllers\MedicalProcedureController;
+use App\Http\Controllers\SpecializationController;
 use App\Models\Invoice;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Artisan;
@@ -123,7 +127,8 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::get('perposal/action/view/{id}',[PerposalController::class,'perposalAction'])->name('perposalAction');
         Route::post('identity',[UserController::class,'identity'])->name('identity');
     });
-    Route::group(['middleware' =>  'role:admin'], function () {
+
+    Route::group(['middleware' =>  'role:superadmin',], function () {
         Route::resource('about', AboutUsController::class);
         Route::resource('contact', ContactControllers::class);
         Route::resource('client', ClientController::class);
@@ -243,4 +248,27 @@ Route::delete('delete/logo4/{id}',[LogoController::class,'logoDelete4'])->name('
 Route::delete('delete/logo5/{id}',[LogoController::class,'logoDelete5'])->name('logo5.destroy');
 Route::delete('delete/logo6/{id}',[LogoController::class,'logoDelete6'])->name('logo6.destroy');
 Route::delete('delete/logo7/{id}',[LogoController::class,'logoDelete7'])->name('logo7.destroy');
+
+
+///admin routes
+
+Route::get('admin/create',  [App\Http\Controllers\AdminCreateController::class, 'create'])->name('admin.create');
+Route::post('admin/store',  [App\Http\Controllers\AdminCreateController::class, 'store'])->name('admin.store');
+Route::get('admin/index',  [App\Http\Controllers\AdminCreateController::class, 'index'])->name('admin.index');
+Route::get('admin/edit/{id}',  [App\Http\Controllers\AdminCreateController::class, 'edit'])->name('admin.edit');
+Route::post('admin/update/{id}',  [App\Http\Controllers\AdminCreateController::class, 'update'])->name('admin.update');
+Route::delete('admin/delete/{id}',  [App\Http\Controllers\AdminCreateController::class, 'destroy'])->name('admin.destroy');
+Route::get('admin/show/{id}',  [App\Http\Controllers\AdminCreateController::class, 'show'])->name('admin.show');
+Route::resource('specialization', SpecializationController::class);
+Route::post('specialization/update/{id}',  [App\Http\Controllers\SpecializationController::class, 'update'])->name('specialization.update');
+Route::resource('procedure', MedicalProcedureController::class);
+Route::post('procedure/update/{id}',  [App\Http\Controllers\MedicalProcedureController::class, 'update'])->name('procedure.update');
+
+Route::resource('extention', FileExtentionController::class);
+Route::post('extention/update/{id}',  [App\Http\Controllers\FileExtentionController::class, 'update'])->name('extention.update');
+
+
+Route::get('/ordermanagmentview',function(){
+ return view('pages.admin.dashboard.perposal.OrderManagementView');
+})->name('order.management.user');
 

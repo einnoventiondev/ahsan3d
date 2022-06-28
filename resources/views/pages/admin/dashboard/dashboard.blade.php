@@ -61,79 +61,25 @@
         </div>
       </div>
     </div>
+ <input type="hidden" id="admin_get" value="{{ $admin_get }}">
+ <input type="hidden" id="product_get" value="{{ $product }}">
+ <input type="hidden" id="designer_get" value="{{ $designer_get }}">
+ <input type="hidden" id="order_get" value="{{ $order }}">
 
   </div>
 </div>
 <section class="sec-dashboard">
   <div class="container-fluid">
     <div class="row dashboard-row">
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header">
-            <div class="header-top d-sm-flex align-items-center">
-              <h5> نظرة عامة على النمو</h5>
-              <div class="center-content growth-content">
-                <p class="d-flex align-items-center"><i class="toprightarrow-primary fa fa-arrow-up mx-2"></i>80% نمو
-                </p>
-              </div>
-              <div class="setting-list">
-                <ul class="list-unstyled setting-option">
-                  <li>
-                    <div class="setting-primary"><i class="icon-settings"> </i></div>
-                  </li>
-                  <li><i class="view-html fa fa-code font-primary"></i></li>
-                  <li><i class="icofont icofont-maximize full-card font-primary"></i></li>
-                  <li><i class="icofont icofont-minus minimize-card font-primary"></i></li>
-                  <li><i class="icofont icofont-refresh reload-card font-primary"></i></li>
-                  <li><i class="icofont icofont-error close-card font-primary"></i></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="card-body p-0">
-            <div id="chart-dashbord"></div>
-            <div class="code-box-copy">
-              <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#sell-overview" title="Copy"><i
-                  class="icofont icofont-copy-alt"></i></button>
-              <pre><code class="language-html" id="sell-overview">                                     &lt;div class="card"&gt;
-                                &lt;div class="card-header"&gt;
-                                  &lt;div class="header-top d-sm-flex align-items-center"&gt;
-                                    &lt;h5&gt; Sell Overview &lt;/h5&gt;
-                                    &lt;div class="center-content" &gt;
-                                      &lt;p class="d-flex align-items-center"&gt;
-                                        &lt;i class="toprightarrow-primary fa fa-arrow-up me-2" &gt; &lt;/i&gt;
-                                          86% Growth
-                                      &lt;/p&gt;
-                                    &lt;/div&gt;
-                                    &lt;div class="setting-list"&gt;
-                                      &lt;ul class="list-unstyled setting-option"&gt;
-                                        &lt;li&gt;&lt;div class="setting-primary"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/li&gt;
-                                        &lt;li&gt;&lt;i class="view-html fa fa-code font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                        &lt;li&gt;&lt;i class="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                        &lt;li&gt;&lt;i class="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                        &lt;li&gt;&lt;i class="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-                                        &lt;li&gt;&lt;i class="icofont icofont-error close-card font-primary"&gt; &lt;/i&gt;&lt;/li&gt;
-                                      &lt;/ul&gt;
-                                    &lt;/div&gt;
-                                  &lt;/div&gt;
-                                &lt;/div&gt;
-                                &lt;div class="card-body p-0"&gt;
-                                  &lt;div id="chart-dashbord"&gt;&lt;/div&gt;
-                                &lt;/div&gt;
-                              &lt;/div&gt;</code>
-                            </pre>
-            </div>
-          </div>
-        </div>
-      </div>
+     
 
       <!-- letest -->
-      <div class="col-md-4">
+      <div class="col-md-12">
         <div class="card latest-update-sec">
           <div class="card-header">
             <div class="header-top d-sm-flex align-items-center">
 
-              <div class="setting-list">
+              {{-- <div class="setting-list">
                 <ul class="list-unstyled setting-option">
                   <li>
                     <div class="setting-primary"><i class="icon-settings"></i></div>
@@ -144,7 +90,7 @@
                   <li><i class="icofont icofont-refresh reload-card font-primary"></i></li>
                   <li><i class="icofont icofont-error close-card font-primary"> </i></li>
                 </ul>
-              </div>
+              </div> --}}
             </div>
           </div>
           <div class="card-body">
@@ -158,7 +104,7 @@
                     <th>جزء</th>
                     <th>هاتف</th>
                     <th>البريد الإلكتروني</th>
-                    <th>
+                    {{-- <th>
                       <div class="setting-list">
                         <ul class="list-unstyled setting-option">
                           <li>
@@ -171,17 +117,18 @@
                           <li><i class="icofont icofont-error close-card font-primary"></i></li>
                         </ul>
                       </div>
-                    </th>
+                    </th> --}}
                   </tr>
                 </thead>
                 <tbody>
                   @foreach ($medical as $medicOrder)
                   <tr>
                     <td >
-                      <div class="media"><img class="img-fluid rounded-circle"
-                          src="{{ asset($medicOrder->myfile) }}" style="height:60px !important" alt="" data-original-title="" title="">
-                        <div class="media-body"><a href="{{ route('medical.show',$medicOrder->id) }}"><span>{{ $medicOrder->pa_name }}</span></a></div>
-                      </div>
+                      {{-- <div class="media"> --}}
+                        {{-- <img class="img-fluid rounded-circle"
+                          src="{{ asset($medicOrder->myfile) }}" style="height:60px !important" alt="" data-original-title="" title=""> --}}
+                        <a href="{{ route('medical.show',$medicOrder->id) }}"><span>{{ $medicOrder->pa_name }}</span></a>
+                      {{-- </div> --}}
                     </td>
                     <td>
                       <p>{{ date_format($medicOrder->created_at,"Y/m/d "); }}</p>
@@ -473,12 +420,12 @@
       </div>
 
       <!-- recent order -->
-      <div class="col-md-4">
+      <div class="col-md-12">
         <div class="card latest-update-sec">
           <div class="card-header">
             <div class="header-top d-sm-flex align-items-center">
 
-              <div class="setting-list">
+              {{-- <div class="setting-list">
                 <ul class="list-unstyled setting-option">
                   <li>
                     <div class="setting-primary"><i class="icon-settings"></i></div>
@@ -489,7 +436,7 @@
                   <li><i class="icofont icofont-refresh reload-card font-primary"></i></li>
                   <li><i class="icofont icofont-error close-card font-primary"> </i></li>
                 </ul>
-              </div>
+              </div> --}}
             </div>
           </div>
           <div class="card-body">
@@ -503,7 +450,8 @@
                     <th>هاتف</th>
                     <th>البريد الإلكتروني</th>
                     <th>
-                      <div class="setting-list">
+                      الجنس
+                      {{-- <div class="setting-list">
                         <ul class="list-unstyled setting-option">
                           <li>
                             <div class="setting-primary"><i class="icon-settings"> </i></div>
@@ -514,7 +462,7 @@
                           <li><i class="icofont icofont-refresh reload-card font-primary"></i></li>
                           <li><i class="icofont icofont-error close-card font-primary"></i></li>
                         </ul>
-                      </div>
+                      </div> --}}
                     </th>
                   </tr>
                 </thead>
@@ -523,15 +471,17 @@
                   <tr>
                     <td >
 
-                      <div class="media">
-                        @if($medicOrder->print_img!=null ||$medicOrder->print_img!='')
+                      {{-- <div class="media"> --}}
+                        {{-- @if($medicOrder->print_img!=null ||$medicOrder->print_img!='')
 
                         <img class="img-fluid rounded-circle"
                         src="{{ asset($medicOrder->print_img) }}" style="height:60px !important" alt="" data-original-title="" title="">
-                        @endif
+                        @endif --}}
 
-                        <div class="media-body"><a href="{{ route('publics.show',$medicOrder->id) }}"><span>{{ $medicOrder->full_name }}</span></a></div>
-                      </div>
+                        {{-- <div class="media-body"> --}}
+                          <a href="{{ route('publics.show',$medicOrder->id) }}"><span>{{ $medicOrder->full_name }}</span></a>
+                        {{-- </div> --}}
+                      {{-- </div> --}}
                     </td>
                     <td>
                       <p>{{ date_format($medicOrder->created_at,"Y/m/d "); }}</p>
@@ -819,6 +769,66 @@
             &lt;/div&gt;
           &lt;/div&gt;</code></pre>
             </div> --}}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <div class="header-top d-sm-flex align-items-center">
+              <h5> نظرة عامة على النمو</h5>
+              <div class="center-content growth-content">
+                <p class="d-flex align-items-center"><i class="toprightarrow-primary fa fa-arrow-up mx-2"></i>80% نمو
+                </p>
+              </div>
+              {{-- <div class="setting-list">
+                <ul class="list-unstyled setting-option">
+                  <li>
+                    <div class="setting-primary"><i class="icon-settings"> </i></div>
+                  </li>
+                  <li><i class="view-html fa fa-code font-primary"></i></li>
+                  <li><i class="icofont icofont-maximize full-card font-primary"></i></li>
+                  <li><i class="icofont icofont-minus minimize-card font-primary"></i></li>
+                  <li><i class="icofont icofont-refresh reload-card font-primary"></i></li>
+                  <li><i class="icofont icofont-error close-card font-primary"></i></li>
+                </ul>
+              </div> --}}
+            </div>
+          </div>
+          <div class="card-body p-0">
+            <div id="chart-dashbord"></div>
+            <div class="code-box-copy">
+              <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#sell-overview" title="Copy"><i
+                  class="icofont icofont-copy-alt"></i></button>
+              <pre><code class="language-html" id="sell-overview">                                     &lt;div class="card"&gt;
+                                &lt;div class="card-header"&gt;
+                                  &lt;div class="header-top d-sm-flex align-items-center"&gt;
+                                    &lt;h5&gt; Sell Overview &lt;/h5&gt;
+                                    &lt;div class="center-content" &gt;
+                                      &lt;p class="d-flex align-items-center"&gt;
+                                        &lt;i class="toprightarrow-primary fa fa-arrow-up me-2" &gt; &lt;/i&gt;
+                                          86% Growth
+                                      &lt;/p&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="setting-list"&gt;
+                                      &lt;ul class="list-unstyled setting-option"&gt;
+                                        &lt;li&gt;&lt;div class="setting-primary"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i class="view-html fa fa-code font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i class="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i class="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i class="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;i class="icofont icofont-error close-card font-primary"&gt; &lt;/i&gt;&lt;/li&gt;
+                                      &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="card-body p-0"&gt;
+                                  &lt;div id="chart-dashbord"&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;</code>
+                            </pre>
+            </div>
           </div>
         </div>
       </div>

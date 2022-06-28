@@ -7,7 +7,7 @@
         <ol class="breadcrumb">
             <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
 
-            <li><a href="{{ route('social.index') }}">حسابات التواصل الاجتماعي</a></li>
+            <li><a href="{{ route('procedure.index') }}">حسابات التواصل الاجتماعي</a></li>
         </ol>
     </div>
     <div class="container-fluid p-0">
@@ -15,10 +15,8 @@
             <div class="col-sm-12">
                 <div class="card medical-card">
                     <div class="card-body p-0">
-                       @if(count($socials) < 1)
-                       <a class="btn btn-primary mb-2" href="{{
-                        route('social.create') }}"> إنشاء منتج جديد</a>
-                       @endif
+                        <a class="btn btn-primary mb-2" href="{{
+                            route('procedure.create') }}"> إنشاء منتج جديد</a>
                         <div class="table-responsive medical-datatable">
                             <table class="display" style="width:100%"
                                 id="basic-2">
@@ -26,26 +24,26 @@
                                     <tr>
                                         <!-- <th>Id</th> -->
 
-                                        <!-- <th>الانستغرام حلقة الوصل</th> -->
-                                        <th> الانستغرام حلقة الوصل</th>
-                                        <th>تويتر حلقة الوصل</th>
+
+                                        <th> لقب  </th>
+
                                         <th></th>
 
                                     </tr>
                                 </thead>
-                                @foreach ($socials as $social)
+                                @foreach ($procedures as $procedure)
                                 <tr>
-                                    <!-- <td>{{ $social->id }}</td> -->
+                                    <!-- <td>{{ $procedure->id }}</td> -->
 
-                                    <td>{{ $social->instagram }}</td>
-                                    <td>{{ $social->twitter }}</td>
+                                    <td>{{ $procedure->medical_procedure }}</td>
+
 
 
                                     <td>
-                                        <form action="{{ route('social.destroy',
-                                            $social->id) }}" method="POST">
+                                        <form action="{{ route('procedure.destroy',
+                                            $procedure->id) }}" method="POST">
                                             <a class="btn btn-primary" href="{{
-                                                route('social.edit', $social->id)
+                                                route('procedure.edit', $procedure->id)
                                                 }}">يحرر</a>
 
                                             @csrf
