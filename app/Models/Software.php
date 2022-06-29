@@ -12,7 +12,6 @@ class Software extends Model
         'name'
    ];
    public function product(){
-    return $this->hasMany(Product::class);
-
+    return $this->belongsTo(Product::class);
    }
 }

@@ -5928,7 +5928,7 @@
                                                 </div>
                                                 <div class="input-holder" id="select-product-parent">
 
-                                                    <select class="form-select select-product" name="software" multiple aria-label="Default select example">
+                                                    <select class="form-select select-product" name="software[]" multiple aria-label="Default select example">
                                                         @foreach($softwares as $software)
                                                         <option value="{{ $software->name }}">{{ $software->name }}</option>
                                                         @endforeach

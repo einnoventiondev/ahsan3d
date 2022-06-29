@@ -32,7 +32,7 @@ protected $fillable = [
 
     }
     public function software(){
-        return $this->belongsTo(Software::class);
-        }
+        return $this->hasMany(Software::class,'id');
+     }
 
 }
