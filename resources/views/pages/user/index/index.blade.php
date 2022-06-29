@@ -1859,7 +1859,7 @@
                                                         <option>1</option>
                                                     </select> -->
                                                     <input class="form-control" id="qty"
-                                                        rows="4" name="qty" placeholder="   الكمية">
+                                                        rows="4" name="qty" placeholder=   الكمية">
                                                 </div>
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                     <label class="form-label dot">المقاسات</label>
