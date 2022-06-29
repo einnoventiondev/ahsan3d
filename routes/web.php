@@ -115,6 +115,8 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
     Route::get('/getRequest_blur/{id}', [App\Http\Controllers\HomeController::class, 'getRequest_blur'])->name('getRequest_blur');
     Route::resource('medical', MedicalController::class);
     Route::resource('publics', PublicServiceController::class);
+    Route::get('publics/delete/{id}', [PublicServiceController::class, 'destroy'])->name('publics.destroy');
+
     //Resource Route
     Route::post('profile',[UserController::class,'profileUpdate'])->name('profileUser');
     Route::get('invoices/{id}', [InvoiceController::class,'show'])->name('invoice');
@@ -182,6 +184,8 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::get('editpassword', [HomeController::class, 'passView'])->name('editpassword');
         Route::get('medi/index', [MedicalController::class, 'index'])->name('medi.index');
         Route::get('medi/show/{id}', [MedicalController::class, 'show'])->name('medi.show');
+        Route::get('medi/delete/{id}', [MedicalController::class, 'destroy'])->name('medi.destroy');
+
         Route::post('updated.status', [MedicalController::class, 'updated'])->name('updated.status');
         Route::post('public.updated.status', [MedicalController::class, 'updatedpublic'])->name('public.updated.status');
         Route::post('password/updates', [HomeController::class, 'password_updates'])->name('password_updates');
