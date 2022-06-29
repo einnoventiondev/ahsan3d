@@ -83,9 +83,7 @@ class SpecializationController extends Controller
     public function update(Request $request, $id)
     {
         Specialization::find($id)->update([
-
             'specialization' => $request->specialization,
-
         ]);
         return redirect()->route('specialization.index');
     }
