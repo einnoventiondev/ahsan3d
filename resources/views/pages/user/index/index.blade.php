@@ -1867,7 +1867,7 @@
                                                         <option>1</option>
                                                     </select> -->
                                                     <input class="form-control" id="qty"
-                                                        rows="4" name="qty" placeholder="   الكمية">
+                                                        rows="4" name="qty" placeholder=   الكمية">
                                                 </div>
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                     <label class="form-label dot">المقاسات</label>
@@ -6603,12 +6603,11 @@
                                                     <p class="sub-heading-box__heading sub-heading-box__heading--b">
                                                         البرامج المستخدم</p>
                                                 </div>
-                                                <div class="input-holder">
+                                                <div class="input-holder" id="select-product-parent">
 
-                                                    <select class="form-select select-softwares-designer" name="software" multiple aria-label="Default select example">
+                                                    <select class="form-select select-product" name="software" multiple aria-label="Default select example">
                                                         @foreach($softwares as $software)
-                                                        <option value="{{ $software->name }}">{{ $software->name }}
-                                                        </option>
+                                                        <option value="{{ $software->name }}">{{ $software->name }}</option>
                                                         @endforeach
                                                   </select>
                                                 </div>

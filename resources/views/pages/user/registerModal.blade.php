@@ -124,7 +124,7 @@
                                                               </select>
 
                                                     </div>
-                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4 ahs-from-box">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4 ahs-from-box" id="selectSoftwares-parent">
                                                         <label class="form-label dot">أنواع البرامج المستخدمة</label>
 
                                                         <select class="form-control"  data-placeholder="Выберите теги" name="software_type" >

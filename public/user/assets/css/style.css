@@ -2055,9 +2055,15 @@ textarea {
 
 
 /* Select2 dropdown */
-#registerModal .select2-container--default .select2-selection--multiple {
+#selectSoftwares-parent .select2-container--default .select2-selection--multiple {
     width: 330px;
-    min-height: 47px;
+    min-height: 44px;
+    height: auto;
+}
+
+#select-product-parent .select2-container--default .select2-selection--multiple {
+    width: 330px;
+    min-height: 44px;
     height: auto;
 }
 
@@ -2082,7 +2088,7 @@ textarea {
     text-align: center;
 }
 
-.select2-dropdown.select2-dropdown--below {
+#healthServiesModal .select2-dropdown.select2-dropdown--below {
     width: 250px !important;
 }
 

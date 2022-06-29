@@ -31588,3 +31588,12 @@ margin-left: 20px;
     width: 22%;
 }
 /* asim css end here */
+#SvgjsPath1091,#SvgjsPath1095{
+  stroke: #0d6efd;
+}
+#SvgjsPath1093,#SvgjsPath1097{
+  stroke: #D83554;
+}
+.apexcharts-legend.center.position-left{
+  transform: translateY(-20px);
+}
