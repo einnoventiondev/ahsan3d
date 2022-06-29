@@ -415,7 +415,7 @@ $(document).ready(function () {
 
     $('#health-file').change(function () {
         var fileName = $(this).val();
-        $('.btn-upload.health').addClass('field-blue');
+        $('#health-dropzone').addClass('field-blue');
         if (fileName && $('#healthServiesModal .carousel-item.three .procedure').hasClass('field-blue')) { // returns true if the string is not empty
             $('#healthServiesModal .carousel-item.three .btn-form').removeClass('disabled')
         } else { // no file was selected

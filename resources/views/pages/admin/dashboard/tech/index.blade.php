@@ -15,17 +15,17 @@
             <div class="col-sm-12">
                 <div class="card medical-card">
                     <div class="card-body p-0">
-                        <a class="btn btn-primary mb-2" href="{{
-                            route('tech.create') }}"> إنشاء منتج جديد</a>
+                        {{--  <a class="btn btn-primary mb-2" href="{{
+                            route('tech.create') }}"> إنشاء منتج جديد</a>  --}}
                         <div class="table-responsive medical-datatable">
                             <table class="display" style="width:100%"
                                 id="basic-2">
                                 <thead>
                                     <tr>
 
-                                    <th>العنوان الفرعي</th>    
+                                    <th>العنوان الفرعي</th>
                                     <th>عنوان</th>
-                                       
+
                                         <th>نص</th>
                                         <th></th>
                                     </tr>
@@ -33,30 +33,31 @@
                                 @foreach ($tech as $tec)
                                 <tr>
 
-                                <td>{{ $tec->subheading }}</td>    
+                                <td>{{ $tec->subheading }}</td>
                                 <td>{{ $tec->heading }}</td>
-                                    
+
                                     <td>{!! $tec->bodytext !!}</td>
                                     <td>
-                                        <form action="{{ route('tech.destroy',
+                                        <a class="btn btn-primary" href="{{
+                                            route('tech.edit', $tec->id)
+                                            }}">Edit</a>
+                                        {{--  <form action="{{ route('tech.destroy',
                                             $tec->id) }}" method="POST">
-                                            <a class="btn btn-primary" href="{{
-                                                route('tech.edit', $tec->id)
-                                                }}">Edit</a>
+
 
                                             @csrf
                                             @method('DELETE')
 
                                             <button type="submit" class="btn
                                                 btn-danger">حذف</button>
-                                        </form>
+                                        </form>  --}}
                                     </td>
                                 </tr>
                                 @endforeach
                             </table>
                         </div>
                     </div>
-                  
+
                 </div>
             </div>
         </div>

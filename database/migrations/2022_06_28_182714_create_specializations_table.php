@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSoftwareTable extends Migration
+class CreateSpecializationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateSoftwareTable extends Migration
      */
     public function up()
     {
-        Schema::create('software', function (Blueprint $table) {
+        Schema::create('specializations', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('images')->nullable();
+            $table->string('specialization')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateSoftwareTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('software');
+        Schema::dropIfExists('specializations');
     }
 }

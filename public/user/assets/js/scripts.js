@@ -198,13 +198,22 @@ $(function() {
         })
     }
 
+    $('.select-product').select2({
+        dropdownParent: $('#select-product-parent'),
+        placeholder: "حدد البرامج",
+    });
+
+    $('.select-softwares').select2({
+        dropdownParent: $('#selectSoftwares-parent'),
+        placeholder: "حدد البرامج",
+    });
 
     var parts = $('.body-parts').select2({
         dropdownParent: $('#healthServiesModal'),
         placeholder: "الجمجمة",
     })
 
-    $('.select2-selection--multiple').addClass('select-disabled');
+    $('#healthServiesModal .select2-selection--multiple').addClass('select-disabled');
 
     // Health Services Radio buttons functionality
     $('.male-back .pointer').click(function() {

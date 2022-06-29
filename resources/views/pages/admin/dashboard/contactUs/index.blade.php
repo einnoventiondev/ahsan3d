@@ -17,8 +17,8 @@
             <div class="col-sm-12">
                 <div class="card medical-card">
                     <div class="card-body p-0">
-                        <a class="btn btn-primary mb-2" href="{{
-                            route('contact.create') }}"> إنشاء منتج جديد</a>
+                        {{--  <a class="btn btn-primary mb-2" href="{{
+                            route('contact.create') }}"> إنشاء منتج جديد</a>  --}}
                         <div class="table-responsive medical-datatable">
                             <table class="display" style="width:100%"
                                 id="basic-2">
@@ -48,20 +48,21 @@
                                         <td>{{ $contact->address }}</td>
                                         <td>{!!$contact->body_text!!}</td>
                                         <td>
-                                            <form action="{{
-                                                route('contact.destroy',
-                                                $contact->id) }}"
-                                                method="POST">
-                                                <a class="btn btn-primary"
+                                            <a class="btn btn-primary"
                                                     href="{{
                                                     route('contact.edit',
                                                     $contact->id) }}">يحرر</a>
+                                            {{--  <form action="{{
+                                                route('contact.destroy',
+                                                $contact->id) }}"
+                                                method="POST">
+
                                                 @csrf
                                                 @method('DELETE')
 
                                                 <button type="submit" class="btn
                                                     btn-danger">حذف</button>
-                                            </form>
+                                            </form>  --}}
                                         </td>
                                     </tr>
                                     @endforeach
@@ -72,6 +73,6 @@
                 </div>
             </div>
         </div>
-    </div>  
-</div>                                 
+    </div>
+</div>
 @endsection

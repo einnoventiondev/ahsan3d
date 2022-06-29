@@ -22,6 +22,7 @@ class CreatePerposalsTable extends Migration
             $table->integer('qty_model')->default(0);
             $table->integer('price_design')->default(0);
             $table->integer('price_model')->default(0);
+            $table->integer('order_id')->nullable();
             $table->integer('tax')->default(0);
             $table->timestamps();
         });

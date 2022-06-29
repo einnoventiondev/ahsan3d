@@ -82,8 +82,7 @@ class RegisterController extends Controller
             $counter = Counter::first();
              $orders_designer = Order::orderBy('id','DESC')->get();
             $products = Product::orderBy('id', 'DESC')->get();
-
-                                        $products_d = Product::orderBy('id', 'DESC')->get();
+             $products_d = Product::orderBy('id', 'DESC')->get();
             return view('pages.user.index.index', compact('products_d','counter', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map','products','orders_designer'));
         } elseif (auth()->user()->role == 'admin') {
             $title = Title::first();
@@ -155,11 +154,9 @@ class RegisterController extends Controller
         }
 
             $user = User::create([
-
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'password' =>Hash::make($data['password']),
-                
                 'role' => $roleData,
                 'profile' => $datas,
                 'approve' => 1,
