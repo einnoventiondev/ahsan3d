@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('printing_technology')->nullable();
             $table->string('software_type')->nullable();
             $table->string('order_id')->nullable();
+            $table->integer('approve')->default(0);
             $table->string('field')->nullable();
             $table->rememberToken();
             $table->timestamps();
