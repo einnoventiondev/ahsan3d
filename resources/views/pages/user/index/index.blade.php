@@ -4883,16 +4883,19 @@
 
                                                                     </div>
                                                                     @php
-
-                                                                    $software=App\Models\Software::where('name', $product->user_software )->first();
-
+                                                                      $software_type=[];
+                                                                      $software_type=json_decode($product->user_software);
                                                                     @endphp
+                                                                    @foreach($software_type as $item)
+                                                                       $software=App\Models\Software::where('name', $item)->get();
+                                                                    @endforeach
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
+                                                                            @foreach($software as $soft)
                                                                             <a href="#">
-                                                                                <img src="{{$software-> images ? asset('upload/software/'.$software->images): $software->name}}" class="img-fluid" alt="">
+                                                                                <img src="{{ asset('upload/software/'.$soft->images)}}" class="img-fluid" alt="">
                                                                             </a>
-
+                                                                            @endforeach
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -8564,9 +8567,17 @@
                         $('#subImages').html(' ');
                         $('#data').html(' ');
                         $('#name').html(' ');
-                        $('#product_image_show').append(`
-                 <img src="upload/software/${data.soft_image}" id="${data.soft_image}" alt="img" style="width:50px;height:50px">
-                 `);
+                        $('#images_field').html(' ');
+
+                        const obj = JSON.parse(data.soft_image);
+                        console.log(obj);
+                        $.each(obj, function(key, value) {
+                            $('#product_image_show').append(`
+                               <img src="upload/map/${value}" id="${value}" alt="img"style="width:70px;height:70px;">
+
+                                `);
+                        });
+
                         var date = data.msg[0].created_at;
                         date = date.substr(0, 10);
                         $.each(data.msg[0].images, function(index, value) {
@@ -8982,8 +8993,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                         </div>
                     </div>
                     <div class="blurText"></div>
