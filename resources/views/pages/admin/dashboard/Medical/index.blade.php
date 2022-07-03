@@ -34,11 +34,11 @@
                                         <th>التاريخ</th>
                                         <th></th>
                                         <th>عمل</th>
-                                        
+
                                     </tr>
                                 </thead>
                                 <tbody>
-                                  
+
                                     @foreach ($medical as $medi)
                                     @if($medi->seen == 0)
                                     <tr>
@@ -79,7 +79,7 @@
                                         <td class="flex">
                                         <!-- <a href="" class="edit-btn"><i class="fa fa-pencil-square-o"></i></a> -->
                                         <!-- <a href="" class="view-btn"><i class="fa  fa-eye"></i></a> -->
-                                        <a href="" class="delete-btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                                        <a href="{{ route('medi.destroy',$medi->id) }}" class="delete-btn btn-danger"><i class="fa fa-trash-o"></i></a>
                                     </td>
 
                                     </tr>

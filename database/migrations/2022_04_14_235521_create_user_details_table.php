@@ -18,6 +18,7 @@ class CreateUserDetailsTable extends Migration
             $table->unsignedInteger('user_id');
             $table->string('printing_technology');
             $table->string('software_type');
+            $table->string('approve')->default(0);
             $table->timestamps();
         });
     }

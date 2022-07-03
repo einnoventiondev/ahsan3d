@@ -16,7 +16,7 @@
                 <div class="card medical-card">
                     <div class="card-body p-0">
                     <!-- <a class="btn btn-primary mb-2" href="#"> جديد +</a> -->
-                        
+
                         <div class="table-responsive medical-datatable">
                             <table class="display" style="width:100%"
                                 id="basic-2">
@@ -51,7 +51,8 @@
                                         <td class="flex">
                                         <!-- <a href="" class="edit-btn"><i class="fa fa-pencil-square-o"></i></a> -->
                                         <!-- <a href="" class="view-btn"><i class="fa  fa-eye"></i></a> -->
-                                        <a href="" class="delete-btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                                        <a href="{{ route('publics.destroy',$medi->id) }}" class="delete-btn btn-danger"><i class="fa fa-trash-o"></i></a>
+
                                     </td>
                                     </tr>
                                     @else
@@ -70,11 +71,11 @@
                                                 route('publics.show', $medi->id)
                                                 }}">عرض</a>
                                         </td>
-                                        
+
                                         <td class="flex">
                                         <!-- <a href="" class="edit-btn"><i class="fa fa-pencil-square-o"></i></a> -->
                                         <!-- <a href="" class="view-btn"><i class="fa  fa-eye"></i></a> -->
-                                        <a href="" class="delete-btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                                        <a href="{{ route('publics.destroy',$medi->id) }}" class="delete-btn btn-danger"><i class="fa fa-trash-o"></i></a>
                                     </td>
                                     </tr>
                                     @endif
@@ -101,7 +102,7 @@
                     type: "GET",
                     url: "{{route('mark.read')}}",
                     data: "id="+elem.attr('data-artid'),
-                    dataType:"json",  
+                    dataType:"json",
                     success: function(data) {
                         if(data.success){
                                elem.hide();

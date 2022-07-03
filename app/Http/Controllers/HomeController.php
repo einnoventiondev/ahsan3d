@@ -109,7 +109,7 @@ class HomeController extends Controller
                     $links = Youtubeurl::first();
                     $counter = Counter::first();
                     $images = Logo::all();
-                    $products = Product::orderBy('id', 'DESC')->get();
+                    $products = Product::orderBy('id', 'DESC')->with('software')->get();
 
                     //$orders_designer = Order::orderBy('id','DESC')->get();
 					$proposal_order_id = Proposal::where('user_id', Auth::id())->get('order_id');
@@ -157,8 +157,10 @@ class HomeController extends Controller
     public function getProduct($id)
     {
         $bdata = Product::with('user')->find($id);
-        $software=Software::where('name',$bdata->user_software)->first();
-        $software_image=$software->images;
+        $software=Software::where('name',$bdata->user_software)->get();
+        foreach($software as $soft){
+            $software_image[]=$soft->images;
+        }
         $designer_name = $bdata->user->name;
         $data[0] = $bdata;
         $data[1] = $designer_name;
