@@ -242,43 +242,43 @@ class LogoController extends Controller
     }
     public function logoDelete1($id){
         $logo=Logo::find($id);
-        $logo->logo1=Null;
-        $logo->update();
+        $logo->logo1=' ';
+        $logo->save();
         return redirect()->back();
     }
     public function logoDelete2($id){
         $logo=Logo::find($id);
-        $logo->logo2=Null;
+        $logo->logo1=' ';
         $logo->update();
         return redirect()->back();
     }
     public function logoDelete3($id){
         $logo=Logo::find($id);
-        $logo->logo3=Null;
+        $logo->logo1=' ';
         $logo->update();
         return redirect()->back();
     }
     public function logoDelete4($id){
         $logo=Logo::find($id);
-        $logo->logo4=Null;
+        $logo->logo1=' ';
         $logo->update();
         return redirect()->back();
     }
     public function logoDelete5($id){
         $logo=Logo::find($id);
-        $logo->logo5=Null;
+        $logo->logo1=' ';
         $logo->update();
         return redirect()->back();
     }
     public function logoDelete6($id){
         $logo=Logo::find($id);
-        $logo->logo6=Null;
+        $logo->logo1=' ';
         $logo->update();
         return redirect()->back();
     }
     public function logoDelete7($id){
         $logo=Logo::find($id);
-        $logo->logo7=Null;
+        $logo->logo1=' ';
         $logo->update();
         return redirect()->back();
     }
