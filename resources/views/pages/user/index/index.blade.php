@@ -4888,17 +4888,19 @@
                                                                       $software_type=json_decode($product->user_software);
                                                                       foreach($software_type as $item)
                                                                       {
-                                                                       $software =App\Models\Software::where('name', $item)->first();
+                                                                       $software[] =App\Models\Software::where('name', $item)->first();
                                                                        }
 
                                                                     @endphp
 
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
+                                                                            @foreach($software as $soft)
+                                                                                <a href="#">
+                                                                                    <img src="{{ asset('upload/software/'.$soft->images)}}" class="img-fluid" alt="">
 
-                                                                            <a href="#">
-                                                                                {{ $software->name }}
                                                                                  </a>
+                                                                                 @endforeach
                                                                                  {{--  @foreach($software as $soft)  --}}
                                                                                  {{--  <img src="{{ asset('upload/software/'.$soft->images)}}" class="img-fluid" alt="">  --}}
 
@@ -5437,7 +5439,7 @@
                                                                 $software_type=json_decode($product->user_software);
                                                               @endphp
                                                               @foreach($software_type as $item)
-                                                                 $software =App\Models\Software::where('name', $item)->first();
+                                                                 $software[] =App\Models\Software::where('name', $item)->first();
                                                               @endforeach
                                                               <div class="design-card-left-bottom">
                                                                 <div class="card-icons">
