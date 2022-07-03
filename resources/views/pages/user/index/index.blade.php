@@ -4884,18 +4884,24 @@
                                                                     </div>
                                                                     @php
                                                                       $software_type=[];
+                                                                        $software=[];
                                                                       $software_type=json_decode($product->user_software);
+                                                                      foreach($software_type as $item)
+                                                                      {
+                                                                       $software =App\Models\Software::where('name', $item)->first();
+                                                                       }
+
                                                                     @endphp
-                                                                    @foreach($software_type as $item)
-                                                                       $software=App\Models\Software::where('name', $item)->get();
-                                                                    @endforeach
+
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
-                                                                            @foreach($software as $soft)
+
                                                                             <a href="#">
-                                                                                <img src="{{ asset('upload/software/'.$soft->images)}}" class="img-fluid" alt="">
-                                                                            </a>
-                                                                            @endforeach
+                                                                                {{ $software->name }}
+                                                                                 </a>
+                                                                                 {{--  @foreach($software as $soft)  --}}
+                                                                                 {{--  <img src="{{ asset('upload/software/'.$soft->images)}}" class="img-fluid" alt="">  --}}
+
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -5426,17 +5432,22 @@
                                                                     <p>{{$product_d->print_technology}}</p>
                                                                 </div>
                                                                 @php
-                                                                $software=App\Models\Software::where('name', $product->user_software )->first();
-                                                                @endphp
-                                                                <div class="design-card-left-bottom">
-                                                                    <div class="card-icons">
-                                                                        <a href="#">
-                                                                            <img src="{{asset('upload/software/'.$software->images ?? '')}}" class="img-fluid" alt="">
-
-                                                                        </a>
-
-                                                                    </div>
+                                                                $software_type=[];
+                                                                  $software=[];
+                                                                $software_type=json_decode($product->user_software);
+                                                              @endphp
+                                                              @foreach($software_type as $item)
+                                                                 $software =App\Models\Software::where('name', $item)->first();
+                                                              @endforeach
+                                                              <div class="design-card-left-bottom">
+                                                                <div class="card-icons">
+                                                                    @foreach($software as $soft)
+                                                                    <a href="#">
+                                                                        <img src="{{ asset('upload/software/'.$soft->images)}}" class="img-fluid" alt="">
+                                                                    </a>
+                                                                    @endforeach
                                                                 </div>
+                                                            </div>
                                                             </div>
                                                             <div class="design-card-footer products-cards-footer">
                                                                 <h4>{{$product_d->description}}

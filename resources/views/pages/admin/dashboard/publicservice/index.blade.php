@@ -47,6 +47,7 @@
                                             <a class="btn btn-primary" href="{{
                                                 route('publics.show', $medi->id)
                                                 }}">عرض</a>
+                                             
                                         </td>
                                         <td class="flex">
                                         <!-- <a href="" class="edit-btn"><i class="fa fa-pencil-square-o"></i></a> -->

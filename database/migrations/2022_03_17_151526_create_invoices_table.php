@@ -21,6 +21,7 @@ class CreateInvoicesTable extends Migration
             $table->integer('user_id')->default(0);
             $table->integer('qty_model')->default(0);
             $table->integer('price_design')->default(0);
+            $table->string('order_id')->nullable();
             $table->integer('price_model')->default(0);
             $table->integer('tax')->default(0);
             $table->timestamps();
