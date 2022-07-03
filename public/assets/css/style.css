@@ -31600,3 +31600,9 @@ margin-left: 20px;
 .enteries-d-none .dataTables_wrapper .dataTables_length{
   display: none !important;
 }
+.enteries-d-none .dataTables_wrapper .dataTables_paginate {
+  display: none !important;
+}
+.medical-card .form-control{
+  border: 3px solid #c3c1c1 !important;
+}

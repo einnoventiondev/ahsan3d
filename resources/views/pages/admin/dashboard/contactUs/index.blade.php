@@ -31,9 +31,8 @@
                                         <th>بريد الالكتروني</th>
                                         <th> هاتف</th>
                                         <th>عنوان</th>
-
                                         <th>نص</th>
-                                        <th></th>
+                                        <th>عمل</th>
                                     </tr>
                                     </thead>
 
@@ -51,7 +50,7 @@
                                             <a class="btn btn-primary"
                                                     href="{{
                                                     route('contact.edit',
-                                                    $contact->id) }}">يحرر</a>
+                                                    $contact->id) }}">تعديل</a>
                                             {{--  <form action="{{
                                                 route('contact.destroy',
                                                 $contact->id) }}"
