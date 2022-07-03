@@ -31597,3 +31597,6 @@ margin-left: 20px;
 .apexcharts-legend.center.position-left{
   transform: translateY(-20px);
 }
+.enteries-d-none .dataTables_wrapper .dataTables_length{
+  display: none !important;
+}

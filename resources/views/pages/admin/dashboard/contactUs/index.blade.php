@@ -19,7 +19,7 @@
                     <div class="card-body p-0">
                         {{--  <a class="btn btn-primary mb-2" href="{{
                             route('contact.create') }}"> إنشاء منتج جديد</a>  --}}
-                        <div class="table-responsive medical-datatable">
+                        <div class="table-responsive medical-datatable enteries-d-none">
                             <table class="display" style="width:100%"
                                 id="basic-2">
                                 <thead>
