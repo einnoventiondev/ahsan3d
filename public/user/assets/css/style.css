@@ -2706,6 +2706,10 @@ input[type=number] {
     position: relative;
     /* width: 599px;
      height: 40px; */
+     
+}
+.search-input .form-control{
+    color: #fff !important;
 }
 
 .search-input i {
