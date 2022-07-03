@@ -19,14 +19,14 @@
                         
                         <div class="input-group">
                             
-                            <input class="form-control input-login" type="email" name='email' required="" placeholder="Test@gmail.com" />
+                            <input class="form-control input-login login-email" type="email" name='email' required="" placeholder="Test@gmail.com" />
                         </div>
                     </div>
                     <div class="form-group">
                        
                         <div class="input-group">
                             
-                            <input class="form-control input-login" type="password" name="password" required="" placeholder="*********" />
+                            <input class="form-control input-login login-password" type="password" name="password" required="" placeholder="*********" />
                             <!-- <div class="show-hide">
                                 <span class="show"> </span>
                             </div> -->
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="form-group btan-login">
-                        <button class="btn btn-blue btn-block " type="submit" style="font-family: 'JannaRegular';">
+                        <button class="btn btn-blue btn-block login-submit-btn disabled" type="submit" style="font-family: 'JannaRegular';">
                         تسجيل الدخول
                         </button>
                     </div>
