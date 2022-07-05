@@ -72,6 +72,7 @@
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="{{asset('assets/js/script.js')}}"></script>
+    <script src="{{ asset('user/assets/js/formValidation.js') }}"></script>
     <!-- login js-->
     <!-- Plugin used-->
     <script src="{{ asset('js/app.js') }}"></script>

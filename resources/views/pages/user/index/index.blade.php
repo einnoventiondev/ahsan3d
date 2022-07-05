@@ -4901,7 +4901,7 @@
 
                                                                                  </a>
                                                                                  @endforeach
-                               
+
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -5433,14 +5433,13 @@
                                                                 </div>
                                                                 @php
                                                                 $software_type=[];
-                                                                  $software=[];
-                                                                $software_type=json_decode($product_d->user_software);
-                                                                foreach($software_type as $item)
+                                                                        $software=[];
+                                                                      $software_type=json_decode($product_d->user_software);
+                                                                      foreach($software_type as $item)
                                                                       {
                                                                        $software[] =App\Models\Software::where('name', $item)->first();
                                                                        }
                                                               @endphp
-                                                             
                                                               <div class="design-card-left-bottom">
                                                                 <div class="card-icons">
                                                                     @foreach($software as $soft)
@@ -8582,7 +8581,7 @@
                         $('#name').html(' ');
                         $('#images_field').html(' ');
 
-        
+
                         $.each(data.soft_image, function(key, value) {
                             $('#product_image_show').append(`
                                <img src="upload/software/${value.images}" id="${value.images}" alt="img"style="width:70px;height:70px;">

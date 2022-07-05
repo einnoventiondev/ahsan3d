@@ -18,18 +18,16 @@
                     <div class="card-body p-0">
                         {{--  <a class="btn btn-primary mb-2" href="{{
                             route('about.create') }}"> إنشاء منتج جديد</a>  --}}
-                        <div class="table-responsive medical-datatable">
+                        <div class="table-responsive medical-datatable enteries-d-none">
                             <table class="display" style="width:100%"
                                 id="basic-2">
 
                                 <thead>
                                     <tr>
-                                    <th>العنوان الفرعي</th>
+                                        <th>العنوان الفرعي</th>
                                         <th>عنوان</th>
-
                                         <th>نص</th>
-                                        <th></th>
-                                        <!-- <th>Action</th> -->
+                                        <th>عمل</th>
                                     </tr>
 
                                     @foreach ($abouts as $about)
@@ -42,7 +40,7 @@
                                     <td>
                                         <a class="btn btn-primary" href="{{
                                             route('about.edit', $about->id)
-                                            }}">يحرر</a>
+                                            }}">تعديل</a>
                                         {{--  <form action="{{ route('about.destroy',
                                             $about->id) }}" method="POST">
 
