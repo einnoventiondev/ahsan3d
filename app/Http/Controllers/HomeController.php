@@ -156,15 +156,17 @@ class HomeController extends Controller
 
     public function getProduct($id)
     {
+        $software=[];
+
         $bdata = Product::with('user')->find($id);
-        $software=Software::where('name',$bdata->user_software)->get();
-        foreach($software as $soft){
-            $software_image[]=$soft->images;
+        $software=json_decode($bdata->user_software);
+        foreach($software as $type){
+            $software_type[]=Software::where('name',$type)->first();
         }
         $designer_name = $bdata->user->name;
         $data[0] = $bdata;
         $data[1] = $designer_name;
-        return response() -> json(['code'=> 200, 'msg' => $data,'soft_image'=>$software_image]);
+        return response() -> json(['code'=> 200, 'msg' => $data,'soft_image'=>$software_type]);
     }
 
     public function getRequest($id)

@@ -130,7 +130,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">صالح لغاية</label>
-                                        <input type="number" class="form-control
+                                        <input type="date" class="form-control
                                             invoice-field" required
                                             name="validtill" id=""
                                             aria-describedby=""
@@ -140,7 +140,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
+                                {{--  <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">الحالة
                                         </label>
@@ -156,19 +156,20 @@
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
-                                </div>
+                                </div>  --}}
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">مسندة
+                                        <label for="exampleInputEmail1">team
                                         </label>
                                         <select class="form-select
                                             invoice-field" required
                                             name="assigned" aria-label="Default
                                             select example">
-                                            <option selected disabled>مسندة</option>
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
+                                            <option selected disabled>team</option>
+                                            @foreach($admin as $user)
+                                            <option value="{{ $user->id }}" name="{{ $user->name }}">{{ $user->name }}</option>
+
+                                            @endforeach
                                         </select>
                                         <small id="" class="form-text
                                             text-muted"></small>

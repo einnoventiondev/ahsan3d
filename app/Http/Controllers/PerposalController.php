@@ -54,8 +54,9 @@ class PerposalController extends Controller
     public function create()
     {
         $orders = Medical::all();
+        $admin = User::where('role' , 'admin')->get();
         $publics = PublicService::all();
-        return view('pages.admin.dashboard.perposal.create', compact('orders','publics'));
+        return view('pages.admin.dashboard.perposal.create', compact('orders','publics','admin'));
     }
 
     /**

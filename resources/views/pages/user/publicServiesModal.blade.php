@@ -66,14 +66,17 @@
                                                             <input type="email" class="form-control email" placeholder=".. الايميل هنا" name="email" value="">
                                                         </div>
                                                     </div>
+                                                    @php
+                                                    $helth=App\Models\Specialization::all();
+                                                    @endphp
                                                     <div class="row">
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                             <label class="form-label dot">التخصص</label>
                                                             <select class="form-select spec" name="spec" aria-label="Default select example">
-                                                                <option selected>رقم الهاتف هنا</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
+                                                                 
+                                                                @foreach ($helth as $specialization)
+                                                                <option value="{{ $specialization->specialization }}">{{ $specialization->specialization }}</option>
+                                                                @endforeach
                                                             </select>
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
@@ -122,8 +125,11 @@
                                                                     <div class="dropzone-previews"></div>
                                                                     <img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img">
                                                                     <div class="fallback">
-                                                                        <!-- this is the fallback if JS isn't working -->
-                                                                        <input name="file" type="file" id="public-file" required multiple />
+                                                                        <!-- this is the fallback if JS isn working -->
+                                                                        <input name="file" class="@error('file') is-invalid @enderror" type="file" id="public-file" required multiple />
+                                                                        @error('file')
+                                                                        <span class="text-danger">{{ $message }}</span>
+                                                                        @enderror
                                                                     </div>
                                                                 </div>
                                                                 <span class="form-detail">صور بصيغة STL,PNG,JPG </span>

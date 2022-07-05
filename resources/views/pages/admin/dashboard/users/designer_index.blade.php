@@ -34,11 +34,19 @@
 
 
                                 <tr>
-                                    <td>{{ $designer->name }}</td>
-                                    <td>{{ $designer->email }}</td>
-                                    <td>{{ $designer->phone }}</td>
-                                    <td>{{ $designers[0]->userDetail->printing_technology }}</td>
-                                    <td>{{ $designers[0]->userDetail->software_type }}</td>
+                                    <td>{{ $designer->name ?? ' '}}</td>
+                                    <td>{{ $designer->email ?? ' ' }}</td>
+                                    <td>{{ $designer->phone ?? ' '}}</td>
+                                    <td>{{ $designers[0]->userDetail->printing_technology ?? ' ' }}</td>
+                                    @php
+                                        $software=[];
+                                        $software=json_decode($designers[0]->userDetail->software_type ?? ' ');
+                                    @endphp
+                                    <td>
+                                    @foreach ($software as  $type)
+                                   {{ $type }}
+                                    @endforeach
+                                </td>
 
                                     <td>
                                         <div class="flex  idad-btn-box items-center justify-center text-theme-9" data-id="ttt" > <input type="checkbox" id="ttt" data-id="ttt"  data-toggle="toggle" data-on="Active" class="approved profileApproved idad-btn-box__input w-4 h-4 mr-2" checked="checked" /> <label for="tt" class="idad-btn-box__label"></label> <div class="text-tt"></div>

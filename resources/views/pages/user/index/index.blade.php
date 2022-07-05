@@ -4884,7 +4884,7 @@
                                                                     </div>
                                                                     @php
                                                                       $software_type=[];
-                                                                        $software=[];
+                                                                    $software=[];
                                                                       $software_type=json_decode($product->user_software);
                                                                       foreach($software_type as $item)
                                                                       {
@@ -4901,9 +4901,7 @@
 
                                                                                  </a>
                                                                                  @endforeach
-                                                                                 {{--  @foreach($software as $soft)  --}}
-                                                                                 {{--  <img src="{{ asset('upload/software/'.$soft->images)}}" class="img-fluid" alt="">  --}}
-
+                               
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -5436,11 +5434,13 @@
                                                                 @php
                                                                 $software_type=[];
                                                                   $software=[];
-                                                                $software_type=json_decode($product->user_software);
+                                                                $software_type=json_decode($product_d->user_software);
+                                                                foreach($software_type as $item)
+                                                                      {
+                                                                       $software[] =App\Models\Software::where('name', $item)->first();
+                                                                       }
                                                               @endphp
-                                                              @foreach($software_type as $item)
-                                                                 $software[] =App\Models\Software::where('name', $item)->first();
-                                                              @endforeach
+                                                             
                                                               <div class="design-card-left-bottom">
                                                                 <div class="card-icons">
                                                                     @foreach($software as $soft)
@@ -8582,11 +8582,10 @@
                         $('#name').html(' ');
                         $('#images_field').html(' ');
 
-                        const obj = JSON.parse(data.soft_image);
-                        console.log(obj);
-                        $.each(obj, function(key, value) {
+        
+                        $.each(data.soft_image, function(key, value) {
                             $('#product_image_show').append(`
-                               <img src="upload/map/${value}" id="${value}" alt="img"style="width:70px;height:70px;">
+                               <img src="upload/software/${value.images}" id="${value.images}" alt="img"style="width:70px;height:70px;">
 
                                 `);
                         });
