@@ -8731,7 +8731,7 @@
                         $('#order_format1').val(' ');
                         $('#order_print1').val(' ');
                         $('#order_note1').val(' ');
-                        var date = data?.msg?.created_at;
+                        var date = data.msg?.created_at;
                         date = date.substr(0, 10);
                         $('#order_no1').html(`${data.msg.order_no}`);
 

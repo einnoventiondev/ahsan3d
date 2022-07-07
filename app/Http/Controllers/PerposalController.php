@@ -9,6 +9,7 @@ use App\Models\Perposal;
 use App\Models\PublicService;
 use App\Models\Order;
 use App\Models\User;
+use Illuminate\Support\Facades\Http;
 use App\Notifications\ProposelNotification;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
@@ -35,15 +36,53 @@ class PerposalController extends Controller
     }
     public function perposal_statuschange(Request $request){
       $perposal=Perposal::where('order_id',$request->id)->first();
-
+      $order=Order::where('id',$request->id)->first();
       $perposal->status = 2;
       $perposal->update();
+      $airtable_id=$order->airtable_order_id;
+      $airtable_created=$order->airtable_created_at;
+      $response = Http::withHeaders([
+        'Content-Type' => 'application/json',
+        'Authorization' =>'Bearer keyD9Kbfap9FoWk0M',
+    ])->patch('https://api.airtable.com/v0/'.env('AIRTABLE_BASE_ID').'/'.env('AIRTABLE_CAND_TABLE'), [
+
+        "records"=> [
+            [
+
+            "id"=>$airtable_id,
+            "fields" => [
+                "Status_order" => "Reject",
+        ],
+    ]
+],
+        "typecast" => true,
+    ]);
+    // return $response;
        return redirect()->route('/');
     }
     public function perposal_statuschange1(Request $request){
         $perposal=Perposal::where('order_id',$request->id)->first();
+        $order=Order::where('id',$request->id)->first();
         $perposal->status = 1;
         $perposal->update();
+        $airtable_id=$order->airtable_order_id;
+        $airtable_created=$order->airtable_created_at;
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization' =>'Bearer keyD9Kbfap9FoWk0M',
+        ])->patch('https://api.airtable.com/v0/'.env('AIRTABLE_BASE_ID').'/'.env('AIRTABLE_CAND_TABLE'), [
+
+            "records"=> [
+                [
+
+                "id"=>$airtable_id,
+                "fields" => [
+                    "Status_order" => "Accept",
+            ],
+        ]
+    ],
+            "typecast" => true,
+        ]);
          return redirect()->route('/');
       }
     /**
