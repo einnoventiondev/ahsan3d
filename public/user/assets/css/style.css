@@ -3311,3 +3311,7 @@ input[type=number] {
     display: none !important;
 
 }
+
+.productadd-btm-btn .disabled.product-add-validate-submit{
+    background-color: #E0E0DE !important;
+}

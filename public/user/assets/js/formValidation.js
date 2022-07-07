@@ -506,4 +506,71 @@ $(document).ready(function () {
         })
     // })
 
+
+    // product add modal validation start here
+
+
+
+    $('.product-add-validate-address').keyup(function () {
+        if ($(this).val().length > 1 && $('.product-add-validate-disc').val().length > 1 && $('.product-add-validate-printing').hasClass('field-blue')  && $('.product-add-validate-software').hasClass('field-blue')  && $('.product-add-validate-colors').hasClass('field-blue')  && $('.product-add-validate-sizes').hasClass('field-blue') ) {
+            $('.product-add-validate-submit').removeClass('disabled');
+        }
+        else {
+            $('.product-add-validate-submit').addClass('disabled');
+        }
+    })
+
+    $('.product-add-validate-disc').keyup(function () {
+        if ($('.product-add-validate-address').val().length > 1 && $(this).val().length > 1 && $('.product-add-validate-printing').hasClass('field-blue')  && $('.product-add-validate-software').hasClass('field-blue')  && $('.product-add-validate-colors').hasClass('field-blue')  && $('.product-add-validate-sizes').hasClass('field-blue') ) {
+            $('.product-add-validate-submit').removeClass('disabled');
+        }
+        else {
+            $('.product-add-validate-submit').addClass('disabled');
+        }
+    })
+
+    $('.product-add-validate-printing').change(function () {
+        if ($('.product-add-validate-address').val().length > 1 && $('.product-add-validate-disc').val().length > 1 && $(this).hasClass('field-blue')  && $('.product-add-validate-software').hasClass('field-blue')  && $('.product-add-validate-colors').hasClass('field-blue')  && $('.product-add-validate-sizes').hasClass('field-blue') ) {
+            $('.product-add-validate-submit').removeClass('disabled');
+        }
+        else {
+            $('.product-add-validate-submit').addClass('disabled');
+        }
+    })
+
+    $('.product-add-validate-software').change(function () {
+        if ($('.product-add-validate-address').val().length > 1 && $('.product-add-validate-disc').val().length > 1 && $('.product-add-validate-printing').hasClass('field-blue')  && $(this).hasClass('field-blue')  && $('.product-add-validate-colors').hasClass('field-blue')  && $('.product-add-validate-sizes').hasClass('field-blue') ) {
+            $('.product-add-validate-submit').removeClass('disabled');
+        }
+        else {
+            $('.product-add-validate-submit').addClass('disabled');
+        }
+    })
+
+
+    $('.product-add-validate-colors').change(function () {
+        if ($('.product-add-validate-address').val().length > 1 && $('.product-add-validate-disc').val().length > 1 && $('.product-add-validate-printing').hasClass('field-blue')  && $('.product-add-validate-software').hasClass('field-blue')  && $(this).hasClass('field-blue')  && $('.product-add-validate-sizes').hasClass('field-blue') ) {
+            $('.product-add-validate-submit').removeClass('disabled');
+        }
+        else {
+            $('.product-add-validate-submit').addClass('disabled');
+        }
+    })
+    
+    $('.product-add-validate-sizes').change(function () {
+        if ($('.product-add-validate-address').val().length > 1 && $('.product-add-validate-disc').val().length > 1 && $('.product-add-validate-printing').hasClass('field-blue')  && $('.product-add-validate-software').hasClass('field-blue')  && $('.product-add-validate-colors').hasClass('field-blue')  && $(this).hasClass('field-blue') ) {
+            $('.product-add-validate-submit').removeClass('disabled');
+        }
+        else {
+            $('.product-add-validate-submit').addClass('disabled');
+        }
+    })
+
+
+    if($('.product-add-validate-software').hasClass('field-blue')){
+        alert('sfda')
+        $(this).parents('#select-product-parent').find('.select2-selection--multiple').addClass('field-blue');
+    }
+
+
 })
