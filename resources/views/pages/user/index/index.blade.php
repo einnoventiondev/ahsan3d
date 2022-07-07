@@ -1673,6 +1673,7 @@
                                         <form method="POST" action="{{route('addOrder')}}">
                                             @csrf
                                             <input type="hidden" id="designer_id" name="designer_id" value="">
+                                            <input type="hidden"  name="user_id" value="{{ Auth::user()->id }}">
                                             <div class="row zhd-form-clean">
 
                                                 <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4 acf">
