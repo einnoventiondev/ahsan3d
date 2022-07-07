@@ -41,6 +41,7 @@
                                         $order_status=App\Models\Perposal::where('order_id',$order->id)->first();
                                     @endphp
                                     <td>
+                                        @if($order_status)
                                         @if($order_status->status == 0)
                                         <button class="btn btn-secondary "  >Waiting</button>
                                     @endif
@@ -49,6 +50,7 @@
                                     @endif
                                     @if($order_status->status == 2)
                                         <a class="btn btn-danger">Reject</a>
+                                    @endif
                                     @endif
                                     </td>
                                     <td class="flex">

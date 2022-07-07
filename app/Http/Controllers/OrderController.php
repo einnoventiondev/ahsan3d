@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\User;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Response;
 use Illuminate\Support\Facades\Http;
 
 
@@ -29,6 +33,8 @@ class OrderController extends Controller
                 'order_no' => $order_no,
                 'status' => 1,
             ]);
+
+            // dd($order->id);
             $response = Http::withHeaders([
                 'Content-Type' => 'application/json',
                 'Authorization' =>'Bearer keyD9Kbfap9FoWk0M',
@@ -36,8 +42,10 @@ class OrderController extends Controller
 
                 "typecast" => true,
                 "fields" => [ "Name" => Auth::user()->name,
-                               "User_id"=>$request->user_id,
+                               "User_email"=>$request->user_email,
                                "Designer_id"=>$request->designer_id,
+                               "Designer_name"=>$request->designer_name,
+                               "Designer_email"=>$request->designer_email,
                                "Quantity"=>$request->qty,
                                "Color" => "yellow",
                                "Size" => $request->size,
@@ -46,8 +54,11 @@ class OrderController extends Controller
                                "Description" => $request->notes,
                          ]
             ]);
-             return  $response ;
-
+            $json = json_decode($response, true);
+                $order_update=Order::latest()->first();
+                $order_update->airtable_order_id=$json['id'];
+                $order_update->airtable_created_at=$json['createdTime'];
+                $order_update->save();
     	 if ($order) {
     	  return redirect()->back()->with('success','Order placed successfully');
     	 }

@@ -1673,7 +1673,11 @@
                                         <form method="POST" action="{{route('addOrder')}}">
                                             @csrf
                                             <input type="hidden" id="designer_id" name="designer_id" value="">
-                                            <input type="hidden"  name="user_id" value="{{ Auth::user()->id }}">
+                                            <input type="hidden"  name="user_id" value="{{ Auth::user()->id ?? '' }}">
+                                            <input type="hidden"  name="user_email" value="{{ Auth::user()->email ?? '' }}">
+                                            <input type="hidden" id="designer_order_name" name="designer_name" value="">
+                                            <input type="hidden" id="designer_order_email" name="designer_email" value="">
+
                                             <div class="row zhd-form-clean">
 
                                                 <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4 acf">
@@ -8595,6 +8599,7 @@
                         $.each(data.msg[0].images, function(index, value) {
                             $('#subImages').append(`<div class="col-auto p-0 card-img-main"><img src="{{asset(Storage::url('/'))}}/${value}" ></div>                                                           alt=""></div>`);
                         });
+                        console.log(data.msg[0].user.email);
                         $('#data').append(`<h3>${data.msg[0].title}</h3>
                                                 <h6>${date}</h6>
 
@@ -8602,6 +8607,11 @@
                         $('#name').append(`<p>${data.msg[1]}</p>`);
                         $('#designer_request > .row > .nav-link > .col-md-12 > .designer_request').attr('value', data.msg[0].designer_id);
                         $('#designer_id').attr('value', data.msg[0].designer_id);
+                        $('#designer_order_name').attr('value', data.msg[0].user.name);
+                        $('#designer_order_email').attr('value', data.msg[0].user.email);
+
+
+
 
 
 
