@@ -16,7 +16,7 @@
                                 </h1>
                             </div>
                             <div></div>
-                        </div>أنواع البرامج المستخدمة
+                        </div>
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-md-12 p-4">

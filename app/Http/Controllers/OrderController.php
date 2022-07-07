@@ -48,6 +48,7 @@ class OrderController extends Controller
                                "Designer_email"=>$request->designer_email,
                                "Quantity"=>$request->qty,
                                "Color" => "yellow",
+                               "Status_order" => "waiting",
                                "Size" => $request->size,
                                "Print" => $request->print,
                                "Format" => $request->format,
