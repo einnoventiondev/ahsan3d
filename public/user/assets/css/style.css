@@ -3354,7 +3354,6 @@ input[type=number] {
     animation-delay: 8s!important;
 }
 
-
 /* .move-blue{
     animation: righToright 4s linear;
 }
@@ -3390,3 +3389,9 @@ input[type=number] {
 .pdf-designer {
     display: none !important;
 }
+
+
+.productadd-btm-btn .disabled.product-add-validate-submit{
+    background-color: #E0E0DE !important;
+}
+

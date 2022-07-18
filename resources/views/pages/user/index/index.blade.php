@@ -5911,7 +5911,7 @@
                                                 <p class="sub-heading-box__heading sub-heading-box__heading--b">العنوان
                                                 </p>
                                             </div>
-                                            <input type="text" class="almuntjat-form__input form-control" placeholder="الاسم هنا .." name="title">
+                                            <input type="text" class="almuntjat-form__input form-control product-add-validate-address" placeholder="الاسم هنا .." name="title">
                                         </div>
                                         <!-- alunwan end -->
                                         <div class="almuntjat-form__input-wrapper">
@@ -5921,7 +5921,7 @@
                                                 </p>
                                             </div>
                                             <!-- <label for="almuntjat-form__wasaf" class="almuntjat-form__wasaf-label"></label> -->
-                                            <textarea placeholder="الوصف هنا .." name="description" id="almuntjat-form__wasaf" class="almuntjat-form__wasaf-input form-control"></textarea>
+                                            <textarea placeholder="الوصف هنا .." name="description" id="almuntjat-form__wasaf" class="almuntjat-form__wasaf-input form-control product-add-validate-disc"></textarea>
                                         </div>
                                         <div class="form-inner-wrapper wrapper jst-btw">
                                             <div class="almuntjat-form__box ">
@@ -5933,7 +5933,7 @@
 
                                                 <div class="input-holder">
 
-                                                    <select class="form-control" data-placeholder="Выберите теги" name="print_technology">
+                                                    <select class="form-select product-add-validate-printing" data-placeholder="Выберите теги" name="print_technology">
                                                         @foreach($printings as $printing)
                                                         <option value="{{ $printing->name }}">{{ $printing->name }}</option>
                                                         @endforeach
@@ -5948,7 +5948,7 @@
                                                 </div>
                                                 <div class="input-holder" id="select-product-parent">
 
-                                                    <select class="form-select select-product" name="software[]" multiple aria-label="Default select example">
+                                                    <select class="form-select select-product product-add-validate-software" name="software[]" multiple aria-label="Default select example">
                                                         @foreach($softwares as $software)
                                                         <option value="{{ $software->name }}">{{ $software->name }}</option>
                                                         @endforeach
@@ -5963,7 +5963,7 @@
                                                 </div>
                                                 <div class="input-holder">
 
-                                                    <select class="form-control" data-placeholder="Выберите теги" name="color">
+                                                    <select class="form-select product-add-validate-colors" data-placeholder="Выберите теги" name="color">
                                                         @foreach($colors as $color)
                                                         <option value="{{ $color->name }}">{{ $color->name }}</option>
                                                         @endforeach
@@ -5978,7 +5978,7 @@
                                                 </div>
                                                 <div class="input-holder">
 
-                                                    <select class="form-control" data-placeholder="Выберите теги" name="size">
+                                                    <select class="form-select product-add-validate-sizes" data-placeholder="Выберите теги" name="size">
                                                         @foreach($sizes as $size)
                                                         <option value="{{ $size->name }}">{{ $size->name }}</option>
                                                         @endforeach
@@ -6002,8 +6002,8 @@
                                             الإدارة للمراجعة للقبول أو الرفض
                                         </div>
                                         <div class="productadd-btm-btn">
-                                            <input type="submit" class="almuntjat-form__btn m-btn product-sub-btn" value="submit">
-                                            <input type="button" class="almuntjat-form__btn m-btn product-sub-btn" value="تعديل">
+                                            <input type="submit" class="almuntjat-form__btn m-btn product-sub-btn disabled product-add-validate-submit" value="submit">
+                                            <input type="button" class="almuntjat-form__btn m-btn product-sub-btn  product-add-validate-change" value="تعديل">
                                             <!-- <button type="button" class="ahs-profile-plus-btn productadd-top-btn show-bg-pink change-zhd">
                                             تعديل
                                         </button> -->
