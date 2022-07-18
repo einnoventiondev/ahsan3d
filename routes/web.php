@@ -272,7 +272,11 @@ Route::resource('extention', FileExtentionController::class);
 Route::post('extention/update/{id}',  [App\Http\Controllers\FileExtentionController::class, 'update'])->name('extention.update');
 
 
-Route::get('/ordermanagmentview',function(){
- return view('pages.admin.dashboard.perposal.OrderManagementView');
-})->name('order.management.user');
+Route::get('/ordermanagmentview/{id}',[PerposalController::class, 'OrderManagementview'])->name('order.management.user');
+Route::get('/send/email',[UserController::class,'sendemail'])->name('user.email.send');
+Route::post('/send/mail',[UserController::class,'usersendemail'])->name('send.mail.user');
+Route::get('/reset/password/{token}',[UserController::class,'forgotview'])->name('user.forgot-password');
+Route::post('/changepassword',[UserController::class,'changepassword'])->name('password.reset.user');
+
+
 

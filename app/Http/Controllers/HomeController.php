@@ -116,11 +116,13 @@ class HomeController extends Controller
                     // $orders_designer = Order::where('user_id',Auth::id())->whereNotIn('id',$proposal_order_id)->orderBy('id','DESC')->get();
 
                     $orders_designer = Order::where('designer_id',Auth::id())->orderBy('id','DESC')->get();
+                    $orders_designer_user = Order::where('user_id',Auth::id())->first();
+
 					  $orders_user = Order::where('user_id', Auth::id())->orderBy('id', 'desc')->with('InvoicePDF')->with('PerposalPDF')->get();
 
 					// dd($orders_user);
 					$products_d = Product::where('designer_id',Auth::user()->id)->orderBy('id', 'DESC')->get();
-                    return view('pages.user.index.index', compact('counter', 'links','images', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map', 'user','products','orders_designer','products_d','orders_user'));
+                    return view('pages.user.index.index', compact('counter', 'links','images', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map', 'user','products','orders_designer','products_d','orders_user','orders_designer_user'));
                 }
             }
         } else {

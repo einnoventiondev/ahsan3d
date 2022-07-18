@@ -69,7 +69,7 @@
                                <label for="imgInp1" class="upload-avatar"> <img src="{{ asset('user/assets/images/camera.png') }}" alt="camera" class="ahs-img-uploder-cam"></label>
                                 <input id="imgInp1" type="file" class="chose1 d-none" value="upload/images/1648128609.png" name="image" accept="image/*" style="opacity: 0">
                             </div>
- 
+
                             @if(Auth::user()->role == 'user')
 
                                 <div class="ahs-form-box1-box">
@@ -91,7 +91,7 @@
                                         المصمم
                                     </a> --}}
                                 </div>
-                                
+
                             @endif
 
 
@@ -166,7 +166,7 @@
                               <label for="imgInp1" class="upload-avatar">  <img src="{{ asset('user/assets/images/camera.png') }}" alt="camera" class="ahs-img-uploder-cam"> </label>
                                 <input id="imgInp1" type="file" class="chose1 d-none" value="upload/images/1648128609.png" name="image" accept="image/*" style="opacity: 0">
                             </div>
-                            
+
                             @if(Auth::user()->role == 'user')
                                 <div class="ahs-form-box1-box">
                                     @if(@auth()->user()->name == null)
@@ -183,18 +183,18 @@
                                         المصمم
                                     </a> --}}
                                 </div>
-                            
+
                             @else
                                 <div class="ahs-form-box1-box">
                                     <a href="#" class="btn btn-form ahs-form-btn1">مستخدم</a>
                                 </div>
-                                
+
                             @endif
 
                             <div class="wrapper al-center ahs-form-box1">
                                 <span class="ahs-form-head1"> الرصيد الحالي </span>
-                                <span class="ahs-form-head2"> 0 ريال </span>
-                                <button data-bs-toggle="modal" data-bs-target="#financialOperations"
+                                <span class="ahs-form-head2"> {{ Auth::user()->wallet }} ريال </span>
+                                <button data-bs-toggle="modal" data-bs-target="#financialOperations" type="button"
                                     class="m-btn mujtmah-box-btn btn-white-1 d-contents">
                                     <img src="{{ asset('user/assets/images/ar.png') }}" alt="" class="ahs-form-img1">
                                 </button>

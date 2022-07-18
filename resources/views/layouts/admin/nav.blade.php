@@ -3,7 +3,7 @@
         {{-- <a class="setting-primary" href="{{route('editpassword')}}"><i data-feather="settings"></i></a> --}}
 
           <a href="{{ route('profileupdate.view') }}" class="admin-profile">
-              @if(auth()->user()->profile != null)
+              @if(Auth::user()->profile != null)
               <img class="img-90 rounded-circle" src="{{ asset(  auth()->user()->profile) }}" alt="">
               @else
               <img class="img-90 rounded-circle" src="{{asset('assets/images/dashboard/1.png')}}" alt="">

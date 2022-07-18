@@ -9,6 +9,8 @@ use App\Models\Perposal;
 use App\Models\PublicService;
 use App\Models\Order;
 use App\Models\User;
+use App\Models\Country;
+
 use Illuminate\Support\Facades\Http;
 use App\Notifications\ProposelNotification;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -95,7 +97,8 @@ class PerposalController extends Controller
         $orders = Medical::all();
         $admin = User::where('role' , 'admin')->get();
         $publics = PublicService::all();
-        return view('pages.admin.dashboard.perposal.create', compact('orders','publics','admin'));
+        $country=Country::all();
+        return view('pages.admin.dashboard.perposal.create', compact('orders','publics','admin','country'));
     }
 
     /**
@@ -107,9 +110,9 @@ class PerposalController extends Controller
     public function store(Request $request)
     {
 
-        $image = $request->image->getClientOriginalName();
-        $request->image->move(public_path('upload/'), $image);
-        $pathimage ='upload/'.$image;
+        // $image = $request->image->getClientOriginalName();
+        // $request->image->move(public_path('upload/'), $image);
+        // $pathimage ='upload/'.$image;
 
         if ($request->order_id ) {
         $order_id = $request->order_id;
@@ -133,7 +136,7 @@ class PerposalController extends Controller
             'order_id' => $order_id,
             'user_id' => $user->id,
             'comments' =>$request->comments,
-            'image'=> $pathimage,
+            // 'image'=> $pathimage,
             'address' =>$request->address,
             'validtill' => $request->validtill,
             'date' => $request->date,
@@ -281,5 +284,11 @@ class PerposalController extends Controller
         //$id = (int)$orders->user_id;
         //return User::where('id',$orders->user_id)->get('name');
         return view('pages.admin.dashboard.perposal.orderManagement',compact('orders'));
+    }
+    public function OrderManagementview($id){
+          $order=Order::find($id);
+
+        return view('pages.admin.dashboard.perposal.OrderManagementView',compact('order'));
+
     }
 }

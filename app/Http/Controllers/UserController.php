@@ -11,6 +11,8 @@ use App\Models\PublicService;
 use App\Models\UserDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -24,6 +26,49 @@ class UserController extends Controller
     {
        $data = User::find($id);
        return view('pages.admin.dashboard.users.user_update',compact('data'));
+    }
+    public function sendemail(){
+        return view('pages.user.sendemail');
+    }
+    public function forgotview($token){
+       $token=User::where('token',$token)->first();
+   return view('pages.user.resetpassword',compact('token'));
+    }
+    public function changepassword(Request $request){
+        $user=User::where('email',$request->email)->first();
+        if($request->password==$request->confirm_password){
+            $user->password=Hash::make($request->password);
+            $user->save();
+            if($user){
+                Alert::success('Congrats', 'Password Generate Succeussfully');
+                return redirect()->route('/');
+            }else{
+                Alert::error('Opps!', 'Password Not generate');
+                return back();
+            }
+        }
+        else{
+            Alert::error('Opps!', 'Password & Confirm Password Does not Match,So enter again password');
+         return back();
+        }
+    }
+    public function usersendemail(Request $request){
+        $user=User::where('email',$request->email)->first();
+        $user->token=$request->_token;
+        $details=$request->_token;
+        $user->save();
+        if($user){
+
+            Alert::success('Congrats', 'You have requested to change your password,
+            Soon, you will receive an email to reset your password on your registered email address');
+        }
+        else{
+            Alert::error('Opps!', 'Sorry! email Not send');
+        }
+        Mail::to($request->email)->send(new \App\Mail\ForgotPassword($details));
+
+        return back();
+
     }
     public function userUpdate1(Request $request)
     {

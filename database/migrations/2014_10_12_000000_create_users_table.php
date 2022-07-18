@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('order_id')->nullable();
             $table->integer('approve')->default(0);
             $table->string('field')->nullable();
+            $table->string('wallet')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

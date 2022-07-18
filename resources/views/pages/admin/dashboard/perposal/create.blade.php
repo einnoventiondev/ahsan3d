@@ -161,7 +161,8 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">team
                                         </label>
-                                        <select class="form-select
+                                        <select class="form-select form-text
+                                        text-muted
                                             invoice-field" required
                                             name="assigned" aria-label="Default
                                             select example">
@@ -208,10 +209,9 @@
                                             name="country"  aria-label="Default
                                             select example">
                                             <option selected disabled>الدولة</option>
-
-                                                <option value="pk">pk</option>
-                                                <option value="uk">uk</option>
-                                                <option value="usa">usa</option>
+                                                @foreach ($country as $item )
+                                                <option value="{{$item->id}}">{{ $item->name }}</option>
+                                                @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -225,7 +225,7 @@
                                             placeholder="">
                                     </div>
                                 </div>
-                                <div class="invoice-field-12 d-flex">
+                                {{--  <div class="invoice-field-12 d-flex">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">صورة
                                         </label>
@@ -236,7 +236,7 @@
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
-                                </div>
+                                </div>  --}}
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">عنوان
