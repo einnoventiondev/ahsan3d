@@ -481,6 +481,7 @@ $(function() {
         }
 
     })
+
 })
 
 // new-nav
@@ -759,7 +760,7 @@ $(document).ready(function() {
         // $(".modal-backdrop").addClass('d-none');
     })
 
-    
+
     $('.reg-des').click(function() {
         $('#myTab .nav-item .nav-link').removeClass('active');
         $('#myTab .nav-item:last-child .nav-link').addClass('active');
