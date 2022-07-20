@@ -37,14 +37,15 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="user-payment-form">
+                <form class="user-payment-form" method="POST" action="{{route('user.account.payment')}}">
+                   @csrf
                     <div class="payment-user" id="payment-user-method">
                         <div class="amount-box">
                             <label class="form-label dot">
                                 amount
                             </label>
-                            <input type="text" class="form-control  disabled" name="amount" value="" placeholder="  .."
-                                value="">
+                
+                            <input type="text" class="form-control" name="payment"  placeholder=" add Payment  .." >
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="flexRadioDefault1">
@@ -69,7 +70,8 @@
                             </label>
                         </div>
                         <div class="button-box__user-payment">
-                            <button type="button" class="btn btn-sky invert user-payment-submit">Submit</button>
+                            <input type="submit" value="submit" class="btn btn-sky invert user-payment-submit">
+                          
                         </div>
                     </div>
                 </form>
