@@ -34,17 +34,17 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h5 class="modal-title" id="">عنوان مشروط</h5>
+                <h5 class="modal-title">عنوان مشروط</h5>
             </div>
             <div class="modal-body">
                 <form class="user-payment-form" method="POST" action="{{route('user.account.payment')}}">
                    @csrf
-                    <div class="payment-user" id="payment-user-method">
+                    <div class="payment-user payment" id="payment-user-method">
                         <div class="amount-box">
                             <label class="form-label dot">
                             مقدار
                             </label>
-                            <input type="text" class="form-control" name="payment"  placeholder=" add Payment  .." >
+                            <input type="number" pattern="\d*"  class="form-control user-add-payment" name="payment"  placeholder="Add Payment  .." >
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="flexRadioDefault1">
@@ -69,7 +69,7 @@
                             </label>
                         </div>
                         <div class="button-box__user-payment">
-                            <input type="submit" value="submit" class="btn btn-sky invert user-payment-submit">
+                            <input type="submit" value="Submit" class="btn btn-sky disabled invert user-payment-submit">
 
                         </div>
                     </div>

@@ -3395,3 +3395,8 @@ input[type=number] {
     background-color: #E0E0DE !important;
 }
 
+
+#user-payment .payment-user.payment{
+    position: relative;
+    top: 0;
+}
