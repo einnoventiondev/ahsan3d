@@ -29,22 +29,23 @@
 <!-- designer pro update  start-->
 <!-- payment modal for users start -->
 <!-- Modal -->
-<div class="modal fade user-payment" id="user-payment" tabindex="-1" aria-labelledby="user-paymentLabel" aria-hidden="true">
+<div class="modal fade" id="user-payment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h5 class="modal-title">عنوان مشروط</h5>
             </div>
             <div class="modal-body">
                 <form class="user-payment-form" method="POST" action="{{route('user.account.payment')}}">
                    @csrf
-                    <div class="payment-user payment" id="payment-user-method">
+                    <div class="payment-user" id="payment-user-method">
                         <div class="amount-box">
                             <label class="form-label dot">
-                            مقدار
+                                amount
                             </label>
-                            <input type="number" pattern="\d*"  class="form-control user-add-payment" name="payment"  placeholder="Add Payment  .." >
+
+                            <input type="text" class="form-control" name="payment"  placeholder=" add Payment  .." >
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="flexRadioDefault1">
@@ -60,7 +61,7 @@
                                     id="flexRadioDefault2">
                             </label>
                         </div>
-                        <div class="form-check apple-pay-box">
+                        <div class="form-check">
                             <label class="form-check-label" for="flexRadioDefault3">
                                 <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                 <p>آبل باي</p>
@@ -69,7 +70,7 @@
                             </label>
                         </div>
                         <div class="button-box__user-payment">
-                            <input type="submit" value="Submit" class="btn btn-sky disabled invert user-payment-submit">
+                            <input type="submit" value="submit" class="btn btn-sky invert user-payment-submit">
 
                         </div>
                     </div>
@@ -82,7 +83,6 @@
         </div>
     </div>
 </div>
-
 <!-- payment modal for users End -->
 
 <div class="modal fade page register" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel"
@@ -165,7 +165,7 @@
 
                                 <div class="wrapper al-center ahs-form-box1">
                                     <span class="ahs-form-head1"> الرصيد الحالي </span>
-                                    <span class="ahs-form-head2"> 0 ريال </span>
+                                    <span class="ahs-form-head2"> {{ Auth::user()->wallet }}  ريال </span>
                                     <!-- before this modal is  #financialOperations -->
                                     <button data-bs-toggle="modal" data-bs-target="#financialOperations"
                                         class="m-btn mujtmah-box-btn btn-white-1 d-contents">

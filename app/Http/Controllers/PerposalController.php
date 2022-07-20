@@ -36,6 +36,34 @@ class PerposalController extends Controller
         $medicals = Medical::all();
         return view('pages.admin.dashboard.perposal.index', compact('invoices','users','medicals'));
     }
+    public function deliverFile(Request $request){
+        $perposal=Perposal::where('order_id',$request->order_id)->first();
+        if($request->hasfile('deliver_file')){
+            $file= $request->file('deliver_file');
+            $extenstion= $file->getClientOriginalExtension();
+            $filename=time().'.'.$extenstion;
+            $file->move('deliver/file/', $filename);
+            $perposal->deliver_file=$filename;
+        }
+        $perposal->description=$request->description;
+        $perposal->save();
+        return redirect()->route('/');
+    }
+    public function priceDetect(Request $request){
+        $perposal=Perposal::where('order_id',$request->id)->first();
+        $order=Order::where('id',$perposal->order_id)->first();
+        $designer_data=User::where('id',$order->designer_id)->first();
+        $user=User::where('id',1)->first();
+        $user_price= $user->wallet;
+       $order_price=$perposal->price_model;
+       $average=$order_price/100*90;
+       $total_price=$user_price-$average;
+       $user->wallet=$total_price;
+       $user->update();
+        $designer_data->wallet += $average;
+        $designer_data->update();
+        return back();
+    }
     public function perposal_statuschange(Request $request){
       $perposal=Perposal::where('order_id',$request->id)->first();
       $order=Order::where('id',$request->id)->first();

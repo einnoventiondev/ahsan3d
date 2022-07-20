@@ -2665,6 +2665,11 @@
                                             </div>
                                         </div>
                                     </div>
+                                    @php
+                                    $id = Session::get('order_id');
+                                    $user_data=App\Models\Perposal::where('order_id',$id)->first();
+                                    @endphp
+                                    @if($user_data != $user_data)
                                     <form id="submit_proposal" method="post" action="{{route('addProposal')}}">
                                         @csrf
                                         <input type="hidden" name="user_id" id="user_id" value="">
@@ -2715,6 +2720,105 @@
                                             </div>
                                         </div>
                                     </form>
+                                    @else
+                                    <div class="row">
+                                        <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">طلب
+                                            قيد التنفيذ</h1>
+                                        <div class="col-md-12">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-12">
+                                                    <div class="row mb-2 justify-content-between conditional-blur">
+                                                        <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                            <label class="form-label">تكلفة تنفيذ الخدمة</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="كتابة القيمة هنا .." readonly
+                                                                value="{{$user_data->price_model ?? ''}}">
+                                                                <div class="service-fee-text text-center">
+                                                    <span>شامل رسوم الخدمة + قيمة الضريبة المضافة</span>
+                                                </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                            <label class="form-label">تاريخ البداية</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="تحديد التاريخ هنا .." readonly
+                                                                value="{{$user_data->date ?? ''}}">
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                            <label class="form-label">تاريخ التسليم</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="تحديد التاريخ هنا .. " readonly
+                                                                value="{{$user_data->validtill ?? ''}}">
+
+                                                        </div>
+                                                        <div class="prog-outer wrapper al-center">
+                                                            <div class="prog-inner"></div>
+
+
+                                                        </div>
+                                                        <div class="service-fee-text prog-fee">
+                                                            <span> متبقي على تسليم الطلب 24 يوم 35 دقيقة 13
+                                                                ثانية</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="row conditional-blur">
+                                   <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                       <label class="form-label">رفع ملف المجسم</label>
+                                       <div class="upload-btn-wrapper">
+                                           <a class="btn btn-upload" href="{{ asset( @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
+                                       </div>
+                                   </div>
+                                   </div> -->
+                                   <form action="{{ route('designer.deliver.file') }}" method="POST" enctype="multipart/form-data"  >
+                                    @csrf
+                                                <input type="hidden" value="{{ $id }}" name="order_id">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <label class="form-label dot">ملاحظات</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <textarea class="form-control designer-text-area "
+                                                            id="exampleFormControlTextarea1" rows="4" name="description"
+                                                            placeholder="  ..الوصف هنا" ></textarea>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="upload-btn-wrapper designer-upload">
+                                                            <button class="btn btn-upload-designer "><img
+                                                                    src="{{asset('user/assets/icons/upload-atachment.png')}}"
+                                                                    alt="upload-img">
+                                                                <p>صور بصيغة STL,PNG,JPG</p>
+                                                            </button>
+                                                            <input type="file"  required
+                                                                name="deliver_file" />
+                                                        </div>
+                                                    </div>
+                                                    <!-- <p class="mt-3" style="    text-align: center;
+                                      ">متبقي على تسليم الطلب 24 يوم 35 دقيقة 13 ثانية</p> -->
+                                                </div>
+
+                                                <h1 class="title text-center mt-5 no-border conditional-blur">
+                                                    <div class="">
+                                                        {{--  <a href="javascript:void(0);"
+                                                            class="btn btn-form mx-3 with-arrow mt-10"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#designer-review-upload">ارسال</a>  --}}
+                                                            <input  type="submit"
+                                                            class="btn btn-form mx-3 with-arrow mt-10" value="ارسال">
+                                                        <a href="#"
+                                                            class="btn btn-form mx-3 with-arrow btn-uplod mt-10">الفاتورة</a>
+                                                        <a href="#"
+                                                            class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
+
+
+                                                    </div>
+                                                </h1>
+                                                <p class="mt-4  modal-bottom-txt">الرجاء التأكد من ارسال كافة الملفات لتجنب
+                                                            تقديم بلاغ عليك</p>
+                                            </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -6780,16 +6884,21 @@
                                                                         الصحية</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <textarea class="form-control text-area-input" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly=""></textarea>
+                                                                    <textarea class="form-control text-area-input" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly="">{{ $user_data->description ?? '' }}</textarea>
                                                                 </div>
+
                                                                 <div class="col-md-6">
-                                                                    <div class="upload-btn-wrapper designer-upload">
+                                                                    <div class="upload-btn-wrapper ">
+                                                                        <a href="{{ asset('deliver/file/'.$user_data->deliver_file) }}" download >
                                                                         <button class="btn btn-upload-designer"><img src="{{asset('user/assets/icons/download-attachments.png')}}" alt="upload-img">
                                                                             <h5>تحميل المرفقات</h5>
+                                                                            <img src="{{ asset('deliver/file/'.$user_data->deliver_file) }}" alt=" deliver image" style="width: 150px;height:150px;display:none;" >
                                                                         </button>
-                                                                        <input type="file" id="" required="" name="myfile">
+                                                                    </a>
+
                                                                     </div>
                                                                 </div>
+
                                                             </div>
                                                         </div>
                                                         <div class="almuntjat-form-error almuntjat-form-error-2">
@@ -6801,7 +6910,7 @@
                                                             <button class="userReq-btn-box__btn userReq-btn-box__btn--e mgl-0" data-bs-toggle="modal" data-bs-target="#user4RequestModal">تقديم بلاغ</button>
                                                         </div>
                                                         <div class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-show">
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--d orange-bg">انهاء
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--d orange-bg toggle_button2" id="{{$id}}">انهاء
                                                                 الخدمة</button>
                                                             <button class="userReq-btn-box__btn userReq-btn-box__btn--d ">الفاتورة</button>
                                                             <button class="userReq-btn-box__btn userReq-btn-box__btn--e mgl-0">تقديم بلاغ</button>
@@ -8551,6 +8660,28 @@
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
                     url: "{{ route('perposal_status_change1') }}",
+                    data: {
+                        'id': id
+                    },
+                    success: function(data) {
+
+                    }
+                });
+            });
+        });
+        $(document).ready(function() {
+            $(".toggle_button2").click(function() {
+                var id = $(this).attr('id');
+                alert(id);
+                console.log(id);
+                $.ajax({
+
+                    type: "POST",
+                    dataType: "json",
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url: "{{ route('deliver_price_detect') }}",
                     data: {
                         'id': id
                     },

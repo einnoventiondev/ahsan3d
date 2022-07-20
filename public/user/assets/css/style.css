@@ -1001,7 +1001,7 @@ footer .right img {
 
 .modal.result .form-control {
     background-color: #E3E9EC;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .modal.video,
@@ -3349,9 +3349,12 @@ input[type=number] {
 
 .pdf-designer {
     display: none !important;
-}.animate__delay-6s {
+}
+
+.animate__delay-6s {
     animation-delay: 8s!important;
 }
+
 
 /* .move-blue{
     animation: righToright 4s linear;
@@ -3389,13 +3392,11 @@ input[type=number] {
     display: none !important;
 }
 
-
-.productadd-btm-btn .disabled.product-add-validate-submit{
+.productadd-btm-btn .disabled.product-add-validate-submit {
     background-color: #E0E0DE !important;
 }
 
-
-#user-payment .payment-user.payment{
+#user-payment .payment-user.payment {
     position: relative;
     top: 0;
 }
