@@ -9,9 +9,9 @@ $(document).ready(function () {
 
     function loginValidateemail(email) {
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        
+
         if ($('.login-email').val().length === 0) {
-            
+
             $('.login-email').removeClass('field-blue');
             $('.login-email').removeClass('field-red');
             $('.login-submit-btn').addClass('disabled');
@@ -386,7 +386,7 @@ $(document).ready(function () {
         var email = $(this).val();
         userProfileValidateEmail(email);
     })
-    
+
     $('#healthServiesModal .email').keyup(function () {
         var email = $(this).val();
         if ($('#healthServiesModal .carousel-item.one .name').val().length > 1 && $(this).hasClass('field-blue') &&
@@ -440,10 +440,10 @@ $(document).ready(function () {
         if ($('#publicServiesModal .carousel-item.two .type').val().length > 1 && $('#publicServiesModal .carousel-item.two .print-resolution').val().length > 1 &&
             $('#publicServiesModal .carousel-item.two .spec').val().length > 1) {
             $('#publicServiesModal .carousel-item.two .btn-form').removeClass('disabled');
-        } 
+        }
     })
 
-    
+
     $('#public-file').change(function () {
         var fileName = $(this).val();
         $('.btn-upload.public').addClass('field-blue');
@@ -556,7 +556,7 @@ $(document).ready(function () {
             $('.product-add-validate-submit').addClass('disabled');
         }
     })
-    
+
     $('.product-add-validate-sizes').change(function () {
         if ($('.product-add-validate-address').val().length > 1 && $('.product-add-validate-disc').val().length > 1 && $('.product-add-validate-printing').hasClass('field-blue')  && $('.product-add-validate-software').hasClass('field-blue')  && $('.product-add-validate-colors').hasClass('field-blue')  && $(this).hasClass('field-blue') ) {
             $('.product-add-validate-submit').removeClass('disabled');
@@ -571,6 +571,32 @@ $(document).ready(function () {
         alert('sfda')
         $(this).parents('#select-product-parent').find('.select2-selection--multiple').addClass('field-blue');
     }
+
+
+    // user payment form validation
+
+    $('.user-add-payment').keyup(function () {
+        if ($(this).val().length > 1 && $('.payment-user .form-check-label').hasClass('active')) {
+            $('.user-payment-submit').removeClass('disabled');
+        }
+        else {
+            $('.user-payment-submit').addClass('disabled');
+        }
+    })
+
+    $('.payment-user .form-check-label').click(function () {
+        if ($('.user-add-payment').val().length > 1 && $(this).hasClass('active')) {
+            $('.user-payment-submit').removeClass('disabled');
+        }
+        else {
+            $('.user-payment-submit').addClass('disabled');
+        }
+    })
+
+
+
+
+
 
 
 })
