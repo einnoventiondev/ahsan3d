@@ -29,12 +29,12 @@
 <!-- designer pro update  start-->
 <!-- payment modal for users start -->
 <!-- Modal -->
-<div class="modal fade" id="user-payment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog ">
+<div class="modal fade page user-payment" id="user-payment" tabindex="-1" aria-labelledby="user-paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h5 class="modal-title" id="exampleModalLabel">عنوان مشروط</h5>
+                <h5 class="modal-title" id="user-paymentModalLabel">عنوان مشروط</h5>
             </div>
             <div class="modal-body">
                 <form class="user-payment-form" method="POST" action="{{route('user.account.payment')}}">
