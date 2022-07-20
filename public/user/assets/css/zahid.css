@@ -442,3 +442,33 @@ position: absolute;
     padding: 0 10px !important;
     font-size: 11px !important;
 }
+#user-payment .modal-dialog{
+    margin: auto !important;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#user-payment{
+    background: transparent !important;
+}
+#user-payment .btn-close{
+    margin: 0 !important;
+}
+#user-payment .modal-title{
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+#user-payment .modal-title::before{
+    content:'/f055';
+    display: inline-block;
+  font-family: FontAwesome;
+}
+#user-payment .amount-box{
+    padding: 0 17px 0 39px;    
+}
+#user-payment .apple-pay-box{
+    width: 50% !important;
+    padding: 0 0 0 14px;
+}
