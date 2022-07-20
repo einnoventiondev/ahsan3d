@@ -1,5 +1,5 @@
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
 
 <head>
     <meta charset="UTF-8">

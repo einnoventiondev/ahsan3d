@@ -2788,7 +2788,7 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">406</span>
+                                            <span class="id">4062</span>
                                             <!-- <span class="id">{{@$public->id}}</span> -->
                                             <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
                                             <div class="dateTime">11/01/2022 - 03:00PM</div>
@@ -3025,7 +3025,7 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">406</span>
+                                            <span class="id">4063</span>
                                             <!-- <span class="id">{{@$public->id}}</span> -->
                                             <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
                                             <div class="dateTime">11/01/2022 - 03:00PM</div>
@@ -3292,7 +3292,7 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">406</span>
+                                            <span class="id">4064</span>
                                             <!-- <span class="id">{{@$public->id}}</span> -->
                                             <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
                                             <div class="dateTime">11/01/2022 - 03:00PM</div>
@@ -3633,7 +3633,7 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">406</span>
+                                            <span class="id">4065</span>
                                             <!-- <span class="id">{{@$public->id}}</span> -->
                                             <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
                                             <div class="dateTime">11/01/2022 - 03:00PM</div>
@@ -3867,7 +3867,7 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">406</span>
+                                            <span class="id">4066</span>
                                             <!-- <span class="id">{{@$public->id}}</span> -->
                                             <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
                                             <div class="dateTime">11/01/2022 - 03:00PM</div>
@@ -4107,7 +4107,7 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">406</span>
+                                            <span class="id">4067</span>
                                             <!-- <span class="id">{{@$public->id}}</span> -->
                                             <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
                                             <div class="dateTime">11/01/2022 - 03:00PM</div>
@@ -4341,7 +4341,7 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">406</span>
+                                            <span class="id">4068</span>
                                             <!-- <span class="id">{{@$public->id}}</span> -->
                                             <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
                                             <div class="dateTime">11/01/2022 - 03:00PM</div>
@@ -6508,7 +6508,7 @@
                                 </div>
                                 <div class="profile">
                                     <button class="btn btn-sky profile-btn invert">
-                                        مستخدم
+                                        {{Auth::user()->name ?? ' '}}
                                     </button> @if(@auth()->user()->profile == null)
                                     <a href="#profile">
                                         <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
@@ -6532,7 +6532,7 @@
 
                                                     <h1></h1>
 
-                                                    <h1>406</h1>
+                                                    <h1 id="order_no_deliver1"></h1>
 
                                                     <p><img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> رفع الطلب</p>
                                                     <p><img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">تقديم عرض سعر من قبل المصمم</p>
@@ -6580,7 +6580,7 @@
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert">
-                                        المصمم
+                                        {{ Auth::user()->name ?? ' ' }}
                                     </button> @if(@auth()->user()->profile == null)
                                     <a href="#profile">
                                         <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
@@ -6625,10 +6625,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">406</span>
+                                            <span class="id" id="order_no_deliver"></span>
                                             <!-- <span class="id">{{@$public->id}}</span> -->
                                             <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
-                                            <div class="dateTime ">11/01/2022 - 03:00PM</div>
+                                            <div class="dateTime "id="order_date_deliver">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -6685,21 +6685,21 @@
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="1">
+                                                <input type="text" class="form-control" id="order_qty_deliver" placeholder=".. رقم الهاتف هنا" readonly="" value="">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="اختيار المقاس">
+                                                <input type="text" class="form-control" id="order_size_deliver" placeholder=".. الايميل هنا" readonly="" value=" ">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"id="order_format_deliver" readonly="" value="">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="التقنية الأولي + 35 ريال">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly=""id="order_print_deliver" value="">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
@@ -6713,11 +6713,14 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="order_note_deliver" rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
-
+                                        @php
+                                        $id = Session::get('order_id');
+                                        $user_data=App\Models\Perposal::where('order_id',$id)->first();
+                                        @endphp
                                         <div class="row">
                                             <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">
                                                 معلومات المصمم</h1>
@@ -6731,7 +6734,7 @@
                                                                     <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
                                                                 <div class="star-profile-txt">
                                                                     <span>مصمم</span>
-                                                                    <h4> أسم المصمم</h4>
+                                                                    <h4 id="designer_name_deliver"> أسم المصمم</h4>
                                                                     <div class="star-reating">
                                                                         <i class="fa-solid fa-star"></i>
                                                                         <i class="fa-solid fa-star"></i>
@@ -6749,17 +6752,17 @@
                                                         <div class="row mb-2 justify-content-between mb-5 conditional-blur">
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{$user_data->price_model ?? ''}}">
                                                                 <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة
                                                                     المضافة</p>
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ البداية</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{$user_data->date ?? ''}}">
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ التسليم</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{$user_data->validtill ?? ''}}">
                                                             </div>
                                                         </div>
                                                         <div class="prog-box mb-5">
@@ -6885,7 +6888,7 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">406</span>
+                                            <span class="id">40610</span>
                                             <!-- <span class="id">{{@$public->id}}</span> -->
                                             <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
                                             <div class="dateTime ">11/01/2022 - 03:00PM</div>
@@ -7135,7 +7138,7 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">406</span>
+                                            <span class="id">40611</span>
                                             <!-- <span class="id">{{@$public->id}}</span> -->
                                             <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
                                             <div class="dateTime ">11/01/2022 - 03:00PM</div>
@@ -7463,7 +7466,7 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">406</span>
+                                            <span class="id">40612</span>
                                             <!-- <span class="id">{{@$public->id}}</span> -->
                                             <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
                                             <div class="dateTime ">11/01/2022 - 03:00PM</div>
@@ -7670,7 +7673,7 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">406</span>
+                                            <span class="id">40613</span>
                                             <!-- <span class="id">{{@$public->id}}</span>
                                             <div class="dateTime">{{@$public->created_at}}</div> -->
                                             <div class="dateTime ">11/01/2022 - 03:00PM</div>
@@ -7918,7 +7921,7 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">406</span>
+                                            <span class="id">4061</span>
                                             <!-- <span class="id">{{@$public->id}}</span>
                                             <div class="dateTime">{{@$public->created_at}}</div> -->
                                             <div class="dateTime ">11/01/2022 - 03:00PM</div>
@@ -8652,38 +8655,56 @@
                         }
                         console.log('proceed');
                         $('#order_no').html(' ');
+                        $('#order_no_deliver').html(' ');
+                        $('#order_no_deliver1').html(' ');
                         $('#order_no3').html(' ');
                         $('#order_date').html(' ');
+                        $('#order_date_deliver').html(' ');
                         $('#order_date3').html(' ');
                         $('#designer_name').html(' ');
+                        $('#designer_name_deliver').html(' ');
                         $('#order_qty').val(' ');
+                        $('#order_qty_deliver').val(' ');
                         $('#order_qty3').val(' ');
                         $('#order_size').val(' ');
+                        $('#order_size_deliver').val(' ');
                         $('#order_size3').val(' ');
                         $('#order_format').val(' ');
+                        $('#order_format_deliver').val(' ');
                         $('#order_format3').val(' ');
                         $('#order_print').val(' ');
+                        $('#order_print_deliver').val(' ');
                         $('#order_print3').val(' ');
                         $('#order_note').val(' ');
+                        $('#order_note_deliver').val(' ');
                         $('#order_note3').val(' ');
                         var date = data.msg.created_at;
                         date = date.substr(0, 10);
                         $('#order_no').html(`${data.msg.order_no}`);
+                        $('#order_no_deliver').html(`${data.msg.order_no}`);
+                        $('#order_no_deliver1').html(`${data.msg.order_no}`);
                         $('#order_no3').html(`${data.msg.order_no}`);
                         $('#order_date').html(`${date}`);
+                        $('#order_date_deliver').html(`${date}`);
                         $('#order_date3').html(`${date}`);
-                        $('#designer_name').html(`${data.msg.user.name}`);
+                        $('#designer_name').html(`${data.designer_name}`);
+                        $('#designer_name_deliver').html(`${data.designer_name}`);
                         $('#user_id').val(`${data.msg.user.id}`);
                         $('#order_qty').val(`${data.msg.qty}`);
+                        $('#order_qty_deliver').val(`${data.msg.qty}`);
                         $('#order_qty3').val(`${data.msg.qty}`);
                         $('#order_id').val(`${data.msg.id}`);
                         $('#order_size').val(`${data.msg.size}`);
+                        $('#order_size_deliver').val(`${data.msg.size}`);
                         $('#order_size3').val(`${data.msg.size}`);
                         $('#order_format').val(`${data.msg.format}`);
+                        $('#order_format_deliver').val(`${data.msg.format}`);
                         $('#order_format3').val(`${data.msg.format}`);
                         $('#order_print').val(`${data.msg.print}`);
+                        $('#order_print_deliver').val(`${data.msg.print}`);
                         $('#order_print3').val(`${data.msg.print}`);
                         $('#order_note').val(`${data.msg.notes}`);
+                        $('#order_note_deliver').val(`${data.msg.notes}`);
                         $('#order_note3').val(`${data.msg.notes}`);
 
 

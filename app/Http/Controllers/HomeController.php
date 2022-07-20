@@ -174,8 +174,10 @@ class HomeController extends Controller
     public function getRequest($id)
     {
         $data = Order::with('user')->with('InvoicePDF')->with('PerposalPDF')->find($id);
+        $designer_name=User::find($data->designer_id);
+        $name=$designer_name->name;
         $session=Session::put('order_id',$id);
-        return response() -> json(['code'=> 200,'session'=>$session, 'msg' => $data,'name' => 'request_order_with_id']);
+        return response() -> json(['code'=> 200,'session'=>$session, 'msg' => $data,'designer_name'=>$name,'name' => 'request_order_with_id']);
     }
 
 	 public function getRequest_blur($id)
