@@ -64,6 +64,15 @@ class PerposalController extends Controller
     }
     public function perposal_statuschange1(Request $request){
         $perposal=Perposal::where('order_id',$request->id)->first();
+        $user=User::where('id',Auth::user()->id)->first();
+       $user_price= $user->wallet;
+       $order_price=$perposal->price_model;
+       $total_price=$user_price-$order_price;
+        $user->wallet = $total_price;
+        $user->update();
+         $admin_wallet=User::where('id',1)->first();
+         $admin_wallet->wallet +=$order_price;
+         $admin_wallet->update();
         $order=Order::where('id',$request->id)->first();
         $perposal->status = 1;
         $perposal->update();

@@ -11,7 +11,9 @@
               @endif
               <div class="badge-bottom"><span class="badge badge-primary">جديد</span></div>
               <h6 class="mt-3 f-14 f-w-600">{{auth()->user()->name}}</h6>
+
           </a>
+          <h6 class="mt-3 f-14 f-w-600">Total Amount:{{auth()->user()->wallet}}</h6>
           <p class="mb-0 font-roboto"></p>
 
       </div>

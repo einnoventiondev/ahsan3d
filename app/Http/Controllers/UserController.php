@@ -22,6 +22,12 @@ class UserController extends Controller
         $users = User::where('role','user')->get();
         return view('pages.admin.dashboard.users.index', compact('users'));
     }
+    public function userpayment(Request $request){
+       $user=User::where('id',Auth::user()->id)->first();
+       $user->wallet += $request->payment;
+       $user->update();
+       return redirect()->route('/');
+    }
     public function userUpdate($id)
     {
        $data = User::find($id);

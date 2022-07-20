@@ -278,5 +278,6 @@ Route::post('/send/mail',[UserController::class,'usersendemail'])->name('send.ma
 Route::get('/reset/password/{token}',[UserController::class,'forgotview'])->name('user.forgot-password');
 Route::post('/changepassword',[UserController::class,'changepassword'])->name('password.reset.user');
 
+Route::post('/user/payment',[UserController::class,'userpayment'])->name('user.account.payment');
 
 
