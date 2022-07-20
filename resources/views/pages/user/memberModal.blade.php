@@ -34,9 +34,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                
-
+                <h5 class="modal-title" id="exampleModalLabel">عنوان مشروط</h5>
             </div>
             <div class="modal-body">
                 <form class="user-payment-form" method="POST" action="{{route('user.account.payment')}}">
@@ -46,7 +44,6 @@
                             <label class="form-label dot">
                             مقدار
                             </label>
-                
                             <input type="text" class="form-control" name="payment"  placeholder=" add Payment  .." >
                         </div>
                         <div class="form-check">

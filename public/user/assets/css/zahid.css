@@ -461,12 +461,16 @@ position: absolute;
     margin: auto;
 }
 #user-payment .modal-title::before{
-    content:'/f055';
+    content:'\f055';
     display: inline-block;
   font-family: FontAwesome;
+  padding-left: 10px;
+
 }
 #user-payment .amount-box{
     padding: 0 17px 0 39px;    
+    margin-bottom: 15px;
+
 }
 #user-payment .apple-pay-box{
     width: 50% !important;
