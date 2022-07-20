@@ -29,7 +29,7 @@
 <!-- designer pro update  start-->
 <!-- payment modal for users start -->
 <!-- Modal -->
-<div class="modal fade page user-payment" id="user-payment" tabindex="-1" aria-labelledby="user-paymentLabel" aria-hidden="true">
+<div class="modal fade user-payment" id="user-payment" tabindex="-1" aria-labelledby="user-paymentLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

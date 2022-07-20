@@ -482,6 +482,8 @@ $(function() {
 
     })
 
+    $('#user-payment').modal('hide');
+
 })
 
 // new-nav
