@@ -431,3 +431,14 @@ position: absolute;
 #memberModal .profile {
     text-align: end;
 }
+.button-box__user-payment{
+    text-align:center;
+}
+
+ .payment-user .form-check-label{
+    width: 100% !important;
+}
+ .payment-user .form-check-label p{
+    padding: 0 10px !important;
+    font-size: 11px !important;
+}
