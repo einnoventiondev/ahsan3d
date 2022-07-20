@@ -163,12 +163,24 @@ class RegisterController extends Controller
 				'phone'=> $data['phone']
             ]);
         if($roleData=='designer'){
-            UserDetail::create([
-                'user_id'=>$user->id,
-                'printing_technology'=>$data['printing_technology'],
-                'software_type'=>$data['software_type'],
-                'approve' => 1,
-            ]);
+            
+            $designer=new UserDetail();
+            foreach($data['software_type'] as $type)
+            {
+                $s_type[] = $type;
+            }
+            $software=json_encode($s_type);
+            $designer->user_id=$user->id;
+            $designer->printing_technology=$data['printing_technology'];
+            $designer->software_type=$software;
+            $designer->approve=1;
+            $designer->save();
+            // UserDetail::create([
+            //     'user_id'=>$user->id,
+            //     'printing_technology'=>$data['printing_technology'],
+            //     'software_type'=>$software,
+            //     'approve' => 1,
+            // ]);
         }
         $details = [
             'subject'=> 'New User Registered',

@@ -779,8 +779,8 @@
             <div class="header-top d-sm-flex align-items-center">
               <h5> نظرة عامة على النمو</h5>
               <div class="center-content growth-content">
-                <p class="d-flex align-items-center"><i class="toprightarrow-primary fa fa-arrow-up mx-2"></i>80% نمو
-                </p>
+                <!-- <p class="d-flex align-items-center"><i class="toprightarrow-primary fa fa-arrow-up mx-2"></i>80% نمو
+                </p> -->
               </div>
               {{-- <div class="setting-list">
                 <ul class="list-unstyled setting-option">

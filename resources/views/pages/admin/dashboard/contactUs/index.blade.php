@@ -19,7 +19,7 @@
                     <div class="card-body p-0">
                         {{--  <a class="btn btn-primary mb-2" href="{{
                             route('contact.create') }}"> إنشاء منتج جديد</a>  --}}
-                        <div class="table-responsive medical-datatable">
+                        <div class="table-responsive medical-datatable enteries-d-none">
                             <table class="display" style="width:100%"
                                 id="basic-2">
                                 <thead>
@@ -31,9 +31,8 @@
                                         <th>بريد الالكتروني</th>
                                         <th> هاتف</th>
                                         <th>عنوان</th>
-
                                         <th>نص</th>
-                                        <th></th>
+                                        <th>عمل</th>
                                     </tr>
                                     </thead>
 
@@ -51,7 +50,7 @@
                                             <a class="btn btn-primary"
                                                     href="{{
                                                     route('contact.edit',
-                                                    $contact->id) }}">يحرر</a>
+                                                    $contact->id) }}">تعديل</a>
                                             {{--  <form action="{{
                                                 route('contact.destroy',
                                                 $contact->id) }}"

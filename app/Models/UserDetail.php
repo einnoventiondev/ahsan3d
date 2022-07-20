@@ -9,6 +9,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class UserDetail extends Model
 {
     use HasFactory;
-    protected $fillable = ['user_id','printing_technology','software_type'];
-   
+    protected $fillable = ['user_id','printing_technology','software_type','approve'];
+
 }

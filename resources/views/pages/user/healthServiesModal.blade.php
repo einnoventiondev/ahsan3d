@@ -197,14 +197,16 @@
                                                             <!-- <img src="{{asset('user/assets/images/male-front.png')}}" class="img-fluid robot" alt="male-front"> -->
 
                                                         </div>
+                                                        @php
+                                                            $helth=App\Models\MedicalProcedure::all();
+                                                        @endphp
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-3 text-end">
                                                             <label class="form-label dot">اختيار نوع الإجراء الطبي</label>
                                                             <select class="form-select procedure" required name="procedure" aria-label="Default select example">
-                                                                <option selected>اختيار من هنا ..</option>
-                                                                <option>الجمجمة</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
+                                                                
+                                                                @foreach ($helth as $procedure)
+                                                                <option value="{{ $procedure->medical_procedure }}">{{ $procedure->medical_procedure }}</option>
+                                                                @endforeach
                                                             </select>
                                                             <label class="form-label dot mt-4">رفع الصور الطبية</label>
                                                             <!-- <div class="upload-btn-wrapper">

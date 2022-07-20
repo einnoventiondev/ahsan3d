@@ -22,10 +22,11 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('role')->nullable();
             $table->string('printing_technology')->nullable();
-            $table->string('software_type')->nullable();
+            $table->longText('software_type')->nullable();
             $table->string('order_id')->nullable();
             $table->integer('approve')->default(0);
             $table->string('field')->nullable();
+            $table->string('wallet')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

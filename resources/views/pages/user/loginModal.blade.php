@@ -29,7 +29,7 @@
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="" data-bs-toggle="tab" data-bs-target="#designerloginModal" type="button" role="tab" aria-controls="profile" aria-selected="false">
-                                                مصمم 
+                                                مصمم
                                             </button>
                                         </li>
                                     </ul>
@@ -37,7 +37,7 @@
                                         <div class="tab-pane fade show active" id="userloginModal" role="tabpanel">
                                             <form action="{{route('login')}}" class="row gy-4 gx-5" method="post">
                                                 @csrf
-                                                
+
                                                 <input type="hidden" name="role" value="12">
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
                                                     <label class="form-label dot">الايميل</label>
@@ -47,7 +47,7 @@
                                                     <label class="form-label dot">كلمة المرور</label>
                                                     <input type="password" name="password" class="form-control pass" placeholder="التخصص هنا .." value="">
                                                     <div class="forget-password-box">
-                                                        <a href="#" class="forget-password">نسيك كلمة المرور</a>
+                                                        <a href="{{ route('user.email.send') }}" class="forget-password">نسيك كلمة المرور</a>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12 new-account-box">

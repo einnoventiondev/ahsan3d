@@ -109,18 +109,20 @@ class HomeController extends Controller
                     $links = Youtubeurl::first();
                     $counter = Counter::first();
                     $images = Logo::all();
-                    $products = Product::orderBy('id', 'DESC')->get();
+                    $products = Product::orderBy('id', 'DESC')->with('software')->get();
 
                     //$orders_designer = Order::orderBy('id','DESC')->get();
 					$proposal_order_id = Proposal::where('user_id', Auth::id())->get('order_id');
                     // $orders_designer = Order::where('user_id',Auth::id())->whereNotIn('id',$proposal_order_id)->orderBy('id','DESC')->get();
 
                     $orders_designer = Order::where('designer_id',Auth::id())->orderBy('id','DESC')->get();
+                    $orders_designer_user = Order::where('user_id',Auth::id())->first();
+
 					  $orders_user = Order::where('user_id', Auth::id())->orderBy('id', 'desc')->with('InvoicePDF')->with('PerposalPDF')->get();
 
 					// dd($orders_user);
 					$products_d = Product::where('designer_id',Auth::user()->id)->orderBy('id', 'DESC')->get();
-                    return view('pages.user.index.index', compact('counter', 'links','images', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map', 'user','products','orders_designer','products_d','orders_user'));
+                    return view('pages.user.index.index', compact('counter', 'links','images', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map', 'user','products','orders_designer','products_d','orders_user','orders_designer_user'));
                 }
             }
         } else {
@@ -156,13 +158,17 @@ class HomeController extends Controller
 
     public function getProduct($id)
     {
+        $software=[];
+
         $bdata = Product::with('user')->find($id);
-        $software=Software::where('name',$bdata->user_software)->first();
-        $software_image=$software->images;
+        $software=json_decode($bdata->user_software);
+        foreach($software as $type){
+            $software_type[]=Software::where('name',$type)->first();
+        }
         $designer_name = $bdata->user->name;
         $data[0] = $bdata;
         $data[1] = $designer_name;
-        return response() -> json(['code'=> 200, 'msg' => $data,'soft_image'=>$software_image]);
+        return response() -> json(['code'=> 200, 'msg' => $data,'soft_image'=>$software_type]);
     }
 
     public function getRequest($id)

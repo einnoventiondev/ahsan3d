@@ -407,7 +407,7 @@ var options17 = {
         }
     },
     colors: [vihoAdminConfig.primary, vihoAdminConfig.secondary, vihoAdminConfig.primary, vihoAdminConfig.secondary],
-    labels: ['Total order', 'Total product', 'Total Designer', 'Total team'],
+    labels: ['من أجل الكاملة', 'إجمالي المنتج', 'إجمالي المصمم', 'مجموع الفريق'],
     legend: {
         show: true,
         floating: true,

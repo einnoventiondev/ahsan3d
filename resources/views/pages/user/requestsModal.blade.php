@@ -4,20 +4,20 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 requests-position">
-                    
+
                         <div class="modal-header border-0">
                             <div class="zhd-center-close">
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
-                            
+
                             <div class="dropdown register-pdf d-none">
-                               
+
                                 <button class="btn bg-light dropdown" type="button" id="dropdownMenuButton1"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-file-pdf" style="color:#1F5098; font-size:35px"></i>
                                 </button>
-                               
+
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 
                                     @if((@$user->purposals)!=null)
@@ -40,7 +40,7 @@
                                 </ul>
                             </div>
 
-       
+
 
                             <div>
                                 <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -124,6 +124,27 @@
 
                                         </li>
                                         <!-- designer-end -->
+
+                                        {{--    --}}
+                                        @if(Auth::check())
+                                        @if(Auth::user()->role == 'designer')
+                                        <li class="nav-item" role="presentation">
+                                            @auth
+                                            <button class="nav-link" id="perposal-tab tab tab4" data-bs-toggle="tab"
+                                                data-bs-target="#perposal-services" type="button" role="tab"
+                                                aria-controls="designer" aria-selected="false"><span
+                                                    class="notification">{{$orders_designer->count()}}</span>مقترحاتك</button>
+                                            @else
+                                            <button class="nav-link active" id="perposal-tab tab tab4"
+                                                data-bs-toggle="tab" data-bs-target="#perposal-services" type="button"
+                                                role="tab" aria-selected="true"><span class="notification">0</span>
+                                                aaa
+                                            </button>
+                                            @endauth
+                                        </li>
+                                        @endif
+                                        @endif
+                                        {{--    --}}
                                     </ul>
                                     <div class="tab-content" id="myTabContent">
                                         <div class="tab-pane fade show active" id="medical-service" role="tabpanel"
@@ -277,7 +298,7 @@
                                             aria-labelledby="designer-tab">
 											@if(Auth::user())
 											@if(Auth::user()->role == 'designer')
- @foreach($orders_designer as $order_designer)
+                                            @foreach($orders_designer as $order_designer)
                                             <div class="row">
                                                 <a class="nav-link" href="#">
                                                     <div class="col-md-12" >
@@ -324,13 +345,13 @@
                                                 </a>
                                             </div>
                                             @endforeach
-											
+
 											@else
-@foreach($orders_user as $order_designer)
+                                       @foreach($orders_user as $order_designer)
                                             <div class="row">
                                                     <div class="col-md-12" >
                                                         <a class="nav-link" href="#" value="{{$order_designer->PerposalPDF->order_id ?? ' '}}">
-                                                        
+
                                                                 @if(Auth::user())
                                                                 @if(Auth::user()->role == 'designer')
                                                                 <div class="request-box" data-bs-toggle="modal"
@@ -350,8 +371,8 @@
                                                                 </div>
 
                                                                 @else
-                                                                
-                                                                
+
+
 
                                                                 <div class="request-box" data-bs-toggle="modal"
                                                                     data-bs-target="#userRequestModal" class="designer_request" id="designer_request" value="{{$order_designer->id}}">
@@ -373,7 +394,7 @@
                                                                 @endif
                                                                 </a>
                                                             </div>
-                                                        
+
 													 <div class="col-md-1 pdf-designer">
                                                     @if(($order_designer->PerposalPDF)!=null)
                                                     <a href="{{ route('perposalAction',$order_designer->PerposalPDF->order_id) }}">
@@ -389,15 +410,144 @@
                                                                 style="color:#1F5098; font-size:35px"></i>
                                                         </button>
 														@endif
-                                                   
+
                                                 </div>
                                             </div>
                                             @endforeach
 											@endif
 											@endif
                                         </div>
+                                        <div class="tab-pane fade" id="perposal-services" role="tabpanel"
+                                        aria-labelledby="public-tab">
+                                        @if(Auth::user())
+@if($orders_designer_user)
+                                         @if(Auth::user()->id==$orders_designer_user->user_id)
+                                       {{--  @foreach($orders_designer as $order_designer)  --}}
+                                        <div class="row">
+                                            <a class="nav-link" href="#">
+                                                <div class="col-md-12" >
+                                                    @if(Auth::user())
+                                                     {{--  @if(Auth::user()->role == 'designer')
+                                                    <div class="request-box" data-bs-toggle="modal"
+                                                        data-bs-target="#designer-order" class="designer_request" id="designer_request" value="{{$order_designer->id}}">
+                                                        <div class="heading">
+                                                            <h5>رقم الطلب:</h5>
+                                                            <span>{{$order_designer->order_no}}</span>
+                                                        </div>
+                                                        <div class="data">
+                                                            <p>حالة الطلب:</p>
+                                                            <span>{{$order_designer->status}} </span>
+                                                            <p>اسم العميل:</p>
+                                                            <span> غير معروف</span>
+                                                            <p>المنتج المطلوب:</p>
+                                                            <span> {{$order_designer->notes}}</span>
+                                                        </div>
+                                                    </div>
 
+                                                    @else  --}}
+
+                                                       <div class="request-box" data-bs-toggle="modal"
+                                                        data-bs-target="#userRequestModal" class="designer_request" id="designer_request" value="{{$order_designer->id}}">
+                                                        <div class="heading">
+                                                            <h5>رقم الطلب:</h5>
+                                                            <span>{{$order_designer->order_no}}</span>
+                                                        </div>
+                                                        <div class="data">
+                                                            <p>حالة الطلب:</p>
+                                                            <span>{{$order_designer->status}} </span>
+                                                            <p>اسم العميل:</p>
+                                                            <span> غير معروف</span>
+                                                            <p>المنتج المطلوب:</p>
+                                                            <span> {{$order_designer->notes}}</span>
+                                                        </div>
+                                                    </div>
+
+                                                    @endif
+                                                    {{--  @endif  --}}
+
+                                                </div>
+                                            </a>
+                                        </div>
+                                        {{--  @endforeach
+
+                                        @else  --}}
+                                   @foreach($orders_user as $order_designer)
+                                        <div class="row">
+                                                <div class="col-md-12" >
+                                                    <a class="nav-link" href="#" value="{{$order_designer->PerposalPDF->order_id ?? ' '}}">
+
+                                                            @if(Auth::user())
+                                                            {{--  @if(Auth::user()->role == 'designer')
+                                                            <div class="request-box" data-bs-toggle="modal"
+                                                                data-bs-target="#designer-order" class="designer_request" value="{{$order_designer->id}}">
+                                                                <div class="heading">
+                                                                    <h5>رقم الطلب:</h5>
+                                                                    <span>{{$order_designer->order_no}}</span>
+                                                                </div>
+                                                                <div class="data">
+                                                                    <p>حالة الطلب:</p>
+                                                                    <span>{{$order_designer->status}} </span>
+                                                                    <p>اسم العميل:</p>
+                                                                    <span> غير معروف</span>
+                                                                    <p>المنتج المطلوب:</p>
+                                                                    <span> {{$order_designer->notes}}</span>
+                                                                </div>
+                                                            </div>
+
+                                                            @else  --}}
+
+
+
+                                                            <div class="request-box" data-bs-toggle="modal"
+                                                                data-bs-target="#userRequestModal" class="designer_request" id="designer_request" value="{{$order_designer->id}}">
+                                                                <div class="heading">
+                                                                    <h5>رقم الطلب:</h5>
+                                                                    <span>{{$order_designer->order_no}}</span>
+                                                                </div>
+                                                                <div class="data">
+                                                                    <p>حالة الطلب:</p>
+                                                                    <span>{{$order_designer->status}} </span>
+                                                                    <p>اسم العميل:</p>
+                                                                    <span> غير معروف</span>
+                                                                    <p>المنتج المطلوب:</p>
+                                                                    <span> {{$order_designer->notes}}</span>
+                                                                </div>
+                                                            </div>
+
+                                                            @endif
+                                                            {{--  @endif  --}}
+                                                            </a>
+                                                        </div>
+
+                                                 <div class="col-md-1 pdf-designer">
+                                                @if(($order_designer->PerposalPDF)!=null)
+                                                <a href="{{ route('perposalAction',$order_designer->PerposalPDF->order_id) }}">
+                                                more
+                                                </a>
+                                            @endif
+                                                      @if(($order_designer->PerposalPDF)!=null)
+                                                <div class="dropdown  pt-4">
+                                                    <button class="btn bg-light dropdown" type="button"
+                                                        id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-file-pdf"
+                                                            style="color:#1F5098; font-size:35px"></i>
+                                                    </button>
+                                                    @endif
+
+                                            </div>
+                                        </div>
+                                        @endforeach
+
+                                        @endif
+                                        @endif
+                                        @endif
                                     </div>
+                                        </div>
+                                    </div>
+                                    {{--    --}}
+
+                                    {{--    --}}
                                 </div>
 
                             </div>

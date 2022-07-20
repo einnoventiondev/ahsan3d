@@ -9,6 +9,9 @@ use App\Models\Perposal;
 use App\Models\PublicService;
 use App\Models\Order;
 use App\Models\User;
+use App\Models\Country;
+
+use Illuminate\Support\Facades\Http;
 use App\Notifications\ProposelNotification;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
@@ -35,15 +38,53 @@ class PerposalController extends Controller
     }
     public function perposal_statuschange(Request $request){
       $perposal=Perposal::where('order_id',$request->id)->first();
-
+      $order=Order::where('id',$request->id)->first();
       $perposal->status = 2;
       $perposal->update();
+      $airtable_id=$order->airtable_order_id;
+      $airtable_created=$order->airtable_created_at;
+      $response = Http::withHeaders([
+        'Content-Type' => 'application/json',
+        'Authorization' =>'Bearer keyD9Kbfap9FoWk0M',
+    ])->patch('https://api.airtable.com/v0/'.env('AIRTABLE_BASE_ID').'/'.env('AIRTABLE_CAND_TABLE'), [
+
+        "records"=> [
+            [
+
+            "id"=>$airtable_id,
+            "fields" => [
+                "Status_order" => "Reject",
+        ],
+    ]
+],
+        "typecast" => true,
+    ]);
+    // return $response;
        return redirect()->route('/');
     }
     public function perposal_statuschange1(Request $request){
         $perposal=Perposal::where('order_id',$request->id)->first();
+        $order=Order::where('id',$request->id)->first();
         $perposal->status = 1;
         $perposal->update();
+        $airtable_id=$order->airtable_order_id;
+        $airtable_created=$order->airtable_created_at;
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'Authorization' =>'Bearer keyD9Kbfap9FoWk0M',
+        ])->patch('https://api.airtable.com/v0/'.env('AIRTABLE_BASE_ID').'/'.env('AIRTABLE_CAND_TABLE'), [
+
+            "records"=> [
+                [
+
+                "id"=>$airtable_id,
+                "fields" => [
+                    "Status_order" => "Accept",
+            ],
+        ]
+    ],
+            "typecast" => true,
+        ]);
          return redirect()->route('/');
       }
     /**
@@ -54,8 +95,10 @@ class PerposalController extends Controller
     public function create()
     {
         $orders = Medical::all();
+        $admin = User::where('role' , 'admin')->get();
         $publics = PublicService::all();
-        return view('pages.admin.dashboard.perposal.create', compact('orders','publics'));
+        $country=Country::all();
+        return view('pages.admin.dashboard.perposal.create', compact('orders','publics','admin','country'));
     }
 
     /**
@@ -67,9 +110,9 @@ class PerposalController extends Controller
     public function store(Request $request)
     {
 
-        $image = $request->image->getClientOriginalName();
-        $request->image->move(public_path('upload/'), $image);
-        $pathimage ='upload/'.$image;
+        // $image = $request->image->getClientOriginalName();
+        // $request->image->move(public_path('upload/'), $image);
+        // $pathimage ='upload/'.$image;
 
         if ($request->order_id ) {
         $order_id = $request->order_id;
@@ -93,7 +136,7 @@ class PerposalController extends Controller
             'order_id' => $order_id,
             'user_id' => $user->id,
             'comments' =>$request->comments,
-            'image'=> $pathimage,
+            // 'image'=> $pathimage,
             'address' =>$request->address,
             'validtill' => $request->validtill,
             'date' => $request->date,
@@ -241,5 +284,11 @@ class PerposalController extends Controller
         //$id = (int)$orders->user_id;
         //return User::where('id',$orders->user_id)->get('name');
         return view('pages.admin.dashboard.perposal.orderManagement',compact('orders'));
+    }
+    public function OrderManagementview($id){
+          $order=Order::find($id);
+
+        return view('pages.admin.dashboard.perposal.OrderManagementView',compact('order'));
+
     }
 }

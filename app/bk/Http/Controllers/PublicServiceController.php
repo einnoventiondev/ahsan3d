@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\PublicService;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Notifications\PublicNotification;
 use App\Models\User;
+use App\Models\FileExtention;
 
 class PublicServiceController extends Controller
 {
@@ -40,14 +42,35 @@ class PublicServiceController extends Controller
      */
     public function store(Request $request)
     {
-        if (isset($request->myfile) && !empty($request->myfile)) {
-            $myfile = $request->myfile->getClientOriginalName();
-            $images = $request->myfile->move(public_path('upload/'), $request->myfile);
-            $path = 'upload/'.$myfile;
-            // $images = Storage::disk('public')->put('upload/', $request->myfile);
-        } else {
-            $path = null;
+        
+        $request->validate([
+            'file' => 'required|image|max:2048',
+         ]);
+          $file_extention=FileExtention::select('file_extension')->get();
+          $extention=json_decode($file_extention);
+         
+          if($request->hasfile('file'))
+          {
+            foreach($extention as $filecheck){
+                if($filecheck==$request->file->extention())
+                {
+                    $file_ex = $filecheck; 
+                }
+              }
+              if($file_ex != null)
+              {
+            $file= $request->file('file');
+            $extenstion= $file_ex;
+            $filename=time().'.'.$extenstion;
+            $file->move('uploads/', $filename);
+              }
+              else{
+                return redirect()->back()->with(['Message'=>"Your file extension is not valid"]);
+              }
+            
+
         }
+       
         $pub = PublicService::create([
             'status' => 0,
             'user_id' => Auth::id(),
@@ -59,7 +82,7 @@ class PublicServiceController extends Controller
             'print_type' => $request->pr_type,
             'print_color' => $request->pr_clr,
             'print_resolution' => $request->pr_res,
-            'print_img' => $path,
+            'print_img' => $filename,
         ]);
         
         $users = User::where('role','admin')->first();
@@ -76,7 +99,7 @@ class PublicServiceController extends Controller
             'userBody' => "'".$pub->id."'جاري العمل على طلبكم رقم ",
             'thanks' => 'شكراً جزيلاً',
         ];
-        \Mail::to($user->email)->send(new \App\Mail\MedicalMail($details));
+        Mail::to($user->email)->send(new \App\Mail\MedicalMail($details));
         return redirect()->route('home')->with('error_code', 6);
     }
 

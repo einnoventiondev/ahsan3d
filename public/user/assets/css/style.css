@@ -62,6 +62,7 @@ nav .nav-link {
     padding-left: 0px !important;
     border-bottom: 2px solid transparent;
 }
+
 .navbar li.nav-item {
     padding-left: 0.7rem;
     padding-right: 0.7rem;
@@ -774,6 +775,7 @@ footer .right img {
     margin: auto;
     display: block;
 }
+
 .black-bg2 {
     background: url('https://hopeful-montalcini.161-97-115-110.plesk.page/public/user/assets/images/black-bg.png') no-repeat;
     position: absolute;
@@ -784,10 +786,12 @@ footer .right img {
     background-size: 100% 100%;
     left: 0;
 }
-.black-bg2{
+
+.black-bg2 {
     display: none;
     /* display: none; */
 }
+
 .move-blue2 {
     background: url('https://hopeful-montalcini.161-97-115-110.plesk.page/public/user/assets/images/banner-bg.png') no-repeat;
     position: absolute;
@@ -798,9 +802,11 @@ footer .right img {
     background-size: 100% 100%;
     right: 0;
 }
-.move-blue2{
+
+.move-blue2 {
     display: none;
 }
+
 .hands.sample {
     position: absolute;
     left: 700px;
@@ -874,7 +880,11 @@ footer .right img {
     border-color: #1EA9D4 !important;
     box-shadow: 0 6px 6px rgb(0 0 0 / 16%);
 }
+
+
 /* 28-may */
+
+
 /* #healthServiesModal {
     z-index: 999!important;
 } */
@@ -1067,7 +1077,8 @@ textarea {
     cursor: pointer;
 }
 
-.btn-upload, .dropzone {
+.btn-upload,
+.dropzone {
     border: 4px dashed #E3E9EC !important;
     border-radius: 50px;
     /* padding: 10px 145px; */
@@ -1291,6 +1302,7 @@ textarea {
 .onTab .nav-tabs .nav-link:hover {
     border-color: transparent;
 }
+
 
 /* #requestsModal .nav-tabs .nav-item:first-child .nav-link {
     border-top-right-radius: 50px;
@@ -1791,6 +1803,7 @@ textarea {
     display: block;
 }
 
+
 /* .about-content .description {
     padding: 0rem 9rem;
 } */
@@ -1897,10 +1910,12 @@ textarea {
     right: 16px;
     top: 19px;
 }
+
 .pointer.chest p {
     right: -68px;
     top: -10px;
 }
+
 .pointer.foot p {
     right: 60px;
     bottom: -15px;
@@ -2055,9 +2070,16 @@ textarea {
 
 
 /* Select2 dropdown */
-#registerModal .select2-container--default .select2-selection--multiple {
+
+#selectSoftwares-parent .select2-container--default .select2-selection--multiple {
     width: 330px;
-    min-height: 47px;
+    min-height: 44px;
+    height: auto;
+}
+
+#select-product-parent .select2-container--default .select2-selection--multiple {
+    width: 330px;
+    min-height: 44px;
     height: auto;
 }
 
@@ -2082,7 +2104,7 @@ textarea {
     text-align: center;
 }
 
-.select2-dropdown.select2-dropdown--below {
+#healthServiesModal .select2-dropdown.select2-dropdown--below {
     width: 250px !important;
 }
 
@@ -2522,7 +2544,6 @@ input[type=number] {
     from {
         transform: translate(-20%, 0px);
     }
-
     to {
         transform: translate(0%, 0px);
     }
@@ -2532,7 +2553,6 @@ input[type=number] {
     from {
         transform: translate(20%, 0px);
     }
-
     to {
         transform: translate(0%, 0px);
     }
@@ -2617,6 +2637,7 @@ input[type=number] {
     z-index: -1;
 }
 
+
 /* .designer-sec::before {
     content: "";
     position: absolute;
@@ -2685,7 +2706,7 @@ input[type=number] {
     width: 143px;
 }
 
-.sort-btn {
+-btn {
     position: relative;
     line-height: 2.5;
 }
@@ -2700,6 +2721,10 @@ input[type=number] {
     position: relative;
     /* width: 599px;
      height: 40px; */
+}
+
+.search-input .form-control {
+    color: #fff !important;
 }
 
 .search-input i {
@@ -2783,9 +2808,11 @@ input[type=number] {
 .design-card-main {
     padding-top: 80px;
 }
+
 #designinnerModal .design-card-main {
     padding-top: 0px;
 }
+
 .star-profile {
     display: flex;
     align-items: center;
@@ -2877,10 +2904,13 @@ input[type=number] {
     border-radius: 10px;
     /* margin-top: 20px; */
 }
-.design-card-body .design-img{
+
+.design-card-body .design-img {
     height: 100%;
     width: 100%;
 }
+
+
 /* .design-1 {
     background: url(../images/design-1.png) no-repeat;
     background-size: cover;
@@ -3097,6 +3127,7 @@ input[type=number] {
 
 /* designer-sec-1  css end here*/
 
+
 /* #designModal {
     direction: ltr;
 }
@@ -3146,7 +3177,6 @@ input[type=number] {
     margin: auto;
     display: block;
     bottom: 90px;
-
 }
 
 #cleanshotModal .modal-body {
@@ -3171,13 +3201,19 @@ input[type=number] {
 #financialOperations .request-box::after {
     display: none;
 }
+
+
 /* .hide-on-load{
     opacity: 0;
 } */
+
 .hide-hands {
     display: none;
 }
+
+
 /* Safari */
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .mujtmah-heading-box {
         width: 325px !important;
@@ -3185,41 +3221,48 @@ input[type=number] {
     .map .btn {
         width: 160px;
     }
-
-    #designinnerModal .designer-sec-1::after{
+    #designinnerModal .designer-sec-1::after {
         background: -webkit-linear-gradient(360deg, rgba(255, 255, 255, 100%), transparent) !important;
     }
-
 }
-
-
-
 
 
 /* chat styling */
+
+
 /* view-order */
-#view-order .view-order-heading, #public-order .view-order-heading{
+
+#view-order .view-order-heading,
+#public-order .view-order-heading {
     margin-right: 130px;
 }
-#view-order .modal-body, #public-order .modal-body{
+
+#view-order .modal-body,
+#public-order .modal-body {
     padding: 0 4rem !important;
 }
-#view-order .card-footer .btn-primary, #public-order .card-footer .btn-primary{
+
+#view-order .card-footer .btn-primary,
+#public-order .card-footer .btn-primary {
     border: 1px solid transparent;
 }
-.chat-submit-btn{
+
+.chat-submit-btn {
     width: 100%;
 }
-.chat-img-upload{
+
+.chat-img-upload {
     position: relative;
     cursor: pointer;
 }
+
 .chat-img-upload img {
     margin-left: 5px;
     transform: rotate(270deg);
     margin-right: 5px;
 }
-.chat-img-upload input{
+
+.chat-img-upload input {
     position: absolute;
     left: 0;
     right: 0;
@@ -3228,44 +3271,51 @@ input[type=number] {
     opacity: 0;
 }
 
-.chat-card .card-header{
+.chat-card .card-header {
     background-color: #fff;
     padding: 25px 12px;
 }
 
 
-
 /* width */
+
 .message-box::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-  }
+}
 
-  /* Track */
-  .message-box::-webkit-scrollbar-track {
+
+/* Track */
+
+.message-box::-webkit-scrollbar-track {
     background: #f1f1f1;
     /* border-radius: 10px; */
-  }
+}
 
-  /* Handle */
-  .message-box::-webkit-scrollbar-thumb {
+
+/* Handle */
+
+.message-box::-webkit-scrollbar-thumb {
     background: #1F5098;
     border-radius: 10px;
-  }
+}
 
-  /* Handle on hover */
-  .message-box::-webkit-scrollbar-thumb:hover {
+
+/* Handle on hover */
+
+.message-box::-webkit-scrollbar-thumb:hover {
     background: #1f4f98b0;
-  }
+}
 
-
-.d-contents{
+.d-contents {
     display: contents !important;
 }
 
 .animate__delay-6s {
     animation-delay: 8s!important;
 }
+
+
 /* .move-blue{
     animation: righToright 4s linear;
 }
@@ -3282,14 +3332,15 @@ input[type=number] {
 } */
 
 
-
 /* asim css start here */
-#memberModal .ahs-img-uploder-cam__holder .ahs-img-uploder-cam{
+
+#memberModal .ahs-img-uploder-cam__holder .ahs-img-uploder-cam {
     bottom: auto !important;
     right: auto !important;
     margin-bottom: 0px !important;
 }
-.upload-avatar{
+
+.upload-avatar {
     position: absolute;
     width: 34px;
     height: auto;
@@ -3299,5 +3350,48 @@ input[type=number] {
 
 .pdf-designer {
     display: none !important;
-
+}.animate__delay-6s {
+    animation-delay: 8s!important;
 }
+
+/* .move-blue{
+    animation: righToright 4s linear;
+}
+.move-black{
+    animation: righToLeft 4s linear;
+}
+@keyframes righToLeft {
+    0%   {width: 0px;height: 100%;}
+    100%   {width: 920px;height: 100%;}
+}
+@keyframes righToright {
+    0%   {width: 0px;height: 100%;}
+    100%   {width: 920px;height: 100%;}
+} */
+
+
+/* asim css start here */
+
+#memberModal .ahs-img-uploder-cam__holder .ahs-img-uploder-cam {
+    bottom: auto !important;
+    right: auto !important;
+    margin-bottom: 0px !important;
+}
+
+.upload-avatar {
+    position: absolute;
+    width: 34px;
+    height: auto;
+    bottom: 38px !important;
+    right: 10px !important;
+}
+
+.pdf-designer {
+    display: none !important;
+}
+
+
+.productadd-btm-btn .disabled.product-add-validate-submit{
+    background-color: #E0E0DE !important;
+}
+

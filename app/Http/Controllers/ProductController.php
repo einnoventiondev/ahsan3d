@@ -17,32 +17,36 @@ class ProductController extends Controller
 {
     public function addProduct(Request $request)
     {
-        $image_arr = [];
 
+        $product=new Product();
+
+        foreach($request->software as $type)
+          {
+            $s_type[] = $type;
+          }
+        $software=json_encode($s_type);
+        $image_arr = [];
         if (isset($request->status)) {
             $status = 1;
-        }
+          }
         else
-        {
+            {
         $status = 0;
            }
 
     	$setting = Setting::latest()->get()[0];
     	$setting = $setting->verification;
-
     	if($setting == 1)
-    	{
+    	    {
     		$verify = 0;
-    	}
+    	  }
     	else
-    	{
-    		$verify = 1;
-    	}
+    	     {
+    	  	$verify = 1;
+    	  }
 
-       
         if($request->hasfile('images'))
-        {
-
+          {
            foreach($request->file('images') as $image)
            {
                $name=$image->getClientOriginalName();
@@ -50,26 +54,24 @@ class ProductController extends Controller
                $data[] = $name;
            }
            $image_arr=json_encode($data);
-        }
+             }
         else
-        {
+             {
             $image_arr = null;
-        }
-    	 $offer = Product::create([
-    	 		'designer_id' => Auth::user()->id,
-                'title' => $request->title,
-                'description' => $request->description,
-                'color' => $request->color,
-                'size' => $request->size,
-                'print_technology' => $request->print_technology,
-                'user_software' => $request->software,
-                'status' => $status,
-                'verify' => $verify,
-                'images' => $image_arr,
-            ]);
+           }
+        $product->designer_id = Auth::user()->id;
+        $product->title = $request->title;
+        $product->description=$request->description;
+        $product->color = $request->color;
+        $product->size = $request->size;
+        $product->print_technology = $request->print_technology;
+        $product->user_software = $software;
+        $product->status = $status;
+        $product->verify = $verify;
+        $product->images= $image_arr;
 
-
-    	 if ($offer) {
+        $product->save();
+    	 if ($product) {
     	  return redirect()->back()->with('success','product added successfully');
     	 }
     	 else

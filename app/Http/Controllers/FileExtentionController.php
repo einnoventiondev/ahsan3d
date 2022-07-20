@@ -39,7 +39,7 @@ class FileExtentionController extends Controller
 
         $extention= new FileExtention;
 
-        $extention->file_extention=$request->file_extention;
+        $extention->file_extention=json_encode($request->file_extention);
         $extention->save();
         return redirect()->route('extention.index');
     }
@@ -65,6 +65,7 @@ class FileExtentionController extends Controller
     public function edit($id)
     {
         $extention = FileExtention::find($id);
+        
         return view('pages.admin.dashboard.file_extention.edit', compact('extention'));
     }
 
@@ -78,7 +79,7 @@ class FileExtentionController extends Controller
     public function update(Request $request, $id)
     {
         $extention=FileExtention::find($id);
-        $extention->file_extention=$request->file_extention;
+        $extention->file_extention=json_encode($request->file_extention);
         $extention->save();
         return redirect()->route('extention.index');
     }

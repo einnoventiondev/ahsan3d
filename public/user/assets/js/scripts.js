@@ -1,5 +1,4 @@
 $(function() {
-
     $('.hide-hands').show();
     // $('.hide-hands').fadeTo(2900, 1);
 
@@ -198,13 +197,13 @@ $(function() {
         })
     }
 
-    $('.select-softwares-designer').select2({
-        dropdownParent: $('#productaddformModal'),
+    $('.select-product').select2({
+        dropdownParent: $('#select-product-parent'),
         placeholder: "حدد البرامج",
     });
 
     $('.select-softwares').select2({
-        dropdownParent: $('#registerModal'),
+        dropdownParent: $('#selectSoftwares-parent'),
         placeholder: "حدد البرامج",
     });
 

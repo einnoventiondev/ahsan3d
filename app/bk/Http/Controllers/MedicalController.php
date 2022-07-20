@@ -21,7 +21,7 @@ class MedicalController extends Controller
 {
     public function store(Request $request)
     {
- 
+
         if ($request->hasFile('myfile')) {
             $myfile =  $request->myfile->getClientOriginalName();
             $request->myfile->move(public_path('upload/'), $request->myfile);
@@ -30,7 +30,7 @@ class MedicalController extends Controller
         } else {
             $path  = null;
         }
-       
+
         $med = Medical::create([
             'user_id' => Auth::id(),
             'myfile' => $path,
@@ -64,12 +64,12 @@ class MedicalController extends Controller
             'userBody' => "'".$med->id."'جاري العمل على طلبكم رقم ",
             'thanks' => 'شكراً جزيلاً',
         ];
-         \Mail::to($user->email)->send(new \App\Mail\MedicalMail($details));
+         Mail::to($user->email)->send(new \App\Mail\MedicalMail($details));
          $admins = User::where('role','admin')->get();
          foreach ($admins as $key => $admin) {
-            \Mail::to($admin->email)->send(new \App\Mail\MedicalAdminMail($details));
+            Mail::to($admin->email)->send(new \App\Mail\MedicalAdminMail($details));
         }
-       
+
         return redirect()->route('home')->with('error_code', 5);
     }
 
@@ -100,87 +100,87 @@ class MedicalController extends Controller
     public function updated(Request $request)
     {
         $order = Medical::find($request->id);
-       
+
         $order->update([
             'status' => $request->status,
         ]);
         $user = User::find($order->user_id);
         if ($request->status = 1) {
             $order->status = 1;
-           
+
             $details = [
                 'title' =>  $user->name,
                 'subject'=> '#'.$request->id.' اجتماع الخطةالعلاجية',
                 'id'=>$request->id,
                 'body' => $order->status.'#'.$request->id,
             ];
-            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
+            Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
         else if ($request->status =2) {
             $order->status = 2;
-           
+
             $details = [
                 'title' =>  $user->name,
                 'subject'=> '#'.$request->id.' اجتماع النموذج الأول',
                 'id'=>$request->id,
                 'body' =>  $order->status.'#'.$request->id
             ];
-            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
+            Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
        else if ($request->status =3 ) {
             $order->status = 3;
-           
+
             $details = [
                 'title' =>  $user->name,
                 'subject'=> '#'.$request->id.' اجتماع النموذج النهائي',
                 'id'=>$request->id,
                 'body' =>  $order->status.'#'.$request->id
             ];
-            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
+            Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
         else if ($request->status =4) {
             $order->status = 4;
-           
+
             $details = [
                 'title' =>  $user->name,
                 'subject'=> '#'.$request->id.' الدفع',
                 'id'=>$request->id,
                 'body' =>  $order->status.'#'.$request->id
             ];
-            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
+            Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
         else if ($request->status=5) {
             $order->status = 5;
-           
+
             $details = [
                 'title' =>  $user->name,
                 'subject'=> '#'.$request->id.' الطباعة ثلاثية الأبعاد',
                 'id'=>$request->id,
                 'body' => $order->status.'#'.$request->id
             ];
-            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
+            Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
        else if ($request->status =6) {
             $order->status = 6;
-           
+
             $details = [
                 'title' =>  $user->name,
                 'subject'=> '#'.$request->id.' اختبار الجودة',
                 'id'=>$request->id,
                 'body' =>  $order->status.'#'.$request->id
             ];
-            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
+            Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
         else if  ($request->status =7)  {
             $order->status = 7;
-           
+
             $details = [
                 'title' =>  $user->name,
                 'subject'=>'#'.$request->id.' التوصيل واتمام الطلب',
                 'id'=>$request->id,
                 'body' =>  $order->status.'#'.$request->id
             ];
-            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
+            Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
         $details = [
             'title' =>  $user->name,
@@ -191,15 +191,20 @@ class MedicalController extends Controller
         // \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         return redirect()->route('home');
     }
+    public function destroy($id){
+        $medical=Medical::find($id);
+        $medical->delete();
+        return redirect()->back();
+    }
     public function updatedpublic(Request $request)
     {
 
         $order = PublicService::find($request->id);
-      
+
         $user = User::find($order->user_id);
 
         if ($request->status ==2) {
-     
+
             $order->status = 4;
             $order->update([
                 'status' => $order->status,
@@ -218,9 +223,9 @@ class MedicalController extends Controller
                 'body' => $order->status,
             ];
         }
-       
 
-        \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
+
+        Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         return redirect()->route('home');
     }
     public function askQuestion(Request $request)
@@ -229,7 +234,7 @@ class MedicalController extends Controller
             'title' => 'FeedBack',
             'body' =>$request->input('question')
         ];
-        \Mail::to($request->email)->send(new \App\Mail\Question($details));
+        Mail::to($request->email)->send(new \App\Mail\Question($details));
     }
 
     public function feedback(Request $request)
@@ -246,6 +251,6 @@ class MedicalController extends Controller
         ]);
         if ($feedbacks) {
            echo "successful send your feedback";
-        } 
+        }
     }
 }

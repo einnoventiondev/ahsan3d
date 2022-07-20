@@ -41,8 +41,9 @@
                                         $order_status=App\Models\Perposal::where('order_id',$order->id)->first();
                                     @endphp
                                     <td>
+                                        @if($order_status)
                                         @if($order_status->status == 0)
-                                        <button class="btn btn-secondary "  >Waiting</button>
+                                        <button class="btn btn-secondary ">Waiting</button>
                                     @endif
                                     @if($order_status->status == 1)
                                         <a class="btn btn-success" >Accept</a>
@@ -50,10 +51,11 @@
                                     @if($order_status->status == 2)
                                         <a class="btn btn-danger">Reject</a>
                                     @endif
+                                    @endif
                                     </td>
                                     <td class="flex">
                                         <!-- <a href="" class="edit-btn"><i class="fa fa-pencil-square-o"></i></a> -->
-                                        <a href="{{route('order.management.user')}}" class="view-btn"><i class="fa  fa-eye"></i></a>
+                                        <a href="{{route('order.management.user',$order->id)}}" class="view-btn"><i class="fa  fa-eye"></i></a>
                                         <a href="" class="delete-btn btn-danger"><i class="fa fa-trash-o"></i></a>
                                     </td>
                                     </tr>
