@@ -18,7 +18,7 @@
                                 </div>
                             </div>
                             <div class="modal-body">
-                            
+
                             </div>
                         </div>
                     </div>
@@ -50,12 +50,12 @@
                             </div>
                         </div>
                         <div class="modal-body">
-                     
+
 @if(Auth::check())
 @if(Auth::user()->role == 'designer')
 
 <form class="gy-4 gx-5" method="post" action="{{ route('profileUser') }}" enctype="multipart/form-data">
-                @csrf                
+                @csrf
     <!-- <input type="text" name="id" value="{{ Auth::user()->id }}">
     <input type="text" name="role" value="{{ Auth::user()->role }}"> -->
            <div class="ahs-img-uploder-cam__holder">
@@ -129,10 +129,10 @@
     </div>
 </form>
 @else
- 
+
     <form class="gy-4 gx-5" method="post" action="{{route('profileUser')}}" enctype="multipart/form-data">
         @csrf
-                                
+
                                  <div class="ahs-img-uploder-cam__holder">
                               <img id="blah1" src="{{(Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('storage/' . auth()->user()->profile)}}" class="mx-auto d-block imageupload1" style="clip-path: circle() !important ;height:150% !important;" width="150">
                                 <img src="{{ asset('user/assets/images/camera.png') }}" alt="camera" class="ahs-img-uploder-cam">
@@ -157,7 +157,7 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                            </div>    
+                            </div>
                                     <div class="row justify-content-center">
                                         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                             <label class="form-label dot">الاسم</label>
@@ -185,7 +185,7 @@
                                 </form>
 @endif
 @endif
-                            
+
                         </div>
                     </div>
                 </div>

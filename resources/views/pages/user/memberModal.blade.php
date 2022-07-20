@@ -44,7 +44,7 @@
                             <label class="form-label dot">
                                 amount
                             </label>
-                
+
                             <input type="text" class="form-control" name="payment"  placeholder=" add Payment  .." >
                         </div>
                         <div class="form-check">
@@ -71,7 +71,7 @@
                         </div>
                         <div class="button-box__user-payment">
                             <input type="submit" value="submit" class="btn btn-sky invert user-payment-submit">
-                          
+
                         </div>
                     </div>
                 </form>
@@ -165,7 +165,7 @@
 
                                 <div class="wrapper al-center ahs-form-box1">
                                     <span class="ahs-form-head1"> الرصيد الحالي </span>
-                                    <span class="ahs-form-head2"> 0 ريال </span>
+                                    <span class="ahs-form-head2"> {{ Auth::user()->wallet }}  ريال </span>
                                     <!-- before this modal is  #financialOperations -->
                                     <button data-bs-toggle="modal" data-bs-target="#financialOperations"
                                         class="m-btn mujtmah-box-btn btn-white-1 d-contents">

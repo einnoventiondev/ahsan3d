@@ -277,7 +277,6 @@ Route::get('/send/email',[UserController::class,'sendemail'])->name('user.email.
 Route::post('/send/mail',[UserController::class,'usersendemail'])->name('send.mail.user');
 Route::get('/reset/password/{token}',[UserController::class,'forgotview'])->name('user.forgot-password');
 Route::post('/changepassword',[UserController::class,'changepassword'])->name('password.reset.user');
-
 Route::post('/user/payment',[UserController::class,'userpayment'])->name('user.account.payment');
-
-
+Route::post('/designer/deliver',[PerposalController::class,'deliverFile'])->name('designer.deliver.file');
+Route::post('deliver/price',[PerposalController::class,'priceDetect'])->name('deliver_price_detect');
