@@ -62,7 +62,7 @@ $(document).ready(function () {
         }
     })
 
-    $('.form-control').not('.email').not('.login-email').keyup(function () {
+    $('.form-control').not('.email').not('.login-email').not('.user-add-payment').keyup(function () {
         if ($(this).val().length === 0) {
             $(this).val($.trim($(this).val()));
             $(this).removeClass('field-blue');
@@ -576,7 +576,20 @@ $(document).ready(function () {
     // user payment form validation
 
     $('.user-add-payment').keyup(function () {
-        if ($(this).val().length > 1 && $('.payment-user .form-check-label').hasClass('active')) {
+            if ($(this).val() === 0) {
+                $(this).val($.trim($(this).val()));
+                $(this).removeClass('field-blue');
+                $(this).removeClass('field-red');
+            } else if ($(this).val() > 0) {
+                $(this).addClass('field-blue');
+                $(this).removeClass('field-red');
+            } else {
+                $(this).val($.trim($(this).val()));
+                $(this).removeClass('field-blue');
+                $(this).addClass('field-red');
+            }
+
+        if ($(this).val() > 0 && $('.payment-user .form-check-label').hasClass('active')) {
             $('.user-payment-submit').removeClass('disabled');
         }
         else {
@@ -585,7 +598,7 @@ $(document).ready(function () {
     })
 
     $('.payment-user .form-check-label').click(function () {
-        if ($('.user-add-payment').val().length > 1 && $(this).hasClass('active')) {
+        if ($('.user-add-payment').val() > 0 && $(this).hasClass('active')) {
             $('.user-payment-submit').removeClass('disabled');
         }
         else {
