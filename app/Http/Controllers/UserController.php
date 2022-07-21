@@ -186,18 +186,23 @@ class UserController extends Controller
         }
         if(Auth::user()->role == 'designer')
         {
-    $designer_update = User::where('id',Auth::user()->id)->update([
-        'name' => $request->name,
-        'email' => $request->email,
-        'field' => $request->field,
-        'profile' => $path,
-        'password' => Hash::make($request->password),
-    ]);
-    $details = [
+            $user=User::where('id',Auth::user()->id)->first();
+            $user->name=$request->name;
+            $user->email=$request->email;
+            $user->phone=$request->field;
+            $user->profile=$path;
+            if($request->password!=null){
+                $user->password=Hash::make($request->password);
+            }
+            else{
+                $user->password=$user->password;
+            }
+
+    $details = UserDetail::where('id',Auth::user()->id)->update([
         'user_id'=> Auth::user()->id,
         'printing_technology'=>$request->printing_technology,
         'software_type'=>$request->software_type,
-    ];
+    ]);
     return redirect()->back();
 }
 else{

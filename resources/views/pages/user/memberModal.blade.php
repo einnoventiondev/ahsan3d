@@ -192,7 +192,7 @@
                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                         <label class="form-label dot">رقم الجوال</label>
                                         <input type="text" class="form-control disabled" name="field"
-                                            value="{{ Auth::user()->field }}" placeholder="رقم الجوال هنا .." value="">
+                                            value="{{ Auth::user()->phone }}" placeholder="رقم الجوال هنا .." value="">
                                     </div>
                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                         <label class="form-label dot">الايميل</label>
@@ -200,26 +200,37 @@
                                             class="form-control email disabled" placeholder="الايميل هنا .." value="">
                                     </div>
                                 </div>
+                                @php
+                                    $designer_details=App\Models\User::with('userDetail')->find(Auth::user()->id);
+                                    $printing=App\Models\Printing::all();
+                                    $software_type=App\Models\Software::all();
+ 
+                                    $software=json_decode($designer_details->userDetail->software_type);
+                                    @endphp
                                 <div class="row justify-content-center mb-5">
                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                         <label class="form-label dot">كلمة المرور</label>
                                         <input type="text" name="password" class="form-control pass disabled"
                                             placeholder="كلمة المرور هنا .." value="">
                                     </div>
+                                    
                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
                                         <label class="form-label dot">تقنية الطباعة</label>
                                         <select class="form-select disabled" name="printing_technology"
                                             aria-label="Default select example">
-                                            <option></option>
-                                            <option>اختيار التقنية</option>
+                                            @foreach ( $printing as $print )
+                                            <option value="{{ $print->name }}" {{ $designer_details->userDetail->printing_technology==$print->name ? 'selected' : ' ' }}>{{ $print->name }}</option>
+                                            @endforeach
+                                         
                                         </select>
                                     </div>
                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
                                         <label class="form-label dot">أنواع البرامج المستخدمة</label>
                                         <select class="form-select disabled" name="software_type"
                                             aria-label="Default select example">
-                                            <option></option>
-                                            <option>اختاير البرامج المستخدمة</option>
+                                            @foreach ( $software_type as $print )
+                                            <option value="{{ $print->name }}" {{ in_array($print->name,$software) ? 'selected':''}}>{{ $print->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -307,7 +318,7 @@
                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                         <label class="form-label dot">رقم الجوال</label>
                                         <input type="text" name="field" class="form-control disabled"
-                                            placeholder="التخصص هنا .." value="{{auth()->user()->field}}">
+                                            placeholder="التخصص هنا .." value="{{auth()->user()->phone}}">
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">

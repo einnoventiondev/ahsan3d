@@ -8779,10 +8779,11 @@
 
 
                         if (data.msg.perposal_p_d_f != null) {
+                            var url = window.location.origin;
                             $(".conditional-blur.design-payment-blur").removeClass('blur');
                             $(".payment.credit-payment").addClass('d-none');
 
-                            $("#web_pdf").attr('href', 'https://busy-mestorf.161-97-115-110.plesk.page/3d_latest/public/perposal/pdf/43');
+                            $("#web_pdf").attr('href', url.'/perposal/pdf/'.data.pdf_id);
                         } else {
                             console.log('this is null');
                         }
