@@ -165,9 +165,9 @@
 
                                 <div class="wrapper al-center ahs-form-box1">
                                     <span class="ahs-form-head1"> الرصيد الحالي </span>
-                                    <span class="ahs-form-head2"> {{ Auth::user()->wallet }}  ريال </span>
+                                    <span class="ahs-form-head2"> {{ Auth::user()->wallet ?? '0' }}  ريال </span>
                                     <!-- before this modal is  #financialOperations -->
-                                    <button data-bs-toggle="modal" data-bs-target="#financialOperations"
+                                    <button data-bs-toggle="modal" data-bs-target="#financialOperations" type="button"
                                         class="m-btn mujtmah-box-btn btn-white-1 d-contents">
                                         <img src="{{ asset('user/assets/images/ar.png') }}" alt=""
                                             class="ahs-form-img1">
@@ -281,7 +281,7 @@
 
                                 <div class="wrapper al-center ahs-form-box1">
                                     <span class="ahs-form-head1"> الرصيد الحالي </span>
-                                    <span class="ahs-form-head2"> {{ Auth::user()->wallet }} ريال </span>
+                                    <span class="ahs-form-head2"> {{ Auth::user()->wallet ?? '0' }} ريال </span>
                                     <button data-bs-toggle="modal" data-bs-target="#user-payment" type="button"
                                         class="m-btn mujtmah-box-btn btn-white-1 d-contents">
                                         <img src="{{ asset('user/assets/images/ar.png') }}" alt=""

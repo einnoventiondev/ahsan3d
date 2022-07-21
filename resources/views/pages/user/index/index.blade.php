@@ -6889,12 +6889,14 @@
 
                                                                 <div class="col-md-6">
                                                                     <div class="upload-btn-wrapper ">
+                                                                        @if($user_data)
                                                                         <a href="{{ asset('deliver/file/'.$user_data->deliver_file) }}" download >
                                                                         <button class="btn btn-upload-designer"><img src="{{asset('user/assets/icons/download-attachments.png')}}" alt="upload-img">
                                                                             <h5>تحميل المرفقات</h5>
                                                                             <img src="{{ asset('deliver/file/'.$user_data->deliver_file) }}" alt=" deliver image" style="width: 150px;height:150px;display:none;" >
                                                                         </button>
                                                                     </a>
+                                                                    @endif
 
                                                                     </div>
                                                                 </div>
@@ -9034,7 +9036,7 @@
                                         </div>
                                     </div>
                                 </div>
-
+  
 
                         </div>
                     </div>
