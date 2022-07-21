@@ -3413,3 +3413,12 @@ input[type=number] {
 #healthServiesModal .padd-right-50{
     padding-right: 50px;
 }
+
+.form-select.procedure{
+    z-index: 9999;
+    position: relative;
+}
+#health-dropzone{
+    z-index: 9999;
+    position: relative;
+}
