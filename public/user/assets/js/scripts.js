@@ -481,6 +481,8 @@ $(function() {
         }
 
     })
+
+    // member modal hide
     $('.user-payment-btn-redirect').click(function() {
         $('#memberModal').modal('hide');
     })
@@ -762,11 +764,6 @@ $(document).ready(function() {
         // $(".modal-backdrop").addClass('d-none');
     })
 
-    $("#user-payment").click(function() {
-        // $('.modal').modal('hide');
-        // $(".modal-backdrop").removeClass('show');
-        // $(".modal-backdrop").addClass('d-none');
-    })
 
     $('.reg-des').click(function() {
         $('#myTab .nav-item .nav-link').removeClass('active');
