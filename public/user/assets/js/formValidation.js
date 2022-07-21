@@ -574,6 +574,13 @@ $(document).ready(function () {
 
 
     // user payment form validation
+    
+    // checked payment radio btn
+    $('.payment-user .form-check-label').click(function(){
+        $(this).find('.form-check-input').prop("checked", true);
+        $(this).prevAll().find('.form-check-input').prop("checked", false);
+        $(this).nextAll().find('.form-check-input').prop("checked", false);
+    })
 
     $('.user-add-payment').keyup(function () {
             if ($(this).val() === 0) {
@@ -605,8 +612,6 @@ $(document).ready(function () {
             $('.user-payment-submit').addClass('disabled');
         }
     })
-
-
 
 
 

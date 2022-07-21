@@ -39,15 +39,15 @@
             <div class="modal-body">
                 <form class="user-payment-form" method="POST" action="{{route('user.account.payment')}}">
                    @csrf
-                    <div class="payment-user" id="payment-user-method">
+                    <div class="payment-user payment" id="payment-user-method">
                         <div class="amount-box">
                             <label class="form-label dot">
                                 المبلغ
                             </label>
 
-                            <input type="text" class="form-control" name="payment"  placeholder=" add Payment  .." >
+                            <input type="number" pattern="\d*" class="form-control user-add-payment" name="payment"  placeholder=" add Payment  .." >
                         </div>
-                        <div class="form-check">
+                        <div class="form-check payment-user">
                             <label class="form-check-label" for="flexRadioDefault1">
                                 <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                 <p>مدى</p>
@@ -61,7 +61,7 @@
                                     id="flexRadioDefault2">
                             </label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check payment-user">
                             <label class="form-check-label" for="flexRadioDefault3">
                                 <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                 <p>آبل باي</p>
@@ -70,7 +70,7 @@
                             </label>
                         </div>
                         <div class="button-box__user-payment">
-                            <input type="submit" value="رصيد الشحن" class="btn btn-sky invert user-payment-submit">
+                            <input type="submit" value="رصيد الشحن" class="btn btn-sky invert disabled user-payment-submit">
 
                         </div>
                     </div>
