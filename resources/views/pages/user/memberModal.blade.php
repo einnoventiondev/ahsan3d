@@ -29,25 +29,25 @@
 <!-- designer pro update  start-->
 <!-- payment modal for users start -->
 <!-- Modal -->
-<div class="modal fade" id="user-payment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="user-payment" tabindex="-1" aria-labelledby="user-paymentLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">رصيد الشحن</h5>
+                <h5 class="modal-title">رصيد الشحن</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form class="user-payment-form" method="POST" action="{{route('user.account.payment')}}">
                    @csrf
-                    <div class="payment-user" id="payment-user-method">
+                    <div class="payment-user payment" id="payment-user-method">
                         <div class="amount-box">
                             <label class="form-label dot">
                                 المبلغ
                             </label>
 
-                            <input type="text" class="form-control" name="payment"  placeholder=" add Payment  .." >
+                            <input type="number" pattern="\d*" class="form-control user-add-payment" name="payment"  placeholder=" add Payment  .." >
                         </div>
-                        <div class="form-check">
+                        <div class="form-check payment-user">
                             <label class="form-check-label" for="flexRadioDefault1">
                                 <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                 <p>مدى</p>
@@ -61,7 +61,7 @@
                                     id="flexRadioDefault2">
                             </label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check payment-user">
                             <label class="form-check-label" for="flexRadioDefault3">
                                 <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                 <p>آبل باي</p>
@@ -70,7 +70,7 @@
                             </label>
                         </div>
                         <div class="button-box__user-payment">
-                            <input type="submit" value="رصيد الشحن" class="btn btn-sky invert user-payment-submit">
+                            <input type="submit" value="رصيد الشحن" class="btn btn-sky invert disabled user-payment-submit">
 
                         </div>
                     </div>
@@ -295,7 +295,7 @@
                                     <span class="ahs-form-head1"> الرصيد الحالي </span>
                                     <span class="ahs-form-head2"> {{ Auth::user()->wallet ?? '0' }} ريال </span>
                                     <button data-bs-toggle="modal"  data-bs-target="#user-payment" type="button"
-                                        class="m-btn mujtmah-box-btn btn-white-1 d-contents">
+                                        class="m-btn mujtmah-box-btn btn-white-1 d-contents user-payment-btn-redirect">
                                         <img src="{{ asset('user/assets/images/ar.png') }}" alt=""
                                             class="ahs-form-img1">
                                     </button>

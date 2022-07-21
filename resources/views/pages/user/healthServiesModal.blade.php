@@ -51,7 +51,7 @@
                                         @csrf
 
                                         <div class="carousel-item one active" data-bs-interval="100000">
-                                           
+
                                             <div class="row justify-content-center">
                                                 <div class="col-md-12">
                                                     <div class="row mb-2">
@@ -113,7 +113,7 @@
                                                 <div class="col-md-12">
 
                                                     <div class="row mb-2 align-items-center">
-                                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-5 col-xxl-5">
+                                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                                             <div class="male-front">
                                                                 <div class="pointer head">
                                                                     <p>
@@ -133,7 +133,7 @@
                                                                 <img src="{{asset('user/assets/images/male-front.png')}}" class="img-fluid robot" alt="male-front">
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-3 py-sm-4 text-end">
+                                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 py-sm-4 text-end padd-right-50">
                                                             <label class="form-label dot d-xxl-block">تحديد القسم</label>
                                                             <select class="form-select body-parts" name="parts" multiple aria-label="Default select example">
                                                                 <!-- <option selected>اختيار من هنا ..</option> -->
@@ -179,7 +179,7 @@
 
                                                 <div class="col-md-12">
                                                     <div class="row mb-2 align-items-center">
-                                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-5 col-xxl-5">
+                                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                                             <div class="male-front">
                                                                 <div class="pointer head"></div>
                                                                 <div class="pointer ear"></div>
@@ -200,10 +200,10 @@
                                                         @php
                                                             $helth=App\Models\MedicalProcedure::all();
                                                         @endphp
-                                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-3 text-end">
+                                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end padd-right-50">
                                                             <label class="form-label dot">اختيار نوع الإجراء الطبي</label>
                                                             <select class="form-select procedure" required name="procedure" aria-label="Default select example">
-                                                                
+
                                                                 @foreach ($helth as $procedure)
                                                                 <option value="{{ $procedure->medical_procedure }}">{{ $procedure->medical_procedure }}</option>
                                                                 @endforeach

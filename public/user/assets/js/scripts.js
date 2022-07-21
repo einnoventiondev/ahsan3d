@@ -482,8 +482,10 @@ $(function() {
 
     })
 
-    $('#user-payment').modal('hide');
-
+    // member modal hide
+    $('.user-payment-btn-redirect').click(function() {
+        $('#memberModal').modal('hide');
+    })
 })
 
 // new-nav
@@ -762,11 +764,6 @@ $(document).ready(function() {
         // $(".modal-backdrop").addClass('d-none');
     })
 
-    $("#user-payment").click(function() {
-        // $('.modal').modal('hide');
-        // $(".modal-backdrop").removeClass('show');
-        // $(".modal-backdrop").addClass('d-none');
-    })
 
     $('.reg-des').click(function() {
         $('#myTab .nav-item .nav-link').removeClass('active');

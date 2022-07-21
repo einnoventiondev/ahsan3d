@@ -8,7 +8,7 @@
                             <div class="zhd-center-close">
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div> 
+                            <div>
                                 <span class="outline dot">أكثر من 13 عضو اصطناعي</span>
                                 <h1 class="modal-title right"><span class="btm-line"><span class="inner-line"></span>
                                         الخدمات الطبية
