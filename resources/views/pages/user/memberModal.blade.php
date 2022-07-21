@@ -29,11 +29,11 @@
 <!-- designer pro update  start-->
 <!-- payment modal for users start -->
 <!-- Modal -->
-<div class="modal fade" id="user-payment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="user-payment" tabindex="-1" aria-labelledby="user-paymentLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">رصيد الشحن</h5>
+                <h5 class="modal-title">رصيد الشحن</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -284,7 +284,7 @@
                                     <span class="ahs-form-head1"> الرصيد الحالي </span>
                                     <span class="ahs-form-head2"> {{ Auth::user()->wallet ?? '0' }} ريال </span>
                                     <button data-bs-toggle="modal"  data-bs-target="#user-payment" type="button"
-                                        class="m-btn mujtmah-box-btn btn-white-1 d-contents">
+                                        class="m-btn mujtmah-box-btn btn-white-1 d-contents user-payment-btn-redirect">
                                         <img src="{{ asset('user/assets/images/ar.png') }}" alt=""
                                             class="ahs-form-img1">
                                     </button>

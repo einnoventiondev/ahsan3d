@@ -481,9 +481,9 @@ $(function() {
         }
 
     })
-
-    $('#user-payment').modal('hide');
-
+    $('.user-payment-btn-redirect').click(function() {
+        $('#memberModal').modal('hide');
+    })
 })
 
 // new-nav
