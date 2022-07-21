@@ -33,7 +33,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">رصيد الشحن</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -42,7 +42,7 @@
                     <div class="payment-user" id="payment-user-method">
                         <div class="amount-box">
                             <label class="form-label dot">
-                                amount
+                                المبلغ
                             </label>
 
                             <input type="text" class="form-control" name="payment"  placeholder=" add Payment  .." >
@@ -70,7 +70,7 @@
                             </label>
                         </div>
                         <div class="button-box__user-payment">
-                            <input type="submit" value="submit" class="btn btn-sky invert user-payment-submit">
+                            <input type="submit" value="رصيد الشحن" class="btn btn-sky invert user-payment-submit">
 
                         </div>
                     </div>
