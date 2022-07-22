@@ -132,7 +132,15 @@
                                                                         @enderror
                                                                     </div>
                                                                 </div>
-                                                                <span class="form-detail">صور بصيغة STL,PNG,JPG </span>
+                                                                @php
+                                                                    $extention=App\Models\FileExtention::all();
+                                                                   // $file_extention=json_decode( $extention->file_extention)
+                                                                @endphp
+                                                                <span class="form-detail">صور بصيغة  </span>
+                                                                @foreach($extention as $file)
+                                                                {{json_decode($file->file_extention)}}
+                                                                @endforeach
+
                                                             </div>
                                                         </div>
                                                     </div>

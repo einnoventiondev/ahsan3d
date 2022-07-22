@@ -6170,7 +6170,7 @@
                                 </div>
                                 <div class="wrapper al-center ahs-form-box1">
                                     <span class="ahs-form-head1"> الرصيد الحالي </span>
-                                    <span class="ahs-form-head2"> 750 ريال </span>
+                                    <span class="ahs-form-head2"> {{ Auth::user()->wallet ?? '0' }} ريال </span>
                                     <button data-bs-toggle="modal" data-bs-target="#financialOperations2" class="m-btn mujtmah-box-btn ml-3 d-contents">
                                         <img src="{{asset('user/assets/images/ar.png')}}" alt="" class="ahs-form-img1">
                                     </button>
@@ -6187,7 +6187,16 @@
                                     </div>
                                 </div>
                             </div>
+                            @php
+                            $order=App\Models\Order::where('designer_id',Auth::user()->id)->get();
+                            foreach($order as $id){
+                            $perposal=App\Models\Perposal::where('user_id',$id->user_id)->get();
+                            }
+
+                            @endphp
                             <div class="modal-body">
+                                @foreach ( $perposal as $order )
+                                  @if($order->status==1)
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="tab-content" id="myTabContent">
@@ -6199,17 +6208,17 @@
                                                                 <div class="heading">
                                                                     <i class="fa fa-circle-minus heading__minus" aria-hidden="true"></i>
                                                                     <h5>رقم الطلب:</h5>
-                                                                    <span>307</span>
+                                                                    <span>{{$order->order_id}}</span>
                                                                 </div>
                                                                 <div class="data">
-                                                                    <p>حالة الطلب:</p>
+                                                                    <p>حالة الطلب:وافقت</p>
                                                                     <span>تحت المراجعة</span>
                                                                     <p>نوع الطلب:</p>
                                                                     <span>سحب أموال</span>
                                                                     <p>المبلغ المطلوب:</p>
-                                                                    <span>750 ريال</span>
+                                                                    <span>{{$order->price_model}} ريال</span>
                                                                 </div>
-                                                                <span class="dateTime small">11/01/2022 - 03:00PM</span>
+                                                                <span class="dateTime small">{{$order->created_at}}</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -6219,7 +6228,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
+                                @endif
+                                @endforeach
+                                @foreach ( $perposal as $order )
+                                @if($order->status==2)
+                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="tab-content" id="myTabContent">
                                             <div class="tab-pane fade show active" id="medical-services" role="tabpanel">
@@ -6230,17 +6243,17 @@
                                                                 <div class="heading">
                                                                     <i class="fa-solid fa-circle-plus heading__plus"></i>
                                                                     <h5>رقم الطلب:</h5>
-                                                                    <span>304</span>
+                                                                    <span>{{$order->order_id}}</span>
                                                                 </div>
                                                                 <div class="data">
-                                                                    <p>حالة الطلب:</p>
+                                                                    <p>حالة الطلب:مرفوض</p>
                                                                     <span>تحت المراجعة</span>
                                                                     <p>نوع الطلب:</p>
                                                                     <span>سحب أموال</span>
                                                                     <p>المبلغ المطلوب:</p>
-                                                                    <span>750 ريال</span>
+                                                                    <span>{{$order->price_model}} ريال</span>
                                                                 </div>
-                                                                <span class="dateTime small">11/01/2022 - 03:00PM</span>
+                                                                <span class="dateTime small">{{$order->created_at}}</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -6249,15 +6262,72 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endif
+                                @endforeach
                                 <div class="form-action mb-5">
-                                    <button class="btn btn-form mx-3 with-arrow" type="submit">سحب أموال</button>
+                                    <button class="btn btn-form mx-3 with-arrow" type="button" data-bs-toggle="modal" data-bs-target="#payment-widthdraw">سحب أموال</button>
                                     <p class="">يتفعل هذا الخيار في حال كان لديك رصيد</p>
                                     <p class="d-none">هناك طلب جاري معالجته</p>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="payment-widthdraw" tabindex="-1" aria-labelledby="payment-widthdrawLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">رصيد الشحن</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="user-payment-form" method="POST" action="{{route('user.account.payment')}}">
+                       @csrf
+                        <div class="payment-user payment" id="payment-user-method">
+                            <div class="amount-box">
+                                <label class="form-label dot">
+                                    المبلغ
+                                </label>
+
+                                <input type="number" pattern="\d*" class="form-control user-add-payment" name="payment"  placeholder=" add Payment  .." >
+                            </div>
+                            <div class="form-check payment-user">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
+                                    <p>مدى</p>
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                </label>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
+                                    <p>فيزا وماستر كارد</p>
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                </label>
+                            </div>
+                            <div class="form-check payment-user">
+                                <label class="form-check-label" for="flexRadioDefault3">
+                                    <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
+                                    <p>آبل باي</p>
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                                </label>
+                            </div>
+                            <div class="button-box__user-payment">
+                                <input type="submit" value="رصيد الشحن" class="btn btn-sky invert disabled user-payment-submit">
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
             </div>
         </div>
     </div>
@@ -6301,7 +6371,7 @@
                                 </div>
                                 <div class="wrapper al-center ahs-form-box1">
                                     <span class="ahs-form-head1"> الرصيد الحالي </span>
-                                    <span class="ahs-form-head2"> 750 ريال </span>
+                                    <span class="ahs-form-head2"> 7504 ريال </span>
                                     <img src="{{asset('user/assets/images/ar.png')}}" alt="" class="ahs-form-img1">
                                 </div>
                                 <div class="row">
@@ -8733,7 +8803,7 @@
                         var date = data.msg[0].created_at;
                         date = date.substr(0, 10);
                         $.each(data.msg[0].images, function(index, value) {
-                            $('#subImages').append(`<div class="col-auto p-0 card-img-main"><img src="{{asset(Storage::url('/'))}}/${value}" ></div>                                                           alt=""></div>`);
+                            $('#bg').append(`<div class="col-auto p-0 card-img-main"><img src="products/${value}" id="${value}" alt="img"></div>`);
                         });
                         console.log(data.msg[0].user.email);
                         $('#data').append(`<h3>${data.msg[0].title}</h3>

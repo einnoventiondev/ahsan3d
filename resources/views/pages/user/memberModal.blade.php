@@ -17,6 +17,7 @@
                                 <button class="btn btn-sky edit-profile">تعديل</button>
                             </div>
                         </div>
+
                         <div class="modal-body">
 
                         </div>
@@ -204,7 +205,7 @@
                                     $designer_details=App\Models\User::with('userDetail')->find(Auth::user()->id);
                                     $printing=App\Models\Printing::all();
                                     $software_type=App\Models\Software::all();
- 
+
                                     $software=json_decode($designer_details->userDetail->software_type);
                                     @endphp
                                 <div class="row justify-content-center mb-5">
@@ -213,7 +214,7 @@
                                         <input type="text" name="password" class="form-control pass disabled"
                                             placeholder="كلمة المرور هنا .." value="">
                                     </div>
-                                    
+
                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
                                         <label class="form-label dot">تقنية الطباعة</label>
                                         <select class="form-select disabled" name="printing_technology"
@@ -221,7 +222,7 @@
                                             @foreach ( $printing as $print )
                                             <option value="{{ $print->name }}" {{ $designer_details->userDetail->printing_technology==$print->name ? 'selected' : ' ' }}>{{ $print->name }}</option>
                                             @endforeach
-                                         
+
                                         </select>
                                     </div>
                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">

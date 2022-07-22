@@ -1121,7 +1121,8 @@ textarea {
     margin-top: 10px;
     display: block;
     margin-right: 10px;
-    position: absolute;
+    display: inline;
+    /* position: absolute; */
 }
 
 .submitted-data {
@@ -3401,7 +3402,8 @@ input[type=number] {
     top: 0;
 }
 
-#user-payment .form-check-label.active, #user-payment .form-check-label.active img {
+#user-payment .form-check-label.active,
+#user-payment .form-check-label.active img {
     border-color: #215099 !important;
 }
 
@@ -3410,15 +3412,16 @@ input[type=number] {
     border-color: #215099;
 }
 
-#healthServiesModal .padd-right-50{
+#healthServiesModal .padd-right-50 {
     padding-right: 50px;
 }
 
-.form-select.procedure{
+.form-select.procedure {
     z-index: 9999;
     position: relative;
 }
-#health-dropzone{
+
+#health-dropzone {
     z-index: 9999;
     position: relative;
 }

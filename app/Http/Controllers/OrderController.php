@@ -55,6 +55,7 @@ class OrderController extends Controller
                                "Description" => $request->notes,
                          ]
             ]);
+           
             $json = json_decode($response, true);
                 $order_update=Order::latest()->first();
                 $order_update->airtable_order_id=$json['id'];
