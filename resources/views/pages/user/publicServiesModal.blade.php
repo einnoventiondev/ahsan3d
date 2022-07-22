@@ -73,7 +73,7 @@
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                             <label class="form-label dot">التخصص</label>
                                                             <select class="form-select spec" name="spec" aria-label="Default select example">
-                                                                 
+
                                                                 @foreach ($helth as $specialization)
                                                                 <option value="{{ $specialization->specialization }}">{{ $specialization->specialization }}</option>
                                                                 @endforeach
@@ -132,7 +132,15 @@
                                                                         @enderror
                                                                     </div>
                                                                 </div>
-                                                                <span class="form-detail">صور بصيغة STL,PNG,JPG </span>
+                                                                @php
+                                                                    $extention=App\Models\FileExtention::all();
+                                                                   // $file_extention=json_decode( $extention->file_extention)
+                                                                @endphp
+                                                                <span class="form-detail">صور بصيغة  </span>
+                                                                @foreach($extention as $file)
+                                                                {{json_decode($file->file_extention)}}
+                                                                @endforeach
+
                                                             </div>
                                                         </div>
                                                     </div>
