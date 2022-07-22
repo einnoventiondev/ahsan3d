@@ -1,4 +1,5 @@
 (function($) {
+
     "use strict";
     $(".mobile-toggle").click(function(){
         $(".nav-menus").toggleClass("open");
@@ -105,6 +106,8 @@ $(".chat-menu-icons .toogle-bar").click(function(){
 // Language
 var tnum = 'en';
 $(document).ready(function () {
+ 
+
     if (localStorage.getItem("primary") != null) {
         var primary_val = localStorage.getItem("primary");
         $("#ColorPicker1").val(primary_val);
@@ -310,6 +313,8 @@ $(".mode").on("click", function () {
         var color = $(this).attr("data-attr");
         localStorage.setItem('body', 'dark-only');
     });
+
+
 
 
     

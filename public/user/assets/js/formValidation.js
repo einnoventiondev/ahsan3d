@@ -69,7 +69,7 @@ $(document).ready(function () {
         }
     })
 
-    $('.form-control').not('.email').not('.login-email').not('.user-add-payment').keyup(function () {
+    $('.form-control').not('.email').not('.login-email').keyup(function () {
         if ($(this).val().length === 0) {
             $(this).val($.trim($(this).val()));
             $(this).removeClass('field-blue');
@@ -621,44 +621,50 @@ $(document).ready(function () {
 
 
     // checked payment radio btn
+
+    $('.user-add-payment').keyup(function () {
+            // if ($(this).val().length === 0) {
+            //     $(this).val($.trim($(this).val()));
+            //     $(this).removeClass('field-blue');
+            //     $(this).removeClass('field-red');
+            // } else if ($(this).val().length > 0) {
+            //     $(this).addClass('field-blue');
+            //     $(this).removeClass('field-red');
+            // } else {
+            //     $(this).val($.trim($(this).val()));
+            //     $(this).removeClass('field-blue');
+            //     $(this).addClass('field-red');
+            // }
+
+        if ($(this).val().length > 1 && $('.payment-user .form-check-label').hasClass('active')) {
+            $('.user-payment-submit').removeClass('disabled');
+        }
+        else {
+            $('.user-payment-submit').addClass('disabled');
+        }
+    })
+
+        // if ($('.user-add-payment').val().length > 1 && $('.payment-user .form-check-label').hasClass('active')) {
+        //     $('.user-payment-submit').removeClass('disabled');
+        // }
+        // else {
+        //     $('.user-payment-submit').addClass('disabled');
+        // }
+
+
     $('.payment-user .form-check-label').click(function(){
+        if ($('.user-add-payment').hasClass('field-blue')) {
+            $('.user-payment-submit').removeClass('disabled');
+        }
+        else {
+            $('.user-payment-submit').addClass('disabled');
+        }
+        
         $(this).find('.form-check-input').prop("checked", true);
         $(this).prevAll().find('.form-check-input').prop("checked", false);
         $(this).nextAll().find('.form-check-input').prop("checked", false);
     })
-
-    $('.user-add-payment').keyup(function () {
-            if ($(this).val() === 0) {
-                $(this).val($.trim($(this).val()));
-                $(this).removeClass('field-blue');
-                $(this).removeClass('field-red');
-            } else if ($(this).val() > 0) {
-                $(this).addClass('field-blue');
-                $(this).removeClass('field-red');
-            } else {
-                $(this).val($.trim($(this).val()));
-                $(this).removeClass('field-blue');
-                $(this).addClass('field-red');
-            }
-
-        if ($(this).val() > 0 && $('.payment-user .form-check-label').hasClass('active')) {
-            $('.user-payment-submit').removeClass('disabled');
-        }
-        else {
-            $('.user-payment-submit').addClass('disabled');
-        }
-    })
-
-    $('.payment-user .form-check-label').click(function () {
-        if ($('.user-add-payment').val() > 0 && $(this).hasClass('active')) {
-            $('.user-payment-submit').removeClass('disabled');
-        }
-        else {
-            $('.user-payment-submit').addClass('disabled');
-        }
-    })
-
-
+    
 
 // ====== health Update ======
 if (window.File && window.FileList && window.FileReader) {

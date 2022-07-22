@@ -21,6 +21,9 @@
         
     });
         // Remove element
+         $(".remove").click(function(){
+
+        });
         $('.remove').on('click','.remove',function(){
                 
             var id = this.id;
