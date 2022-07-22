@@ -76,6 +76,7 @@
             width: 128px;
             height: auto;
         }
+
     </style>
 
 </head>
