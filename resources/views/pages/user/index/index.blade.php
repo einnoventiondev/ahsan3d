@@ -6195,6 +6195,7 @@
                             $perposal=App\Models\Perposal::where('user_id',$id->user_id)->get();
                             }
                             @endphp
+                            
                             <div class="modal-body">
                                 @foreach ( $perposal as $order )
                                   @if($order->status==1)
