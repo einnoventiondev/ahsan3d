@@ -172,7 +172,7 @@
                                     <a type="button" data-bs-toggle="modal" data-bs-target="#user-payment"><i class="fa-solid fa-circle-plus"></i></a>
                                     
                                     <button data-bs-toggle="modal" data-bs-target="#financialOperations" type="button"
-                                        class="m-btn mujtmah-box-btn btn-white-1 d-contents">
+                                        class="m-btn mujtmah-box-btn btn-white-1 d-contents member-payment-btn-redirect">
                                         <img src="{{ asset('user/assets/images/ar.png') }}" alt=""
                                             class="ahs-form-img1">
                                     </button>

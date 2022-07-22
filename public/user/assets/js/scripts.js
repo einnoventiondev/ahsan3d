@@ -487,6 +487,14 @@ $(function() {
     $('.user-payment-btn-redirect').click(function() {
         $('#memberModal').modal('hide');
     })
+
+    $('.designer-payment-btn-redirect').click(function() {
+        $('#financialOperations').modal('hide');
+    })
+
+     $('.member-payment-btn-redirect').click(function() {
+        $('#memberModal').modal('hide');
+    })
 })
 
 // new-nav
