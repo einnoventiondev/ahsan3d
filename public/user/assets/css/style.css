@@ -3425,6 +3425,9 @@ input[type=number] {
     position: relative;
 }
 
+
+
+/* drop file */
 #health-dropzone {
     z-index: 9999;
     position: relative;
@@ -3452,3 +3455,9 @@ input[type=number] {
     height: 100% !important;
     border-radius: 45px;
   }
+
+  /* /#payment-widthdraw */
+
+  /* #payment-widthdraw{
+      background-color: transparent;
+  } */

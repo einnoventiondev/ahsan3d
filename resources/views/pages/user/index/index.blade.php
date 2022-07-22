@@ -1736,7 +1736,7 @@
 
                                                 <div class="col-md-6 col-lg-4 mt-5 ad">
                                                     <label class="form-label dot">شكل الطباعة</label>
-                                                    <select class="form-control" data-placeholder="Выберите теги" name="print">
+                                                    <select class="form-control clean-shot-print-format" data-placeholder="Выберите теги" name="print">
                                                         @foreach($softwares as $software)
                                                         <option value="{{ $software->name }}">{{ $software->name }}</option>
                                                         @endforeach
@@ -1744,7 +1744,11 @@
                                                 </div>
                                                 <div class="col-md-6 col-lg-4 mt-5 ad">
                                                     <label class="form-label dot">تقنية الطباعة</label>
-                                                    <select class="form-control" data-placeholder="Выберите теги" name="format">
+                                                    <select class="form-control clean-shot-printing-tech" data-placeholder="Выберите теги" name="format">
+                                                        <option value="as">asd</option>
+                                                        <option value="as">asd</option>
+                                                        <option value="as">asd</option>
+                                                        <option value="as">asd</option>
                                                         @foreach($printings as $printing)
                                                         <option value="{{ $printing->name }}">{{ $printing->name }}</option>
                                                         @endforeach
@@ -6195,7 +6199,7 @@
                             $perposal=App\Models\Perposal::where('user_id',$id->user_id)->get();
                             }
                             @endphp
-                            
+
                             <div class="modal-body">
                                 @foreach ( $perposal as $order )
                                   @if($order->status==1)

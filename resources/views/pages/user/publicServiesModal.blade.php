@@ -122,9 +122,9 @@
                                                                     <input type="file" id="public-file" name="myfile" />
                                                                 </div> -->
 
-                                                                <div class="upload-btn-wrapper btn-upload" id="health-upload-btn">
+                                                                <div class="upload-btn-wrapper btn-upload" id="public-upload-btn">
                                                                     <img src="{{asset('user/assets/icons/upload-img.svg')}}" class="upload-icon" alt="upload-img">
-                                                                    <input type="file" name="file" id="public-file" class="health-file-input @error('file') is-invalid @enderror" required multiple />
+                                                                    <input type="file" name="file" id="public-file" accept='image/*' class="health-file-input @error('file') is-invalid @enderror" required multiple />
                                                                     {{-- <button class="btn btn-upload health"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button> --}}
                                                                 </div>
                                                                 {{-- <div id="public-dropzone" action="/" class="dropzone scrollbar-hidden">
