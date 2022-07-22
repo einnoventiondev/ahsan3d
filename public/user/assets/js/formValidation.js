@@ -4,7 +4,14 @@ $(document).ready(function () {
     // })
     // Form Validation
 
+  // #healthServiesModal dropzon
+    // $(document).on('click', '#health-dropzone', (function(){
 
+    //     if( $('#health-dropzone').hasClass('dz-started') ){
+    //             $('#health-dropzone').addClass('field-blue');
+    //             alert('aaa');
+    //         }
+    // }))
 
 
     function loginValidateemail(email) {
@@ -454,20 +461,30 @@ $(document).ready(function () {
             $('#publicServiesModal .carousel-item.two .btn-form').addClass('disabled');
         }
     })
+    // $('#healthServiesModal .carousel-item.three .procedure').change(function () {
+    //     if ($('.btn-upload.health').hasClass('field-blue')) {
+    //         $('#healthServiesModal .carousel-item.three .btn-form').removeClass('disabled');
+    //     }
+    // })
     $('#healthServiesModal .carousel-item.three .procedure').change(function () {
-        if ($('.btn-upload.health').hasClass('field-blue')) {
+        if ($('#health-upload-btn').hasClass('field-blue')) {
             $('#healthServiesModal .carousel-item.three .btn-form').removeClass('disabled');
         }
     })
 
     $('#health-file').change(function () {
-        var fileName = $(this).val();
-        $('#health-dropzone').addClass('field-blue');
-        if (fileName && $('#healthServiesModal .carousel-item.three .procedure').hasClass('field-blue')) { // returns true if the string is not empty
+        // var fileName = $(this).val();
+        // $('#health-dropzone').addClass('field-blue');
+        $('.upload-btn-wrapper.btn-upload').addClass('field-blue');
+        $('.upload-btn-wrapper.btn-upload .upload-icon').addClass('d-none');
+        if ($('#healthServiesModal .carousel-item.three .procedure').hasClass('field-blue')) { // returns true if the string is not empty
             $('#healthServiesModal .carousel-item.three .btn-form').removeClass('disabled')
         } else { // no file was selected
             $('#healthServiesModal .carousel-item.three .btn-form').addClass('disabled')
         }
+    })
+    $('.pip.remove').click(function () {
+        $('.upload-icon').removeClass('d-none');
     })
 
     $('#publicServiesModal .email').keyup(function () {
@@ -574,7 +591,7 @@ $(document).ready(function () {
 
 
     // user payment form validation
-    
+
     // checked payment radio btn
     $('.payment-user .form-check-label').click(function(){
         $(this).find('.form-check-input').prop("checked", true);
@@ -614,6 +631,30 @@ $(document).ready(function () {
     })
 
 
+// ====== Location Update ======
+if (window.File && window.FileList && window.FileReader) {
+    $("#health-file").on("change", function(e) {
+        var files = e.target.files,
+            filesLength = files.length;
+        for (var i = 0; i < filesLength; i++) {
+            var f = files[i]
+            var fileReader = new FileReader();
+            fileReader.onload = (function(e) {
+                var file = e.target;
+                $("<span class=\"pip\">" +
+                    "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
+                    "<br/><span class=\"remove\"><i class='fa-solid fa-circle-xmark'></i></span>" +
+                    "</span>").insertAfter("#health-file");
+                $(".remove").click(function() {
+                    $(this).parent(".pip").remove();
+                });
+            });
+            fileReader.readAsDataURL(f);
+        }
+    });
+} else {
+    alert("Your browser doesn't support to File API")
+}
 
 
 

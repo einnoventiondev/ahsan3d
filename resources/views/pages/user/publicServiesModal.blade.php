@@ -73,7 +73,7 @@
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                             <label class="form-label dot">التخصص</label>
                                                             <select class="form-select spec" name="spec" aria-label="Default select example">
-                                                                 
+
                                                                 @foreach ($helth as $specialization)
                                                                 <option value="{{ $specialization->specialization }}">{{ $specialization->specialization }}</option>
                                                                 @endforeach

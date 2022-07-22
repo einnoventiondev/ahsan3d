@@ -3422,3 +3422,26 @@ input[type=number] {
     z-index: 9999;
     position: relative;
 }
+
+.pip{
+    text-align: center;
+    margin-right: 10px;
+}
+.pip img {
+    width: 80px;
+    height: 60px;
+    filter: none !important;
+}
+.pip .remove{
+    position: relative;
+}
+
+.upload-btn-wrapper.btn-upload{
+    width: 400px;
+    height: 120px;
+  }
+
+  .health-file-input{
+    height: 100% !important;
+    border-radius: 45px;
+  }
