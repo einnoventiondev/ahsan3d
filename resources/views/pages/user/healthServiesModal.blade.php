@@ -203,24 +203,27 @@
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-end padd-right-50">
                                                             <label class="form-label dot">اختيار نوع الإجراء الطبي</label>
                                                             <select class="form-select procedure" required name="procedure" aria-label="Default select example">
-
+                                                                <option value="test">test</option>
+                                                                <option value="test">test</option>
                                                                 @foreach ($helth as $procedure)
                                                                 <option value="{{ $procedure->medical_procedure }}">{{ $procedure->medical_procedure }}</option>
                                                                 @endforeach
                                                             </select>
                                                             <label class="form-label dot mt-4">رفع الصور الطبية</label>
-                                                            <!-- <div class="upload-btn-wrapper">
-                                                                <button class="btn btn-upload health"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
-                                                                <input type="file" id="health-file" required name="myfile" />
-                                                            </div> -->
-                                                            <div id="health-dropzone" action="/" class="dropzone scrollbar-hidden">
+                                                            <div class="upload-btn-wrapper btn-upload" id="health-upload-btn">
+                                                                <img src="{{asset('user/assets/icons/upload-img.svg')}}" class="upload-icon" alt="upload-img">
+                                                                <input type="file" name="file" id="health-file" class="health-file-input" required multiple />
+                                                                {{-- <button class="btn btn-upload health"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button> --}}
+                                                            </div>
+
+                                                            {{-- <div id="health-dropzone" action="/" class="dropzone scrollbar-hidden">
                                                                 <div class="dropzone-previews"></div>
                                                                 <img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img">
                                                                 <div class="fallback">
                                                                     <!-- this is the fallback if JS isn't working -->
                                                                     <input name="file" type="file" id="health-file" required multiple />
                                                                 </div>
-                                                            </div>
+                                                            </div> --}}
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                                             <div class="male-back">

@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="content-main">
-    <h3>حسابات التواصل الاجتماعي</h3>
+    <h3>  إجراء طبي</h3>
     <div class="breadcrumb-main">
         <ol class="breadcrumb">
             <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>

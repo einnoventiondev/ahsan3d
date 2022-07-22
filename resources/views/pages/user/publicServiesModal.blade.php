@@ -73,7 +73,7 @@
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                             <label class="form-label dot">التخصص</label>
                                                             <select class="form-select spec" name="spec" aria-label="Default select example">
-                                                                 
+
                                                                 @foreach ($helth as $specialization)
                                                                 <option value="{{ $specialization->specialization }}">{{ $specialization->specialization }}</option>
                                                                 @endforeach
@@ -121,7 +121,13 @@
                                                                     <button class="btn btn-upload public"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
                                                                     <input type="file" id="public-file" name="myfile" />
                                                                 </div> -->
-                                                                <div id="public-dropzone" action="/" class="dropzone scrollbar-hidden">
+
+                                                                <div class="upload-btn-wrapper btn-upload" id="health-upload-btn">
+                                                                    <img src="{{asset('user/assets/icons/upload-img.svg')}}" class="upload-icon" alt="upload-img">
+                                                                    <input type="file" name="file" id="public-file" class="health-file-input @error('file') is-invalid @enderror" required multiple />
+                                                                    {{-- <button class="btn btn-upload health"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button> --}}
+                                                                </div>
+                                                                {{-- <div id="public-dropzone" action="/" class="dropzone scrollbar-hidden">
                                                                     <div class="dropzone-previews"></div>
                                                                     <img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img">
                                                                     <div class="fallback">
@@ -131,8 +137,16 @@
                                                                         <span class="text-danger">{{ $message }}</span>
                                                                         @enderror
                                                                     </div>
-                                                                </div>
-                                                                <span class="form-detail">صور بصيغة STL,PNG,JPG </span>
+                                                                </div> --}}
+                                                                @php
+                                                                    $extention=App\Models\FileExtention::all();
+                                                                   // $file_extention=json_decode( $extention->file_extention)
+                                                                @endphp
+                                                                <span class="form-detail">صور بصيغة  </span>
+                                                                @foreach($extention as $file)
+                                                                {{json_decode($file->file_extention)}}
+                                                                @endforeach
+
                                                             </div>
                                                         </div>
                                                     </div>
