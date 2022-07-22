@@ -6293,7 +6293,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="user-payment-form" method="POST" action="{{route('user.account.payment')}}">
+                    <form class="user-payment-form" method="POST" action="{{route('user.payment.detect')}}">
                        @csrf
                         <div class="payment-user payment" id="payment-user-method">
                             <div class="amount-box">
