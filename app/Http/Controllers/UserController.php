@@ -28,6 +28,13 @@ class UserController extends Controller
        $user->update();
        return redirect()->route('/');
     }
+    public function userPaymentDetect(Request $request){
+        $user=User::where('id',Auth::user()->id)->first();
+        $user->wallet -= $request->payment;
+        $user->update();
+        return redirect()->route('/');
+     }
+
     public function userUpdate($id)
     {
        $data = User::find($id);
