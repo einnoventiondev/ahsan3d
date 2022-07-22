@@ -94,19 +94,19 @@ $public=App\Models\PublicService::count();
                                 <a class="nav-link " href="{{ route('software_type.index') }}" tabindex="-1" aria-disabled="true">  أنواع البرامج المستخدمة </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{{ route('size.index') }}" tabindex="-1" aria-disabled="true">  sالبرامج </a>
+                                <a class="nav-link " href="{{ route('size.index') }}" tabindex="-1" aria-disabled="true">  حجم المنتج </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{{ route('color.index') }}" tabindex="-1" aria-disabled="true">    البرامجc </a>
+                                <a class="nav-link " href="{{ route('color.index') }}" tabindex="-1" aria-disabled="true">لون المنتج </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{{ route('extention.index') }}" tabindex="-1" aria-disabled="true">    Extention </a>
+                                <a class="nav-link " href="{{ route('extention.index') }}" tabindex="-1" aria-disabled="true">    تمديد </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{{ route('procedure.index') }}" tabindex="-1" aria-disabled="true">    medicalProcedure </a>
+                                <a class="nav-link " href="{{ route('procedure.index') }}" tabindex="-1" aria-disabled="true">إجراء طبي </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{{ route('specialization.index') }}" tabindex="-1" aria-disabled="true">    Specialization </a>
+                                <a class="nav-link " href="{{ route('specialization.index') }}" tabindex="-1" aria-disabled="true">تخصص </a>
                             </li>
                           </ul>
                       </li>
