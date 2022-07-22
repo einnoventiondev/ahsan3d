@@ -164,11 +164,13 @@
                                 @endif
 
 
-                                <div class="wrapper al-center ahs-form-box1">
+                                <div class="wrapper al-center ahs-form-box1 plus-icon_payment">
                                     <span class="ahs-form-head1"> الرصيد الحالي </span>
                                     <span class="ahs-form-head2"> {{ Auth::user()->wallet ?? '0' }}  ريال </span>
-                                    <span class="ahs-form-head2"> &nbsp;&nbsp;<button type="button" data-bs-toggle="modal" data-bs-target="#user-payment" ><i  class="fa fa-plus"></i></button></span>
+                                    <!-- <span class="ahs-form-head2"> &nbsp;&nbsp;<button type="button" data-bs-toggle="modal" data-bs-target="#user-payment" ><i  class="fa fa-plus"></i></button></span> -->
                                     <!-- before this modal is  #financialOperations -->
+                                    <a type="button" data-bs-toggle="modal" data-bs-target="#user-payment"><i class="fa-solid fa-circle-plus"></i></a>
+                                    
                                     <button data-bs-toggle="modal" data-bs-target="#financialOperations" type="button"
                                         class="m-btn mujtmah-box-btn btn-white-1 d-contents">
                                         <img src="{{ asset('user/assets/images/ar.png') }}" alt=""
