@@ -79,7 +79,7 @@
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">User
+                                            <label for="exampleInputEmail1">المستخدم
                                             </label>
                                             <input type="text" class="form-control
                                             invoice-field"  disabled id="p_user">
@@ -107,7 +107,7 @@
                                     </div>
 								<div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">عرض سعر
+                                            <label for="exampleInputEmail1">عنوان
                                             </label>
                                             <input type="text" class="form-control
                                             invoice-field"  name="subject">
@@ -237,7 +237,7 @@
                                 </div>  --}}
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">عنوان
+                                        <label for="exampleInputEmail1">تبوك
                                         </label>
                                         <input type="text" class="form-control zhd-addres
                                         " required name="address"

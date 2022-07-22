@@ -112,7 +112,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                            <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about-us">
@@ -258,7 +258,7 @@
                 <div class="mmnue">
                     <ul class="sidebar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                            <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about-us">
@@ -1229,7 +1229,7 @@
                         <div class="col-md-12">
                             <ul class="footer-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/">الرئيسية</a>
+                                    <a class="nav-link active" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#about-us">
@@ -1466,7 +1466,7 @@
                                             <div class="collapse navbar-collapse" id="navbarNav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -1619,7 +1619,7 @@
                                             <div class="mmnue">
                                                 <ul class="sidebar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -1924,7 +1924,7 @@
                                                         <ul class="footer-nav zhd-footer">
                                                             <li class="nav-item">
                                                                 <a class="nav-link active" aria-current="page"
-                                                                    href="/">الرئيسية</a>
+                                                                href="{{ url('/') }}">الرئيسية</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <a class="nav-link" href="#about-us">
@@ -2036,7 +2036,7 @@
                                             <div class="collapse navbar-collapse" id="navbarNav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}" >الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -2189,7 +2189,7 @@
                                             <div class="mmnue">
                                                 <ul class="sidebar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -2491,7 +2491,7 @@
                                                         <ul class="footer-nav zhd-footer">
                                                             <li class="nav-item">
                                                                 <a class="nav-link active" aria-current="page"
-                                                                    href="/">الرئيسية</a>
+                                                                href="{{ url('/') }}">الرئيسية</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <a class="nav-link" href="#about-us">
@@ -5025,7 +5025,7 @@
                                         <div class="collapse navbar-collapse" id="navbarNav">
                                             <ul class="navbar-nav">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                                                    <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="#about-us">
@@ -5174,7 +5174,7 @@
                                         <div class="mmnue">
                                             <ul class="sidebar-nav">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                                                    <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="#about-us">
@@ -5478,7 +5478,7 @@
                                                             <ul class="footer-nav zhd-footer">
                                                                 <li class="nav-item">
                                                                     <a class="nav-link active" aria-current="page"
-                                                                        href="/">الرئيسية</a>
+                                                                    href="{{ url('/') }}">الرئيسية</a>
                                                                 </li>
                                                                 <li class="nav-item">
                                                                     <a class="nav-link" href="#about-us">
@@ -5583,7 +5583,7 @@
                                             <div class="collapse navbar-collapse" id="navbarNav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -5736,7 +5736,7 @@
                                             <div class="mmnue">
                                                 <ul class="sidebar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -6022,7 +6022,7 @@
                                                             <ul class="footer-nav">
                                                                 <li class="nav-item">
                                                                     <a class="nav-link active" aria-current="page"
-                                                                        href="/">الرئيسية</a>
+                                                                    href="{{ url('/') }}">الرئيسية</a>
                                                                 </li>
                                                                 <li class="nav-item">
                                                                     <a class="nav-link" href="#about-us">

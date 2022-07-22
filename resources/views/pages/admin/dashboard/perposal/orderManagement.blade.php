@@ -25,6 +25,9 @@
                                         <th>Designer</th>
                                         <th>Qty</th>
                                         <th>size</th>
+                                        <th>Payment</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -42,9 +45,25 @@
                                     @endphp
                                     <td>
                                         @if($order_status)
-                                        @if($order_status->status == 0)
+                                        {{ $order_status->price_model }}
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($order_status)
+                                        {{ $order_status->date }}
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($order_status)
+                                        {{ $order_status->validtill }}
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($order_status)
+
+                                        @if($order_status->status == 0 || $order_status->status == NULL )
                                         <button class="btn btn-secondary ">Waiting</button>
-                                    @endif
+                                           @endif
                                     @if($order_status->status == 1)
                                         <a class="btn btn-success" >Accept</a>
                                     @endif
