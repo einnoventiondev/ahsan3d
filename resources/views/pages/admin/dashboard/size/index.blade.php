@@ -2,12 +2,12 @@
 @section('content')
 
 <div class="content-main">
-    <h3>حسابات التواصل الاجتماعي</h3>
+    <h3>   حجم المنتج  </h3>
     <div class="breadcrumb-main">
         <ol class="breadcrumb">
             <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
 
-            <li><a href="{{ route('size.index') }}">حسابات التواصل الاجتماعي</a></li>
+            <li><a href="{{ route('size.index') }}">   حجم المنتج  </a></li>
         </ol>
     </div>
     <div class="container-fluid p-0">

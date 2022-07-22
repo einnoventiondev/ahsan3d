@@ -79,7 +79,7 @@
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">User
+                                            <label for="exampleInputEmail1">المستخدم
                                             </label>
                                             <input type="text" class="form-control
                                             invoice-field"  disabled id="p_user">

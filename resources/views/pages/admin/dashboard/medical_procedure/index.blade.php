@@ -7,7 +7,7 @@
         <ol class="breadcrumb">
             <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
 
-            <li><a href="{{ route('procedure.index') }}">حسابات التواصل الاجتماعي</a></li>
+            <li><a href="{{ route('procedure.index') }}"> إجراء طبي  </a></li>
         </ol>
     </div>
     <div class="container-fluid p-0">
