@@ -3397,7 +3397,7 @@ input[type=number] {
     background-color: #E0E0DE !important;
 }
 
-#user-payment .payment-user.payment {
+#user-payment .payment-user.payment, #payment-widthdraw .payment-user.payment{
     position: relative;
     top: 0;
 }
@@ -3406,8 +3406,12 @@ input[type=number] {
 #user-payment .form-check-label.active img {
     border-color: #215099 !important;
 }
+#payment-widthdraw .form-check-label.active,
+#payment-widthdraw .form-check-label.active img {
+    border-color: #215099 !important;
+}
 
-#user-payment .form-check-input:checked[type=radio] {
+#user-payment .form-check-input:checked[type=radio], #payment-widthdraw .form-check-input:checked[type=radio] {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg id='Group_1737' data-name='Group 1737' transform='translate(-20 -27)'%3E%3Ccircle id='Ellipse_6' data-name='Ellipse 6' cx='10' cy='10' r='10' transform='translate(20 27)' fill='%215099'/%3E%3Cg id='check-2' transform='translate(26.287 -20.89)'%3E%3Cpath id='Path_1365' data-name='Path 1365' d='M7.21,56.457,3.291,60.375a.744.744,0,0,1-1.051,0L.217,58.352A.743.743,0,0,1,1.268,57.3l1.5,1.5,3.393-3.393A.743.743,0,0,1,7.21,56.457Z' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     border-color: #215099;
 }
