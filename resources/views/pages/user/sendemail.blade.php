@@ -1,4 +1,28 @@
 @extends('layouts.admin.head')
+<style type="text/css">
+    .form-control {
+    border-color: #E3E9EC !important;
+    border-width: 4px !important;
+    border-radius: 30px !important;
+    color: #9FA5B2 !important;
+}
+    .login-box {
+    width: 20%;
+    margin: auto !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.login-box .btn-r-30 {
+    border-radius: 30px !important;
+}
+</style>
 
 <div class="login-box">
     @include('sweetalert::alert')
