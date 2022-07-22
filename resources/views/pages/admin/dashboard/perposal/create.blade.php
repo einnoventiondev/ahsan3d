@@ -159,14 +159,12 @@
                                 </div>  --}}
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">team
+                                        <label for="exampleInputEmail1">فريق
                                         </label>
-                                        <select class="form-select form-text
-                                        text-muted
-                                            invoice-field" required
+                                        <select class="form-select form-control form-text text-muted invoice-field" required
                                             name="assigned" aria-label="Default
                                             select example">
-                                            <option selected disabled>team</option>
+                                            <option selected disabled>فريق</option>
                                             @foreach($admin as $user)
                                             <option value="{{ $user->id }}" name="{{ $user->name }}">{{ $user->name }}</option>
 
@@ -204,7 +202,7 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">الدولة
                                         </label>
-                                        <select class="form-select
+                                        <select class="form-select form-control
                                             invoice-field" required
                                             name="country"  aria-label="Default
                                             select example">

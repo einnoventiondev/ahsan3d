@@ -1,11 +1,12 @@
 @extends('layouts.auth.app')
-
-@section('content')
-
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card login-box">
-                <div class="card-header">إعادة تعيين كلمة المرور</div>
+<div class="login-box email-admin">
+<div class="login-logo">
+        <a href="">
+            <img src="{{ asset('upload/1647956582.jpg') }}" class="mb-3" style="width: 100px;" alt="logo">
+        </a>
+    </div>
+            <div class="card">
+            <label> إعادة تعيين كلمة المرور</label>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -18,9 +19,9 @@
                         @csrf
 
                         <div class="mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">عنوان البريد الالكترونى</label>
+                            <label for="email" class="  ">عنوان البريد الالكترونى</label>
 
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="أدخل البريد الإلكتروني">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -40,6 +41,4 @@
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
-@endsection
+</div>

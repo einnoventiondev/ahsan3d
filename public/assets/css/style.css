@@ -46277,3 +46277,7 @@ textarea {
 .login-box .btn-r-30{
     border-radius: 30px !important;
 }
+.email-admin .card{
+border: none;
+tex-align: right !important;
+}

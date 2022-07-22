@@ -436,7 +436,7 @@ $(document).ready(function () {
     })
     $('#publicServiesModal .carousel-item.two .form-control').keyup(function () {
         if ($('#publicServiesModal .carousel-item.two .type').val().length > 1 && $('#publicServiesModal .carousel-item.two .print-resolution').val().length > 1 &&
-            $('#publicServiesModal .carousel-item.two .spec').val().length > 1 && $('#publicServiesModal .carousel-item.two .btn-upload.public').hasClass('field-blue')) {
+            $('#publicServiesModal .carousel-item.two .spec').val().length > 1 && $('#publicServiesModal .carousel-item.two #public-upload-btn').hasClass('field-blue')) {
             $('#publicServiesModal .carousel-item.two .btn-form').removeClass('disabled');
         } else {
             $('#publicServiesModal .carousel-item.two .btn-form').addClass('disabled');
@@ -453,13 +453,33 @@ $(document).ready(function () {
 
     $('#public-file').change(function () {
         var fileName = $(this).val();
-        $('.btn-upload.public').addClass('field-blue');
+        // $('.btn-upload.public').addClass('field-blue');
+        $('#public-upload-btn').addClass('field-blue');
+        $('#publicServiesModal .upload-btn-wrapper.btn-upload .upload-icon').addClass('d-none');
         if (fileName && $('#publicServiesModal .carousel-item.two .type').val().length > 1 && $('#publicServiesModal .carousel-item.two .email').val().length > 1 &&
             $('#publicServiesModal .carousel-item.two .spec').val().length > 1) { // returns true if the string is not empty
             $('#publicServiesModal .carousel-item.two .btn-form').removeClass('disabled');
         } else { // no file was selected
             $('#publicServiesModal .carousel-item.two .btn-form').addClass('disabled');
         }
+    })
+    $('#publicServiesModal .pip.remove').click(function () {
+        $('#publicServiesModal .upload-icon').removeClass('d-none');
+    })
+
+    $('#health-file').change(function () {
+        // var fileName = $(this).val();
+        // $('#health-dropzone').addClass('field-blue');
+        $('#healthServiesModal .upload-btn-wrapper.btn-upload').addClass('field-blue');
+        $('#healthServiesModal .upload-btn-wrapper.btn-upload .upload-icon').addClass('d-none');
+        if ($('#healthServiesModal .carousel-item.three .procedure').hasClass('field-blue')) { // returns true if the string is not empty
+            $('#healthServiesModal .carousel-item.three .btn-form').removeClass('disabled')
+        } else { // no file was selected
+            $('#healthServiesModal .carousel-item.three .btn-form').addClass('disabled')
+        }
+    })
+    $('#healthServiesModal .pip.remove').click(function () {
+        $('#healthServiesModal .upload-icon').removeClass('d-none');
     })
     // $('#healthServiesModal .carousel-item.three .procedure').change(function () {
     //     if ($('.btn-upload.health').hasClass('field-blue')) {
@@ -470,21 +490,6 @@ $(document).ready(function () {
         if ($('#health-upload-btn').hasClass('field-blue')) {
             $('#healthServiesModal .carousel-item.three .btn-form').removeClass('disabled');
         }
-    })
-
-    $('#health-file').change(function () {
-        // var fileName = $(this).val();
-        // $('#health-dropzone').addClass('field-blue');
-        $('.upload-btn-wrapper.btn-upload').addClass('field-blue');
-        $('.upload-btn-wrapper.btn-upload .upload-icon').addClass('d-none');
-        if ($('#healthServiesModal .carousel-item.three .procedure').hasClass('field-blue')) { // returns true if the string is not empty
-            $('#healthServiesModal .carousel-item.three .btn-form').removeClass('disabled')
-        } else { // no file was selected
-            $('#healthServiesModal .carousel-item.three .btn-form').addClass('disabled')
-        }
-    })
-    $('.pip.remove').click(function () {
-        $('.upload-icon').removeClass('d-none');
     })
 
     $('#publicServiesModal .email').keyup(function () {
@@ -590,7 +595,30 @@ $(document).ready(function () {
     }
 
 
-    // user payment form validation
+
+    // Register Form Validation
+
+
+    $('.register-printing-tech').change(function () {
+        $(this).addClass('field-blue');
+      })
+
+      $('.register-printing-tech').change(function () {
+        $(this).parents('#selectSoftwares-parent').find('.select2-selection').addClass('field-blue');
+      })
+
+      $('.clean-shot-print-format').change(function () {
+        $(this).addClass('field-blue');
+      })
+
+      $('.clean-shot-printing-tech').change(function () {
+        $(this).addClass('field-blue');
+      })
+
+
+
+
+
 
     // checked payment radio btn
     $('.payment-user .form-check-label').click(function(){
@@ -631,7 +659,8 @@ $(document).ready(function () {
     })
 
 
-// ====== Location Update ======
+
+// ====== health Update ======
 if (window.File && window.FileList && window.FileReader) {
     $("#health-file").on("change", function(e) {
         var files = e.target.files,
@@ -655,6 +684,32 @@ if (window.File && window.FileList && window.FileReader) {
 } else {
     alert("Your browser doesn't support to File API")
 }
+
+// ====== public Update ======
+if (window.File && window.FileList && window.FileReader) {
+    $("#public-file").on("change", function(e) {
+        var files = e.target.files,
+            filesLength = files.length;
+        for (var i = 0; i < filesLength; i++) {
+            var f = files[i]
+            var fileReader = new FileReader();
+            fileReader.onload = (function(e) {
+                var file = e.target;
+                $("<span class=\"pip\">" +
+                    "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
+                    "<br/><span class=\"remove\"><i class='fa-solid fa-circle-xmark'></i></span>" +
+                    "</span>").insertAfter("#public-file");
+                $(".remove").click(function() {
+                    $(this).parent(".pip").remove();
+                });
+            });
+            fileReader.readAsDataURL(f);
+        }
+    });
+} else {
+    alert("Your browser doesn't support to File API")
+}
+
 
 
 
