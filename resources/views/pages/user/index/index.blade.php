@@ -8811,10 +8811,15 @@
                         var date = data.msg[0].created_at;
                         date = date.substr(0, 10);
                         $.each(data.msg[0].images, function(index, value) {
-                            // var imageUrl = products/${value};
+                            var imageUrl = "products/"+value;
                             // $('#bg').css('background-image', 'url("products/'+${value}+'")');
-                            // $('#bg').css('background', 'url(products/'+${value}+')');
-                            $('#bg').append(`<div class="col-auto p-0 card-img-main"><img src="products/${value}" alt="img"></div>`);
+    
+                            $('#bg').css({'background-image': "url(" + imageUrl + ")", 
+                            'background-repeat': 'no-repeat',
+                            'background-position': 'top',
+                            'background-size': 'cover',
+                            });
+                            // $('#bg').append(`<div class="col-auto p-0 card-img-main"><img src="products/${value}" alt="img"></div>`);
                         });
                         console.log(data.msg[0].user.email);
                         $('#data').append(`<h3>${data.msg[0].title}</h3>
