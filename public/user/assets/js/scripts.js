@@ -1,4 +1,5 @@
 $(function() {
+    
     $('.hide-hands').show();
     // $('.hide-hands').fadeTo(2900, 1);
 
