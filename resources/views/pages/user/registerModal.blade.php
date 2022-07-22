@@ -117,7 +117,11 @@
                                                         @endphp
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4 ahs-from-box">
                                                             <label class="form-label dot" \>تقنية الطباعة</label>
-                                                            <select class="form-control"  data-placeholder="Выберите теги" name="printing_technology" >
+                                                            <select class="form-control register-printing-tech"  data-placeholder="Выберите теги" name="printing_technology" >
+
+                                                                <option value="as">asd</option>
+                                                                <option value="as">asd</option>
+                                                                <option value="as">asd</option>
                                                                     @foreach($printings as $printing)
                                                                         <option value="{{ $printing->name }}">{{ $printing->name }}</option>
                                                                     @endforeach

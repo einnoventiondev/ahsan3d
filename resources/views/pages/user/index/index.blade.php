@@ -124,7 +124,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                            <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about-us">
@@ -1381,7 +1381,7 @@
                                             <div class="collapse navbar-collapse" id="navbarNav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -1736,7 +1736,7 @@
 
                                                 <div class="col-md-6 col-lg-4 mt-5 ad">
                                                     <label class="form-label dot">شكل الطباعة</label>
-                                                    <select class="form-control" data-placeholder="Выберите теги" name="print">
+                                                    <select class="form-control clean-shot-print-format" data-placeholder="Выберите теги" name="print">
                                                         @foreach($softwares as $software)
                                                         <option value="{{ $software->name }}">{{ $software->name }}</option>
                                                         @endforeach
@@ -1744,7 +1744,11 @@
                                                 </div>
                                                 <div class="col-md-6 col-lg-4 mt-5 ad">
                                                     <label class="form-label dot">تقنية الطباعة</label>
-                                                    <select class="form-control" data-placeholder="Выберите теги" name="format">
+                                                    <select class="form-control clean-shot-printing-tech" data-placeholder="Выберите теги" name="format">
+                                                        <option value="as">asd</option>
+                                                        <option value="as">asd</option>
+                                                        <option value="as">asd</option>
+                                                        <option value="as">asd</option>
                                                         @foreach($printings as $printing)
                                                         <option value="{{ $printing->name }}">{{ $printing->name }}</option>
                                                         @endforeach
@@ -1909,7 +1913,7 @@
                                             <div class="collapse navbar-collapse" id="navbarNav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -4669,7 +4673,7 @@
                                             <div class="collapse navbar-collapse" id="navbarNav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -5173,7 +5177,7 @@
                                             <div class="collapse navbar-collapse" id="navbarNav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
