@@ -550,3 +550,14 @@
     width: 50% !important;
     padding: 0 0 0 14px;
 }
+.plus-icon_payment .fa-circle-plus{
+    color: #005198;
+    font-size: 20px;
+    padding-right: 12px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.plus-icon_payment .ahs-form-img1{
+    margin-right: 20px !important;
+}
