@@ -280,3 +280,4 @@ Route::post('/changepassword',[UserController::class,'changepassword'])->name('p
 Route::post('/user/payment',[UserController::class,'userpayment'])->name('user.account.payment');
 Route::post('/designer/deliver',[PerposalController::class,'deliverFile'])->name('designer.deliver.file');
 Route::post('deliver/price',[PerposalController::class,'priceDetect'])->name('deliver_price_detect');
+Route::post('/payment/withdraw',[UserController::class,'userPaymentDetect'])->name('user.payment.detect');
