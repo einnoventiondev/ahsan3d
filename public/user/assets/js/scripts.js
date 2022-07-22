@@ -763,6 +763,7 @@ $(document).ready(function() {
         $('.modal').modal('hide');
         // $(".modal-backdrop").removeClass('show');
         // $(".modal-backdrop").addClass('d-none');
+        $('#product_image_show').html('');
     })
 
 
