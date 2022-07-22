@@ -21,9 +21,10 @@
         
     });
         // Remove element
-         $(".remove").click(function(){
-             
-        });
+        //  $('.remove').on('click','.remove',function(){
+        //      alert('sdf')
+        //      $(this).parents('.element').remove();
+        // });
         $('.remove').on('click','.remove',function(){
                 
             var id = this.id;

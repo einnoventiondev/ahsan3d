@@ -141,11 +141,11 @@
         $(".wrapper").append('<tr class="element" id="div_"><td><div class="form-group"><input type="text" class="form-control" id="exampleInput" name="title[]"  placeholder="Description"></div></td><td><div class="form-group"><textarea  class="form-control" id="exampleInput" name="description[]"  placeholder="Description"></textarea></div></td><td><div class="form-group"><input type="number" class="form-control" id="exampleInput" name="qty[]"  placeholder="Quatntity"></div></td><td><div class="form-group"><input type="text" class="form-control" id="exampleInput" name="rate[]"  placeholder="Rate"></div></td><td><span id="remove_" class="remove"><i class="fa fa-uncheck" aria-hidden="true"></i>Xasd</span></td>');     
     });
 
-    alert('aaaa')
-    $("table .remove").on("click", function () {
-           alert('aaaa')
-        $(this).parent.remove(); 
-    });
+    // alert('aaaa')
+    // $("table .remove").on("click", function () {
+    //        alert('aaaa')
+    //     $(this).parent.remove(); 
+    // });
 
 
 </script>
