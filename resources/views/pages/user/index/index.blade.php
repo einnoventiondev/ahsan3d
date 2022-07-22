@@ -8779,11 +8779,11 @@
 
 
                         if (data.msg.perposal_p_d_f != null) {
-                            var url = window.location.origin;
+                            var url = "/perposal/pdf/"+data.pdf_id;
                             $(".conditional-blur.design-payment-blur").removeClass('blur');
                             $(".payment.credit-payment").addClass('d-none');
 
-                            $("#web_pdf").attr('href', url.'/perposal/pdf/'.data.pdf_id);
+                            $("#web_pdf").attr('href', url);
                         } else {
                             console.log('this is null');
                         }
@@ -9037,7 +9037,7 @@
                                         </div>
                                     </div>
                                 </div>
-  
+
 
                         </div>
                     </div>

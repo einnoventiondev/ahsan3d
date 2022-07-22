@@ -177,8 +177,10 @@ class HomeController extends Controller
         $data = Order::with('user')->with('InvoicePDF')->with('PerposalPDF')->find($id);
         $designer_name=User::find($data->designer_id);
         $name=$designer_name->name;
-        $pdf=PdfItem::where('title',$name)->first();
-       $pdf_id= $pdf->pdf_id;
+        $pdf=Perposal::where('order_id',$data->id)->first();
+        $pdfitem=PdfItem::where('pdf_id',$pdf->id)->first();
+       $pdf_id= $pdfitem->pdf_id;
+      
         $session=Session::put('order_id',$id);
         return response() -> json(['code'=> 200,'session'=>$session, 'msg' => $data,'designer_name'=>$name,'name' => 'request_order_with_id','pdf_id'=>$pdf_id]);
     }
