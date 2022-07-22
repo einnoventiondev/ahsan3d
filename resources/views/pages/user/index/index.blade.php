@@ -6187,12 +6187,13 @@
                                     </div>
                                 </div>
                             </div>
+                            @if(Auth::check())
+                            @if(Auth::user()->role=='designer')
                             @php
                             $order=App\Models\Order::where('designer_id',Auth::user()->id)->get();
                             foreach($order as $id){
                             $perposal=App\Models\Perposal::where('user_id',$id->user_id)->get();
                             }
-
                             @endphp
                             
                             <div class="modal-body">
@@ -6272,6 +6273,8 @@
                                 </div>
 
                             </div>
+                            @endif
+                            @endif
                         </div>
                     </div>
                 </div>
