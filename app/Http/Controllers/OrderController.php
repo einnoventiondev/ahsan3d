@@ -38,7 +38,7 @@ class OrderController extends Controller
             $response = Http::withHeaders([
                 'Content-Type' => 'application/json',
                 'Authorization' =>'Bearer keyD9Kbfap9FoWk0M',
-            ])->post('https://api.airtable.com/v0/'.env('AIRTABLE_BASE_ID').'/'.env('AIRTABLE_CAND_TABLE'), [
+            ])->post('https://api.airtable.com/v0/app6zpMWlO12sMvHR/3D', [
 
                 "typecast" => true,
                 "fields" => [ "Name" => Auth::user()->name,
