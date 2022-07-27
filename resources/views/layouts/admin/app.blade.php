@@ -36,7 +36,7 @@
             @include('layouts.admin.footer')
         </div>
     </div>
-    
+
     <!-- latest jquery-->
     <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
     <!-- feather icon js-->
@@ -104,7 +104,7 @@
     </script>
 <script>
     function panel(key) {
-     
+
         if($(".panel_view_"+key).hasClass( "d-none" )){
             console.log(key);
             $('.panel_view').addClass('d-none');
@@ -134,17 +134,11 @@
             $('.payment_add_'+key).removeClass('d-block');
             $('.payment_view_'+key).addClass("d-block");
             $('.payment_view_'+key).removeClass('d-none')
-            
+
         }
     }
     $(".addCustom").click(function(){
-        $(".wrapper").append('<tr class="element" id="div_"><td><div class="form-group"><input type="text" class="form-control" id="exampleInput" name="title[]"  placeholder="Description"></div></td><td><div class="form-group"><textarea  class="form-control" id="exampleInput" name="description[]"  placeholder="Description"></textarea></div></td><td><div class="form-group"><input type="number" class="form-control" id="exampleInput" name="qty[]"  placeholder="Quatntity"></div></td><td><div class="form-group"><input type="text" class="form-control" id="exampleInput" name="rate[]"  placeholder="Rate"></div></td><td><span id="remove_" class="remove"><i class="fa fa-uncheck" aria-hidden="true"></i>Xasd</span></td>');     
-    });
-
-    alert('aaaa')
-    $("table .remove").on("click", function () {
-           alert('aaaa')
-        $(this).parent.remove(); 
+        $(".wrapper").append('<tr class="element" id="div_"><td><div class="form-group"><input type="text" class="form-control" id="exampleInput" name="title[]"  placeholder="Description"></div></td><td><div class="form-group"><textarea  class="form-control" id="exampleInput" name="description[]"  placeholder="Description"></textarea></div></td><td><div class="form-group"><input type="number" class="form-control" id="exampleInput" name="qty[]"  placeholder="Quatntity"></div></td><td><div class="form-group"><input type="text" class="form-control" id="exampleInput" name="rate[]"  placeholder="Rate"></div></td><td><span id="remove_" class="remove"><i class="fa fa-uncheck" aria-hidden="true"></i>Xasd</span></td>');
     });
 
 

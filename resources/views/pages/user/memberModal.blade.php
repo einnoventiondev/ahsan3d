@@ -169,10 +169,10 @@
                                     <span class="ahs-form-head2"> {{ Auth::user()->wallet ?? '0' }}  ريال </span>
                                     <!-- <span class="ahs-form-head2"> &nbsp;&nbsp;<button type="button" data-bs-toggle="modal" data-bs-target="#user-payment" ><i  class="fa fa-plus"></i></button></span> -->
                                     <!-- before this modal is  #financialOperations -->
-                                    <a type="button" data-bs-toggle="modal" data-bs-target="#user-payment"><i class="fa-solid fa-circle-plus"></i></a>
-
+                                    <a type="button" class="member-payment-btn-redirect" data-bs-toggle="modal" data-bs-target="#user-payment"><i class="fa-solid fa-circle-plus"></i></a>
+                                    
                                     <button data-bs-toggle="modal" data-bs-target="#financialOperations" type="button"
-                                        class="m-btn mujtmah-box-btn btn-white-1 d-contents">
+                                        class="m-btn mujtmah-box-btn btn-white-1 d-contents member-payment-btn-redirect">
                                         <img src="{{ asset('user/assets/images/ar.png') }}" alt=""
                                             class="ahs-form-img1">
                                     </button>

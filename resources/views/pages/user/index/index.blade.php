@@ -6272,7 +6272,7 @@
                                 @endif
                                 @endforeach
                                 <div class="form-action mb-5">
-                                    <button class="btn btn-form mx-3 with-arrow" type="button" data-bs-toggle="modal" data-bs-target="#payment-widthdraw">سحب أموال</button>
+                                    <button class="btn btn-form mx-3 with-arrow designer-payment-btn-redirect" type="button" data-bs-toggle="modal" data-bs-target="#payment-widthdraw">سحب أموال</button>
                                     <p class="">يتفعل هذا الخيار في حال كان لديك رصيد</p>
                                     <p class="d-none">هناك طلب جاري معالجته</p>
                                 </div>
