@@ -20,14 +20,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="{{asset('user/assets/js/jquery.min.js')}}"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    
+
     <!-- StyleSheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chat.css') }}">
     <!-- Responsive Sheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/responsive.css') }}">
     @livewireStyles
-    
+
     <style type="text/css">
           #public-order {
             display: block;
@@ -80,7 +80,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( 'uploads/profile/'.auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>

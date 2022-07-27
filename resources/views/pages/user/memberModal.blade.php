@@ -125,17 +125,17 @@
                                 enctype="multipart/form-data">
                                 @csrf
                                 <!-- <input type="text" name="id" value="{{ Auth::user()->id }}">
-    <input type="text" name="role" value="{{ Auth::user()->role }}"> -->
+      <input type="text" name="role" value="{{ Auth::user()->role }}"> -->
                                 <div class="ahs-img-uploder-cam__holder">
                                     <img id="blah1"
-                                        src="{{(Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('storage/' . auth()->user()->profile)}}"
+                                        src="{{(Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('uploads/profile/' . auth()->user()->profile)}}"
                                         class="mx-auto d-block imageupload1"
                                         style="clip-path: circle() !important ;height:150% !important;" width="150">
                                     <label for="imgInp1" class="upload-avatar"> <img
                                             src="{{ asset('user/assets/images/camera.png') }}" alt="camera"
                                             class="ahs-img-uploder-cam"></label>
                                     <input id="imgInp1" type="file" class="chose1 d-none"
-                                        value="upload/images/1648128609.png" name="image" accept="image/*"
+                                         name="image" accept="image/*"
                                         style="opacity: 0">
                                 </div>
 
@@ -170,7 +170,7 @@
                                     <!-- <span class="ahs-form-head2"> &nbsp;&nbsp;<button type="button" data-bs-toggle="modal" data-bs-target="#user-payment" ><i  class="fa fa-plus"></i></button></span> -->
                                     <!-- before this modal is  #financialOperations -->
                                     <a type="button" data-bs-toggle="modal" data-bs-target="#user-payment"><i class="fa-solid fa-circle-plus"></i></a>
-                                    
+
                                     <button data-bs-toggle="modal" data-bs-target="#financialOperations" type="button"
                                         class="m-btn mujtmah-box-btn btn-white-1 d-contents">
                                         <img src="{{ asset('user/assets/images/ar.png') }}" alt=""
@@ -259,14 +259,14 @@
 
                                 <div class="ahs-img-uploder-cam__holder">
                                     <img id="blah1"
-                                        src="{{(Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('storage/' . auth()->user()->profile)}}"
+                                        src="{{(Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('uploads/profile/' . auth()->user()->profile)}}"
                                         class="mx-auto d-block imageupload1"
                                         style="clip-path: circle() !important ;height:150% !important;" width="150">
                                     <label for="imgInp1" class="upload-avatar"> <img
                                             src="{{ asset('user/assets/images/camera.png') }}" alt="camera"
                                             class="ahs-img-uploder-cam"> </label>
                                     <input id="imgInp1" type="file" class="chose1 d-none"
-                                        value="upload/images/1648128609.png" name="image" accept="image/*"
+                                         name="image" accept="image/*"
                                         style="opacity: 0">
                                 </div>
 

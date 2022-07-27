@@ -112,7 +112,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
+                            <a class="nav-link" aria-current="page" href="{{ route('/') }}">الرئيسية</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about-us">
@@ -188,7 +188,7 @@
                             </div>
                             @else
                             <img class="" style="width:30px;height:30px;" alt=""
-                                src="{{ asset('storage/' . auth()->user()->profile) }}">
+                                src="{{ asset('uploads/profile/' . auth()->user()->profile) }}">
                             @endif
 
                             <a href="#membership" class="dot ms-auto border-bottom" data-bs-toggle="modal"
@@ -258,7 +258,7 @@
                 <div class="mmnue">
                     <ul class="sidebar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
+                            <a class="nav-link" aria-current="page" href="{{ route('/') }}">الرئيسية</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about-us">
@@ -335,7 +335,7 @@
 
 
                                 <a href="#" class="m-0"><img
-                                        src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('storage/' . auth()->user()->profile) }}"
+                                        src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('uploads/profile/' . auth()->user()->profile) }}"
                                         class="profile-img" alt="avatar"></a>
                                 @if(Auth::user())
                                 <a href="#" class="dot m-0 border-bottom" data-bs-toggle="modal"
@@ -1229,7 +1229,7 @@
                         <div class="col-md-12">
                             <ul class="footer-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
+                                    <a class="nav-link active" aria-current="page" href="{{ route('/') }}">الرئيسية</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#about-us">
@@ -1466,7 +1466,7 @@
                                             <div class="collapse navbar-collapse" id="navbarNav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ route('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -1544,7 +1544,7 @@
                                                         </div>
                                                         @else
                                                         <img class="" style="width:30px;height:30px;" alt=""
-                                                            src="{{ asset('storage/' . auth()->user()->profile) }}">
+                                                            src="{{ asset('uploads/profile/' . auth()->user()->profile) }}">
                                                         @endif
 
                                                         <a href="#membership" class="dot ms-auto border-bottom"
@@ -1619,7 +1619,7 @@
                                             <div class="mmnue">
                                                 <ul class="sidebar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ route('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -1701,7 +1701,7 @@
 
 
                                                             <a href="#" class="m-0"><img
-                                                                    src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('storage/' . auth()->user()->profile) }}"
+                                                                    src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('uploads/profile/' . auth()->user()->profile) }}"
                                                                     class="profile-img" alt="avatar"></a>
                                                             @if(Auth::user())
                                                             <a href="#" class="dot m-0 border-bottom"
@@ -1924,7 +1924,7 @@
                                                         <ul class="footer-nav zhd-footer">
                                                             <li class="nav-item">
                                                                 <a class="nav-link active" aria-current="page"
-                                                                href="{{ url('/') }}">الرئيسية</a>
+                                                                href="{{ route('/') }}">الرئيسية</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <a class="nav-link" href="#about-us">
@@ -2036,7 +2036,7 @@
                                             <div class="collapse navbar-collapse" id="navbarNav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}" >الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ route('/') }}" >الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -2114,7 +2114,7 @@
                                                         </div>
                                                         @else
                                                         <img class="" style="width:30px;height:30px;" alt=""
-                                                            src="{{ asset('storage/' . auth()->user()->profile) }}">
+                                                            src="{{ asset('uploads/profile/' . auth()->user()->profile) }}">
                                                         @endif
 
                                                         <a href="#membership" class="dot ms-auto border-bottom"
@@ -2189,7 +2189,7 @@
                                             <div class="mmnue">
                                                 <ul class="sidebar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ route('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -2271,7 +2271,7 @@
 
 
                                                             <a href="#" class="m-0"><img
-                                                                    src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('storage/' . auth()->user()->profile) }}"
+                                                                    src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('uploads/profile/' . auth()->user()->profile) }}"
                                                                     class="profile-img" alt="avatar"></a>
                                                             @if(Auth::user())
                                                             <a href="#" class="dot m-0 border-bottom"
@@ -2491,7 +2491,7 @@
                                                         <ul class="footer-nav zhd-footer">
                                                             <li class="nav-item">
                                                                 <a class="nav-link active" aria-current="page"
-                                                                href="{{ url('/') }}">الرئيسية</a>
+                                                                href="{{ route('/') }}">الرئيسية</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <a class="nav-link" href="#about-us">
@@ -2597,7 +2597,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{asset('storage/' . auth()->user()->profile) }}"
+                                        <img src="{{asset('uploads/profile/' . auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
@@ -2695,7 +2695,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}"
+                                        <img src="{{ asset('uploads/profile/' . auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
@@ -2968,7 +2968,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile)}}"
+                                        <img src="{{ asset('uploads/profile/' . auth()->user()->profile)}}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
@@ -3233,7 +3233,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" alt=""
+                                        <img src="{{ asset('uploads/profile/' . auth()->user()->profile) }}" alt=""
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
@@ -3540,7 +3540,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}"
+                                        <img src="{{ asset('uploads/profile/' . auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
@@ -3929,7 +3929,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}"
+                                        <img src="{{ asset('uploads/profile/' . auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
@@ -4196,7 +4196,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}"
+                                        <img src="{{ asset('uploads/profile/' . auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
@@ -4468,7 +4468,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile)}}"
+                                        <img src="{{ asset('uploads/profile/' . auth()->user()->profile)}}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
@@ -4725,7 +4725,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}"
+                                        <img src="{{ asset('uploads/profile/' . auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
@@ -5025,7 +5025,7 @@
                                         <div class="collapse navbar-collapse" id="navbarNav">
                                             <ul class="navbar-nav">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
+                                                    <a class="nav-link" aria-current="page" href="{{ route('/') }}">الرئيسية</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="#about-us">
@@ -5102,7 +5102,7 @@
                                                     </div>
                                                     @else
                                                     <img class="" style="width:30px;height:30px;" alt=""
-                                                        src="{{ asset('storage/' . auth()->user()->profile) }}">
+                                                        src="{{ asset('uploads/profile/' . auth()->user()->profile) }}">
                                                     @endif
 
                                                     <a href="#membership" class="dot ms-auto border-bottom"
@@ -5174,7 +5174,7 @@
                                         <div class="mmnue">
                                             <ul class="sidebar-nav">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
+                                                    <a class="nav-link" aria-current="page" href="{{ route('/') }}">الرئيسية</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="#about-us">
@@ -5256,7 +5256,7 @@
 
 
                                                         <a href="#" class="m-0"><img
-                                                                src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('storage/' . auth()->user()->profile) }}"
+                                                                src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('uploads/profile/' . auth()->user()->profile) }}"
                                                                 class="profile-img" alt="avatar"></a>
                                                         @if(Auth::user())
                                                         <a href="#" class="dot m-0 border-bottom" data-bs-toggle="modal"
@@ -5478,7 +5478,7 @@
                                                             <ul class="footer-nav zhd-footer">
                                                                 <li class="nav-item">
                                                                     <a class="nav-link active" aria-current="page"
-                                                                    href="{{ url('/') }}">الرئيسية</a>
+                                                                    href="{{ route('/') }}">الرئيسية</a>
                                                                 </li>
                                                                 <li class="nav-item">
                                                                     <a class="nav-link" href="#about-us">
@@ -5583,7 +5583,7 @@
                                             <div class="collapse navbar-collapse" id="navbarNav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ route('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -5661,7 +5661,7 @@
                                                         </div>
                                                         @else
                                                         <img class="" style="width:30px;height:30px;" alt=""
-                                                            src="{{ asset('storage/' . auth()->user()->profile) }}">
+                                                            src="{{ asset('uploads/profile/' . auth()->user()->profile) }}">
                                                         @endif
 
                                                         <a href="#membership" class="dot ms-auto border-bottom"
@@ -5736,7 +5736,7 @@
                                             <div class="mmnue">
                                                 <ul class="sidebar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="{{ url('/') }}">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="{{ route('/') }}">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -5818,7 +5818,7 @@
 
 
                                                             <a href="#" class="m-0"><img
-                                                                    src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('storage/' . auth()->user()->profile) }}"
+                                                                    src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset('uploads/profile/' . auth()->user()->profile) }}"
                                                                     class="profile-img" alt="avatar"></a>
                                                             @if(Auth::user())
                                                             <a href="#" class="dot m-0 border-bottom"
@@ -6022,7 +6022,7 @@
                                                             <ul class="footer-nav">
                                                                 <li class="nav-item">
                                                                     <a class="nav-link active" aria-current="page"
-                                                                    href="{{ url('/') }}">الرئيسية</a>
+                                                                    href="{{ route('/') }}">الرئيسية</a>
                                                                 </li>
                                                                 <li class="nav-item">
                                                                     <a class="nav-link" href="#about-us">
@@ -6850,7 +6850,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                        <img src="{{ asset('uploads/profile/'.auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
@@ -7110,7 +7110,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                        <img src="{{ asset('uploads/profile/'.auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
@@ -7190,7 +7190,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                        <img src="{{ asset('uploads/profile/'.auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
@@ -7497,7 +7497,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                        <img src="{{ asset( 'uploads/profile/'.auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
@@ -7784,7 +7784,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}"
+                                        <img src="{{ asset('uploads/profile/' . auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
@@ -8159,7 +8159,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                        <img src="{{ asset('uploads/profile/'.auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
@@ -8431,7 +8431,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset(  auth()->user()->profile) }}"
+                                        <img src="{{ asset('uploads/profile/'.auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
@@ -8688,7 +8688,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset(  auth()->user()->profile) }}"
+                                        <img src="{{ asset('uploads/profile/'.auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
@@ -8945,7 +8945,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset(  auth()->user()->profile) }}"
+                                        <img src="{{ asset( 'uploads/profile/'.auth()->user()->profile) }}"
                                             style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>

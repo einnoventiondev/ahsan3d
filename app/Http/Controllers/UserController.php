@@ -9,6 +9,7 @@ use App\Models\TempUpdateProfile;
 use App\Models\User;
 use App\Models\PublicService;
 use App\Models\UserDetail;
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -182,14 +183,19 @@ class UserController extends Controller
 
      public function profileUpdate(Request $request)
     {
-        if ($request->file('image')) {
-            $imagefile = $request->file('image')->getClientOriginalName();
-            $path = $request->file('image')->store('/orders', ['disk' =>   'public']);
+        if($request->hasfile('image')){
+            $destination='uploads/profile/'.$request->file;
+            if(File::exists($destination)){
+               File::delete($destination);}
+            $file= $request->file('image');
+            $extenstion= $file->getClientOriginalExtension();
+            $filename=time().'.'.$extenstion;
+            $file->move('uploads/profile/', $filename);
 
         }
         else
         {
-            $path = null;
+            $filename = null;
         }
         if(Auth::user()->role == 'designer')
         {
@@ -197,7 +203,7 @@ class UserController extends Controller
             $user->name=$request->name;
             $user->email=$request->email;
             $user->phone=$request->field;
-            $user->profile=$path;
+            $user->profile=$filename;
             if($request->password!=null){
                 $user->password=Hash::make($request->password);
             }
@@ -217,7 +223,7 @@ else{
         'name' => $request->name,
         'email' => $request->email,
         'field' => $request->field,
-        'profile' => $path,
+        'profile' => $filename,
         'password' => Hash::make($request->password),
     ]);
 

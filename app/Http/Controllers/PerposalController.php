@@ -74,11 +74,10 @@ class PerposalController extends Controller
       $response = Http::withHeaders([
         'Content-Type' => 'application/json',
         'Authorization' =>'Bearer keyD9Kbfap9FoWk0M',
-    ])->patch('https://api.airtable.com/v0/'.env('AIRTABLE_BASE_ID').'/'.env('AIRTABLE_CAND_TABLE'), [
+    ])->patch('https://api.airtable.com/v0/app6zpMWlO12sMvHR/3D', [
 
         "records"=> [
             [
-
             "id"=>$airtable_id,
             "fields" => [
                 "Status_order" => "Reject",
@@ -109,7 +108,7 @@ class PerposalController extends Controller
         $response = Http::withHeaders([
             'Content-Type' => 'application/json',
             'Authorization' =>'Bearer keyD9Kbfap9FoWk0M',
-        ])->patch('https://api.airtable.com/v0/'.env('AIRTABLE_BASE_ID').'/'.env('AIRTABLE_CAND_TABLE'), [
+        ])->patch('https://api.airtable.com/v0/app6zpMWlO12sMvHR/3D', [
 
             "records"=> [
                 [

@@ -38,7 +38,7 @@
                                     {{ auth()->user()->name }}
                                 </button>
                                 <a href="#profile">
-                                    <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                    <img src="{{ asset('uploads/profile/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                 </a>
                                 @endif
                             </div>

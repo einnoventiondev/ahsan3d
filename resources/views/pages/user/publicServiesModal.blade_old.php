@@ -28,7 +28,7 @@
                                     المصمم
                                     </button>
                                 <a href="#profile">
-                                    <img src="{{ asset(  auth()->user()->profile) }}"
+                                    <img src="{{ asset('uploads/profile/'.auth()->user()->profile) }}"
                                         style="height:40px; width:40px; border-radius: 50%">
                                 </a>
                                 @endif
@@ -45,7 +45,7 @@
                                             <div class="row justify-content-center">
                                                 <div class="col-md-12 col-xl-9 col-xxl-9">
                                                     <div class="row mb-2">
-                                                        <div 
+                                                        <div
                                                             class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                             <label class="form-label dot">الاسم كامل</label>
                                                             <input type="text" class="form-control name"
@@ -112,14 +112,14 @@
                                                             class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                             <label class="form-label dot">نوع الطباعة</label>
                                                             <input type="text" class="form-control type"
-                                                                placeholder=".. الاسم هنا" value="" 
+                                                                placeholder=".. الاسم هنا" value=""
                                                                 name="pr_type">
                                                         </div>
                                                         <div
                                                             class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                             <label class="form-label dot">لون الطباعة</label>
                                                             <input type="text" class="form-control spec"
-                                                                placeholder=".. التخصص هنا" value="" 
+                                                                placeholder=".. التخصص هنا" value=""
                                                                 name="pr_clr">
                                                         </div>
                                                         <div
@@ -127,7 +127,7 @@
                                                             <label class="form-label dot">دقة الطباعة (صورة
                                                                 كمثال)</label>
                                                             <input type="text" class="form-control print-resolution"
-                                                                placeholder=".. الايميل هنا" value="" 
+                                                                placeholder=".. الايميل هنا" value=""
                                                                 name="pr_res">
                                                         </div>
                                                         <div class="row m-0 p-0 pt-4">
@@ -137,7 +137,7 @@
                                                                     <button class="btn btn-upload public"><img
                                                                             src="{{asset('user/assets/icons/upload-img.svg')}}"
                                                                             alt="upload-img"></button>
-                                                                    <input type="file" id="public-file" 
+                                                                    <input type="file" id="public-file"
                                                                         name="myfile" />
                                                                 </div>
                                                                 <span class="form-detail">صور بصيغة STL,PNG,JPG </span>
